@@ -35,7 +35,8 @@ dev_dependencies:
   sembast: ^2.4.5
   path_provider: ^1.6.11
   dio: ^3.0.9
-  flutter_platform_widgets: ^0.50.0
+  flutter_platform_widgets: ^0.50.1
+  persistent_bottom_nav_bar: ^1.5.5
 
 
 
