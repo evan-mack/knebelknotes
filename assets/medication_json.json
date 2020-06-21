@@ -1,0 +1,4303 @@
+[
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Haloperidol (Haldol)",
+      "indications": [
+        {
+          "indication": "Mania (2nd line monotherapy or 3rd line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "delirium",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [
+        {
+          "severeEffect": "Increased risk of EPS",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "tardive dyskinesia",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "1 mg",
+      "doseInitComment": "",
+      "doseRange": "2-10mg",
+      "doseRangeComment": "",
+      "maxDose": "20mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "CONTRAINDICATED in Parkinson’s",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Flupenthixol (Fluanxol)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "3mg",
+      "doseInitComment": "",
+      "doseRange": "6-18mg",
+      "doseRangeComment": "",
+      "maxDose": "64mg (divided)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Fluphenazine (Prolixin)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "2.5mg",
+      "doseInitComment": "",
+      "doseRange": "5-20mg",
+      "doseRangeComment": "",
+      "maxDose": "90mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Perphenazine (Trilafon)",
+      "indications": [
+        {
+          "indication": "nausea",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "8mg (divided)",
+      "doseInitComment": "",
+      "doseRange": "12-24mg",
+      "doseRangeComment": "",
+      "maxDose": "60mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Prochloperazine",
+      "indications": [
+        {
+          "indication": "nausea",
+          "modifier": 0
+        },
+        {
+          "indication": "vertigo",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "10mg (divided)",
+      "doseInitComment": "",
+      "doseRange": "40mg (divided)",
+      "doseRangeComment": "",
+      "maxDose": "100mg (divided)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Pericyazine (Neuleptil)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "20mg",
+      "doseInitComment": "",
+      "doseRange": "20-50mg",
+      "doseRangeComment": "",
+      "maxDose": "250mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Zuclopenthixol (Clopixol)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "20mg",
+      "doseInitComment": "",
+      "doseRange": "20-80mg",
+      "doseRangeComment": "",
+      "maxDose": "1000mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Loxapine (Loxapac)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "20-200mg (divided)",
+      "doseRangeComment": "",
+      "maxDose": "1000mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "Increased risk of seizure",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Methotrimeprazine (Nozinan)",
+      "indications": [
+        {
+          "indication": "sedation",
+          "modifier": 0
+        },
+        {
+          "indication": "pain",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "50mg",
+      "doseInitComment": "",
+      "doseRange": "100-300mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Thioridazine",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Chlorprothixene",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "Typical",
+      "medName": "Chlorpromazine (Largactil)",
+      "indications": [
+        {
+          "indication": "Mania (3rd line monotherapy) nausea",
+          "modifier": 0
+        },
+        {
+          "indication": "hiccups",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [
+        {
+          "severeEffect": "agranulocytosis",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "jaundice",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "75mg (divided)",
+      "doseInitComment": "",
+      "doseRange": "300-1000mg (divided)",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Risperidone (Risperdal)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy or 1st line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Elderly (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD (1st line Adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (2nd line LAI)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII Maintenence (3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "irritability in developmental disabilities (1st line)",
+      "sideEffects": [
+        {
+          "sideEffect": "(at higher doses) EPS",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "inreased prolactin",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "NMS",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "1mg BID",
+      "doseInitComment": "",
+      "doseRange": "4-8mg (divided qdaily or BID)",
+      "doseRangeComment": "",
+      "maxDose": "16mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "50% dose decrease in renal disease",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Paliperidone (Invega)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "(at higher doses) EPS",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "NMS",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "3mg qdaily",
+      "doseInitComment": "",
+      "doseRange": "6-12mg",
+      "doseRangeComment": "",
+      "maxDose": "12mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "50% dose decrease in renal disease, good if liver issues",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Olanzapine (Zyprexa)",
+      "indications": [
+        {
+          "indication": "Mania (2nd line monotherapy or 2nd line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD (2nd line Adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Child (3rd line combo + fluoxetine)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE (2nd line combo + fluoxetine or 3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "sedation",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "metabolic++",
+          "modifier": -1
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "DRES (rare)",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5mg",
+      "doseInitComment": "",
+      "doseRange": "10-20mg",
+      "doseRangeComment": "",
+      "maxDose": "30mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Ziprazadone (Zeldox)",
+      "indications": [
+        {
+          "indication": "Mania (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD (3rd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (2nd line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII MDE (3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [
+        {
+          "severeEffect": "DRES (rare)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "QTc prolongation",
+          "modifier": -1
+        }
+      ],
+      "frequency": "",
+      "doseInit": "20mg BID",
+      "doseInitComment": "",
+      "doseRange": "40mg BID-80mg BID",
+      "doseRangeComment": "",
+      "maxDose": "200mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "weight neutral. Take with food",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Clozapine (Clozaril)",
+      "indications": [
+        {
+          "indication": "Mania (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania elderly (Tx resistant)",
+          "modifier": 0
+        },
+        {
+          "indication": "Schizophrenia (Tx resistant)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "psychosis in Parkinsons",
+      "sideEffects": [
+        {
+          "sideEffect": "Increased weight",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "salivation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "orthostatic hypotension",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "12.5mg BID",
+      "doseInitComment": "",
+      "doseRange": "300-450mg",
+      "doseRangeComment": "",
+      "maxDose": "900mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Myocarditis, Agranulocytosis, increased seizure risk, orthostatic hypotension; Increased mortality in NCD related psychosis",
+      "misc": "No EPS.",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Quetiapine (Seroquel)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy or 1st line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Elderly (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (1st line monotherapy or 2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE (1st line)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (1st line monotherapy. or 1st line combo +Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII MDE (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII Maintenence (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Child (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD (2nd line monotherapy, 1st line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDE (2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "priapism",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "100mg (divided)",
+      "doseInitComment": "",
+      "doseRange": "400-800mg",
+      "doseRangeComment": "",
+      "maxDose": "1000mg (divided)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased suicidality (<24yo with MDD); Increased mortality in NCD related psychosis;",
+      "misc": "Decreased drug interactions, decreased akathisia",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Aripiprazole (Abilify)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Elderly (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD (1st line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE (3rd line Adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (1st line monotherapy or 1st line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE Elderly (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence Child (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "irritability in developmental disabilities (1st line), BPI not recommended monotherapy",
+      "sideEffects": [
+        {
+          "sideEffect": "akathisia",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "nausea/vomiting",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "compulsive behavior",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "5mg",
+      "doseInitComment": "",
+      "doseRange": "15-30mg",
+      "doseRangeComment": "",
+      "maxDose": "30mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased suicidality (<24yo with MDD);  Increased mortality in NCD related psychosis",
+      "misc": "Decreased metabolic & sedation, treats increased prolactin",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Brexpiprazole (Rexulti)",
+      "indications": [
+        {
+          "indication": "MDD (2nd line adjunct)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "Dosing is HALF in MDD",
+      "sideEffects": [
+        {
+          "sideEffect": "compulsive behavior",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "1mg",
+      "doseInitComment": "",
+      "doseRange": "2-4mg",
+      "doseRangeComment": "",
+      "maxDose": "4mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased suicidality (<24yo with MDD); Increased mortality in NCD related psychosis",
+      "misc": "Decreased metabolic & sedation",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Lurasidone (Latuda)",
+      "indications": [
+        {
+          "indication": "BPI MDE (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (2nd line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BP Child MDE (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "akathisia",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "minimal QTc prolongation",
+          "modifier": 1
+        }
+      ],
+      "frequency": "",
+      "doseInit": "40mg",
+      "doseInitComment": "",
+      "doseRange": "40-120mg",
+      "doseRangeComment": "",
+      "maxDose": "160mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased suicidality (<24yo with MDD); Increased mortality in NCD related psychosis",
+      "misc": "Decreased metabolic & sedation, take with  >350cal",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotics",
+      "subCat": "ATypical",
+      "medName": "Asenapine (Saphris)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy or 1st line combo + Li/DVP)",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Elderly (3rd line monotherapy",
+          "modifier": 0
+        },
+        {
+          "indication": "Mania Child (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE (3rd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI Maintenence (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [
+        {
+          "severeEffect": "worse QTc prolongation",
+          "modifier": -1
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5mg BID",
+      "doseInitComment": "",
+      "doseRange": "5-10mg BID",
+      "doseRangeComment": "",
+      "maxDose": "20mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased mortality in NCD related psychosis",
+      "misc": "weight neutral, no food within 20mins",
+      "miscComment": "",
+      "equiv": "link",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Risperidone (Consta)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "IM q2weekly",
+      "doseInit": "25mg",
+      "doseInitComment": "Cannot do loading dose, so IM start needs to overlap with PO x3weeks",
+      "doseRange": "25-50mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "3.2mg/d",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Paliperidone (Sustenna)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "IM q4weekly",
+      "doseInit": "150mg",
+      "doseInitComment": "Day 1 - 150mg loading dose, Day 7 - 100mg dose",
+      "doseRange": "25-150mg",
+      "doseRangeComment": "increase by 12.5mg monthly",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "4mg/d (112.5mg/4w)",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Paliperidone (Trinza)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "IM q3monthly",
+      "doseInit": "",
+      "doseInitComment": "switch after 4 months on sustenna",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Aripiprazole (Maintena)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "IM q4weekly",
+      "doseInit": "400mg",
+      "doseInitComment": "IM start needs PO supplementation x2w",
+      "doseRange": "300-400mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "400mg = 20mg PO abilify",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Flupenthixol decanoate",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "q2-4weekly",
+      "doseInit": "20mg",
+      "doseInitComment": "",
+      "doseRange": "20-60mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "3.3mg/d",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Zuclopenthixol decanoate",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "q2-4weekly",
+      "doseInit": "100mg",
+      "doseInitComment": "",
+      "doseRange": "100-400mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "13.6mg/d",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Long Acting Injectable",
+      "medName": "Haloperidol decanoate",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "q4weekly",
+      "doseInit": "50mg",
+      "doseInitComment": "",
+      "doseRange": "50-150mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "5.1mg/d",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Short Acting Injectable",
+      "medName": "Olanzapine",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "2.5-10mg IM q2h",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "DO NOT combine with benzodiazepines",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Short Acting Injectable",
+      "medName": "Haloperidol",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "5-10mg IM q6h",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Short Acting Injectable",
+      "medName": "Loxapine",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "12.5-50mg q4-6h",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Short Acting Injectable",
+      "medName": "Chlorpromazine",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "25-50mg q4-6h",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antipsychotic",
+      "subCat": "Short Acting Injectable",
+      "medName": "Zuclopenthixol acetate (acuphase)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "50-150mg q2-3d",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SNRIs",
+      "medName": "Duloxetine (Cymbalta)",
+      "indications": [
+        {
+          "indication": "geri (first line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "chronic pain",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "discontinuation syndrome",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "jittery",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sweating",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "increased blood pressure and heart rate",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "narrow angle glaucoma",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "30mg",
+      "doseInitComment": "",
+      "doseRange": "30-60mg",
+      "doseRangeComment": "up to 120mg for neuropathic pain",
+      "maxDose": "",
+      "maxDoseForKids": "120mg",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "Contraindicated in renal/liver disease",
+      "miscComment": "1% risk of ALT rise, avoid use in liver failure",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SNRIs",
+      "medName": "Desvenlafaxine (Prestiq)",
+      "indications": [
+        {
+          "indication": "MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Peripartum MDD (3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "jittery",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sweating",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "increased blood pressure and heart rate",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "narrow angle glaucoma",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "50mg",
+      "doseInitComment": "",
+      "doseRange": "50-100mg",
+      "doseRangeComment": "NE effects start at 100mg",
+      "maxDose": "",
+      "maxDoseForKids": "100mg",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SNRIs",
+      "medName": "Levomilnacipran (Fetzima)",
+      "indications": [
+        {
+          "indication": "MDD (2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "jittery",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sweating",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "increased blood pressure and heart rate",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "urinary retention",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "20mg",
+      "doseInitComment": "",
+      "doseRange": "40-120mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "120mg",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "",
+      "miscComment": "Contraindicated in cardiovascular disease, renally excreted",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Escitalopram (Cipralex)",
+      "indications": [
+        {
+          "indication": "MDD Youth (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Peripartum MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line monotherapy) anxiety (first line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "QTc prolongation",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "10-20mg",
+      "doseRangeComment": "",
+      "maxDose": "30mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "decreased side effects (Sedation and GI)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Citalopram (Celexa)",
+      "indications": [
+        {
+          "indication": "Geri (first line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "QTc prolongation",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "20-40mg",
+      "doseRangeComment": "",
+      "maxDose": "60mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "decreased drug interaction",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Fluoxetine (Prozac)",
+      "indications": [
+        {
+          "indication": "MDD Youth (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "PMDD (1st line monotherapy) BPI MDE (2nd line combo + Olanzapine)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII MDE (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Bipolar Child (3rd line combo + olanzapine)  children",
+          "modifier": 0
+        },
+        {
+          "indication": "bulimia",
+          "modifier": 0
+        },
+        {
+          "indication": "PMDD (first line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "body dysmorphia",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "anxiety",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "20-80mg",
+      "doseRangeComment": "60-80mg for Bulimia",
+      "maxDose": "80mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "Best for discontinuation syndrome (long λ-life)",
+      "miscComment": "Not recommended for elderly MDE, long half life, avoid in Peripartum MDD breast feeding",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Paroxetine (Paxil)",
+      "indications": [
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "anxiety (first line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD",
+          "modifier": 0
+        },
+        {
+          "indication": "PTSD",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "discontinuation syndrome",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "20-60mg",
+      "doseRangeComment": "",
+      "maxDose": "60mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "Contraindicated in pregnancy, children",
+      "miscComment": "Not recommended for MDD Youth, not recommended in BPII MDE, avoid in Peripartum MDD pregnancy",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Sertaline (Zoloft)",
+      "indications": [
+        {
+          "indication": "MDD Youth (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line combo therapy + Desvenlafaxine)",
+          "modifier": 0
+        },
+        {
+          "indication": "Peripartum MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "anxiety (first line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD",
+          "modifier": 0
+        },
+        {
+          "indication": "PTSD. Geri (first line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (worst)",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "25mg",
+      "doseInitComment": "",
+      "doseRange": "50-200mg",
+      "doseRangeComment": "",
+      "maxDose": "200mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Fluvoxamine (Luvox)",
+      "indications": [
+        {
+          "indication": "Peripartum MDD Pregnancy (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain long term",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Many drug interactions",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "SIADH",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased bleeding risk",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "50mg",
+      "doseInitComment": "",
+      "doseRange": "100-200mg",
+      "doseRangeComment": "100-200mg for MDD; 100-300mg for OCD",
+      "maxDose": "300mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "SSRIs",
+      "medName": "Venlafaxine (Effexor)",
+      "indications": [
+        {
+          "indication": "Peripartum MDD Pregnancy (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII MDE (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPII Maintenence (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDD Youth (3rd line monotherapy or Tx resistant 2nd line)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "discontinuation syndrome",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "jittery",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sweating",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sexual dysfunction",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "increased heart rate and blood pressure",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "HC - more dangerous in OD than SSRIs",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "37.5mg",
+      "doseInitComment": "",
+      "doseRange": "75-375mg",
+      "doseRangeComment": "<225mg =exclusively 5HT; >225mg=dual 5HT-NE effect",
+      "maxDose": "375mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "50% dose in renal/liver disease",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "Atypical",
+      "medName": "Mirtazapine (Remeron)",
+      "indications": [
+        {
+          "indication": "MDD+ETOH (first line monotherapy or 2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Perimenopausal MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "Peripartum MDD (3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "appetite",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "7.5mg most sedating",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "serotonin syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "mania",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "15mg qhs",
+      "doseInitComment": "",
+      "doseRange": "15-45mg",
+      "doseRangeComment": "",
+      "maxDose": "45mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+      "misc": "decreased sexual dysfunction, decreased drug interaction",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "Atypical",
+      "medName": "Bupropion (Wellbutrin XR)",
+      "indications": [
+        {
+          "indication": "MDD (1st line monotherapy or 2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "BPI MDE (2nd line combo adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "Peripartum MDD (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "sexual dysfunction from SSRI",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "anxiety",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "anorexia",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "increased seizure risk",
+          "modifier": -1
+        },
+        {
+          "severeEffect": "contraindicated in seizure and eating disorder",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "150mg",
+      "doseInitComment": "",
+      "doseRange": "150-300mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "no sexual dysfunction, sedation, weight gain",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "Atypical",
+      "medName": "Vortioxetine (Trintellix)",
+      "indications": [
+        {
+          "indication": "MDD (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE Elderly (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "nausea",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "constipation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "10-20mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Antidepressent",
+      "subCat": "Atypical",
+      "medName": "Trazodone (Desyrel)",
+      "indications": [
+        {
+          "indication": "MDD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "insomnia",
+          "modifier": 0
+        },
+        {
+          "indication": "chronic pain",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "weight gain",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "priapism",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "orthostatic hypotension",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "50mg qhs",
+      "doseInitComment": "",
+      "doseRange": "150-400mg",
+      "doseRangeComment": "",
+      "maxDose": "600mg (divided)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "sedation from 25-200mg",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Benzo-like",
+      "medName": "Zopiclone (Imovane)",
+      "indications": [
+        {
+          "indication": "insomnia",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "bitter taste",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "difficulty waking fully in AM",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "3.75mg",
+      "doseInitComment": "",
+      "doseRange": "3.75-7.5mg",
+      "doseRangeComment": "",
+      "maxDose": "15mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "danger if combined with opioids and CNS depressants, due to risk of respiratory depression",
+      "misc": "Treatment should rarely exceed 10 days",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Benzo-like",
+      "medName": "Zolpidem (Ambien)",
+      "indications": [
+        {
+          "indication": "insomnia",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "5-10mg",
+      "doseRangeComment": "",
+      "maxDose": "10mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "danger if combined with opioids and CNS depressants, due to risk of respiratory depression",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Buspirone (Buspar)",
+      "indications": [
+        {
+          "indication": "GAD (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "PTSD (3rd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "SAD (Adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD (Adjunct - not recommended)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "nausea",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "decreased sedation/dependence/cognitive impairment",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "15mg",
+      "doseInitComment": "Increase by 5mg/day",
+      "doseRange": "20-30mg",
+      "doseRangeComment": "",
+      "maxDose": "60mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Not recommended for patients with a seizure disorder",
+      "misc": "No immediate relief, onset of action 2-4weeks",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Propranolol",
+      "indications": [
+        {
+          "indication": "performance anxiety",
+          "modifier": 0
+        },
+        {
+          "indication": "akathisia",
+          "modifier": 0
+        },
+        {
+          "indication": "TBI restless",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "decreased heart rate",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "better for sedation",
+          "modifier": 1
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "10mg BID",
+      "doseInitComment": "",
+      "doseRange": "40-160mg (divided)",
+      "doseRangeComment": "akathisia 10-20mg BID-TID",
+      "maxDose": "160mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Avoid if reactive airway disease, risk of bronchospasm",
+      "misc": "masks hypoglycemia",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Prazosin",
+      "indications": [
+        {
+          "indication": "PTSD nightmares",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "orthostatic hypotension",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "fatigue",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "1mg",
+      "doseInitComment": "",
+      "doseRange": "6-20mg (divided)",
+      "doseRangeComment": "",
+      "maxDose": "20mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Risk of orthostatic hypotension when beginning therapy, start low and go slow",
+      "misc": "alpha-1 NE antagonist",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Melatonin",
+      "indications": [
+        {
+          "indication": "Insomnia",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 1
+        },
+        {
+          "sideEffect": "better for sedation",
+          "modifier": 1
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "3mg",
+      "doseInitComment": "",
+      "doseRange": "3-5mg",
+      "doseRangeComment": "",
+      "maxDose": "10mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Over the counter",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Gabapentin (Neurontin)",
+      "indications": [
+        {
+          "indication": "Social Anxiety (2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "PTSD (2nd line Adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "PDO (3rd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "ataxia",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "100mg TID",
+      "doseInitComment": "",
+      "doseRange": "900-1800mg",
+      "doseRangeComment": "900-1800mg/day for AUD",
+      "maxDose": "3000mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Caution when combined with opioids, increased risk of opioid overdose, and respiratory depression",
+      "misc": "Contraindicated if severe renal impairment",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Pregabalin (Lyrica)",
+      "indications": [
+        {
+          "indication": "SAD (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "GAD (1st line monotherapy/2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "OCD (2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "PTSD (2nd line adjunct)",
+          "modifier": 0
+        },
+        {
+          "indication": "neuropathic pain",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "150mg (divided into BID or TID)",
+      "doseInitComment": "",
+      "doseRange": "150-600mg (divided)",
+      "doseRangeComment": "",
+      "maxDose": "600mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Caution when combined with opioids, increased risk of opioid overdose, and respiratory depression",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Anxiolytics/Hypnotics",
+      "subCat": "Others",
+      "medName": "Nabilone",
+      "indications": [
+        {
+          "indication": "nausea and vomiting in chemo",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Vertigo",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "confusion",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "dissociation",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "psychosis",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "0.5mg BID",
+      "doseInitComment": "",
+      "doseRange": "1-2mg BID",
+      "doseRangeComment": "",
+      "maxDose": "6mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Amphetamines",
+      "medName": "Adderall (Racemic)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "narcolepsy",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Increased heart rate",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "cardiac (Increased heart rate and blood pressure, sudden death in Cardiovascular patients)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "Psychiatric (mania, aggression, psychosis in kids)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "risk of abuse/dependence",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased circulation in fingers/toes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5mg q daily-BID",
+      "doseInitComment": "",
+      "doseRange": "5-40mg (ADHD), 5-60mg (narcolepsy)",
+      "doseRangeComment": "Increase by 5-10mg/ week",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Amphetamines",
+      "medName": "Adderall XR (Racemic)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Increased heart rate",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "cardiac (Increased heart rate and blood pressure, sudden death in Cardiovascular patients)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "Psychiatric (mania, aggression, psychosis in kids)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "risk of abuse/dependence",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased circulation in fingers/toes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg q daily",
+      "doseInitComment": "",
+      "doseRange": "5-40mg (ADHD), 5-60mg (narcolepsy)",
+      "doseRangeComment": "Increase by 5-10mg/ week",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Amphetamines",
+      "medName": "Sulfate/Spansule (Dextro)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 2nd line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "narcolepsy",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Increased heart rate",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "cardiac (Increased heart rate and blood pressure, sudden death in Cardiovascular patients)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "Psychiatric (mania, aggression, psychosis in kids)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "risk of abuse/dependence",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased circulation in fingers/toes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "2.5mg BID-TID",
+      "doseInitComment": "5mg in adults",
+      "doseRange": "5-40mg (ADHD), 5-60mg(narcolepsy)",
+      "doseRangeComment": "Increase by 5-10mg/ week",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Amphetamines",
+      "medName": "Lisdexamfetamine ( Vyvanse)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Increased heart rate",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "cardiac (Increased heart rate and blood pressure, sudden death in Cardiovascular patients)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "Psychiatric (mania, aggression, psychosis in kids)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "risk of abuse/dependence",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased circulation in fingers/toes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "5-40mg (ADHD), 5-60mg (narcolepsy)",
+      "doseRangeComment": "Increase by 5-10mg/ week",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Methlyphenidate(MPH)",
+      "medName": "IR (Ritalin)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased heart rate and blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Anemia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "leukopenia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased liver enzymes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5mg BID-TID",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "100mg",
+      "maxDoseForKids": "60mg",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics, CBC+D, liver enzymes"
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Methlyphenidate(MPH)",
+      "medName": "XR (Biphentin)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased heart rate and blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Anemia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "leukopenia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased liver enzymes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "10mg",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "increase by 5-10mg q7 days",
+      "maxDose": "80mg",
+      "maxDoseForKids": "60mg",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics, CBC+D, liver enzymes"
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Methlyphenidate(MPH)",
+      "medName": "ER OROS (Concerta)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Decreased appetite",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "insomnia",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dry mouth",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "palpitations",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased heart rate and blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "tics",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diarrhea/constipation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "growth inhibition",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Anemia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "leukopenia",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "decreased liver enzymes",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "18mg",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "increase by 9-18mg q7 days",
+      "maxDose": "108mg",
+      "maxDoseForKids": "72mg",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated in: hypertension, cardiac disorders, hyperthyroid, psychosis, History of SUD, pregnancy, breast feeding, MAOI; Pre-prescription workup needed; stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics, CBC+D, liver enzymes"
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Other",
+      "medName": "Modafinil (Alertec)",
+      "indications": [
+        {
+          "indication": "Narcolepsy",
+          "modifier": 0
+        },
+        {
+          "indication": "MDE (2nd line adjunct)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Increased heart rate and blood pressure",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "200mg q daily",
+      "doseInitComment": "",
+      "doseRange": "200-400mg",
+      "doseRangeComment": "800mg",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Increased suicidality (<24yo with MDD)",
+      "misc": "Contraindicated if pregnant, lactating, stimulant comparison table (link)",
+      "miscComment": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Other",
+      "medName": "Atomoxetine (Strattera)",
+      "indications": [
+        {
+          "indication": "ADHD (all ages, 2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "40mg",
+      "doseInitComment": "",
+      "doseRange": "40-100mg",
+      "doseRangeComment": "100mg",
+      "maxDose": "0.5-1.2mg/kg, up to 70kg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated if pregnant, lactating, stimulant comparison table (link)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Other",
+      "medName": "Guanfacine ER (Intuniv)",
+      "indications": [
+        {
+          "indication": "ADHD (children only)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "dry mouth",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "decreased blood pressure",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "constipation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "rebound hypertension",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "1mg",
+      "doseInitComment": "",
+      "doseRange": "1-4mg",
+      "doseRangeComment": "6-12yo: 4mg max, 13-17yo: 7mg max",
+      "maxDose": "Kids only",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "ADHD",
+      "subCat": "Other",
+      "medName": "Clonidine",
+      "indications": [
+        {
+          "indication": "ADHD (all ages)",
+          "modifier": 0
+        },
+        {
+          "indication": "opioid withdrawal",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "0.1mg BID",
+      "doseInitComment": "Slow titration",
+      "doseRange": "0.1-0.2mg BID-QID",
+      "doseRangeComment": "2.4mg",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated with TCAs",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Cognitive Enhancers",
+      "subCat": "",
+      "medName": "Donepezil (Aricept)",
+      "indications": [
+        {
+          "indication": "mild-moderate impairment (MMSE 10-26) in Alzheimers",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea, vomiting, diarrhea, anorexia, weight loss)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "vivid dreams",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Parasympathetic (decreased heart rate, decreased blood pressure, bronchospasm)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased ulcer risk",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5mg qhs",
+      "doseInitComment": "",
+      "doseRange": "5-10mg",
+      "doseRangeComment": "",
+      "maxDose": "10mg slow titration (monthly change)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Slow titration; max effect at 3m, 1-2pt on MMSE; contraindicated in urinary retention; avoid with other cholinomimetic drugs (TCAs, Paxil)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Cognitive Enhancers",
+      "subCat": "",
+      "medName": "Galantamine (Reminyl)",
+      "indications": [
+        {
+          "indication": "mild-moderate impairment (MMSE 10-26) in Alzheimers",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea, vomiting, diarrhea, anorexia, weight loss)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "vivid dreams",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Parasympathetic (decreased heart rate, decreased blood pressure, bronchospasm)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased ulcer risk",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "4mg BID",
+      "doseInitComment": "",
+      "doseRange": "8-12mg BID",
+      "doseRangeComment": "",
+      "maxDose": "32mg slow titration (monthly change)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Slow titration; max effect at 3m, 1-2pt on MMSE; contraindicated in urinary retention; avoid with other cholinomimetic drugs (TCAs, Paxil)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Cognitive Enhancers",
+      "subCat": "",
+      "medName": "Rivastigmine (Exelon)",
+      "indications": [
+        {
+          "indication": "mild-moderate impairment (MMSE 10-26) in Alzheimers",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "++GI distress (nausea, vomiting, diarrhea, anorexia, weight loss)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizzy",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "vivid dreams",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "decreased weight",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "Parasympathetic (decreased heart rate, decreased blood pressure, bronchospasm)",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "increased ulcer risk",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "1.5mg BID",
+      "doseInitComment": "",
+      "doseRange": "3-6mg BID",
+      "doseRangeComment": "",
+      "maxDose": "12mg slow titration (monthly change)",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Slow titration; max effect at 3m, 1-2pt on MMSE; contraindicated in urinary retention; avoid with other cholinomimetic drugs (TCAs, Paxil)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Mood Stabilizer",
+      "subCat": "",
+      "medName": "Lithium",
+      "indications": [
+        {
+          "indication": "Bipolar mania/MDE  (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea, vomiting)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "increased weight gain",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "tremor",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "decreased thyroid function",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "300mg BID",
+      "doseInitComment": "",
+      "doseRange": "300mg BID-600mg BID",
+      "doseRangeComment": "Target serum level: 0.8-1.2 (acute); 0.6-0.8 (maint)",
+      "maxDose": "1800mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "Chronic renal failure, lithium toxicity",
+      "misc": "decreased suicide",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Mood Stabilizer",
+      "subCat": "",
+      "medName": "Valproate (Divalproex)",
+      "indications": [
+        {
+          "indication": "Mania (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea, vomiting)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sedation",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "increased weight gain",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "dizziness",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "decreased white blood cell count",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "steven-johnson syndrome",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "250mg BID",
+      "doseInitComment": "",
+      "doseRange": "750-1500mg",
+      "doseRangeComment": "Target serum level: 400-700µmol/L",
+      "maxDose": "3000mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "pancreatitis, hepatitis, neural tube defects (in pregancy)",
+      "misc": "increases other drug levels",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Mood Stabilizer",
+      "subCat": "",
+      "medName": "Carbamazepine (tegretol)",
+      "indications": [
+        {
+          "indication": "Mania (2nd line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea, vomiting)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "decreased weight (decreased appetite)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizziness",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "CNS",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "decreased thyroid function",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "steven-johnson syndrome",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "hepatitis",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "neural tube defects",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "100mg BID",
+      "doseInitComment": "",
+      "doseRange": "300-1200mg",
+      "doseRangeComment": "Target serum level: 17-50µmol/L",
+      "maxDose": "1200mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "decreased white blood cell count",
+      "misc": "decreases other drug levels",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Mood Stabilizer",
+      "subCat": "",
+      "medName": "Lamotrigine (Lamictal)",
+      "indications": [
+        {
+          "indication": "BP MDE & maintenance (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress (nausea. vomiting)",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizziness",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "diplopia",
+          "modifier": -1
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "25mg",
+      "doseInitComment": "",
+      "doseRange": "50-250mg",
+      "doseRangeComment": "",
+      "maxDose": "400mg BID",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "steven-johnson syndrome",
+      "misc": "NOT effective for acute mania",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Naloxone (Narcan)",
+      "indications": [
+        {
+          "indication": "Opioid overdose",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Sweating",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "restlessness",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "",
+      "doseInitComment": "",
+      "doseRange": "0.4mg (IV,IM,SC), q2-3m",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Repeat until response",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Methadone",
+      "indications": [
+        {
+          "indication": "Opioid use disorder",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "nausea",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "vomiting",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "constipation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "tolerance",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "Respiratory and cardiovascular depression",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "5-30mg/day",
+      "doseInitComment": "5-10mg/day start if no tolerance, 20-30mg/day start if known tolerance. Increase by 5-10mg every 5-7 days",
+      "doseRange": "60-160mg",
+      "doseRangeComment": "",
+      "maxDose": "No theoretical minimum or maximum dose",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Source: BC Centre on Substance Use (2017)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Buphrenorphine/naloxone (Suboxone)",
+      "indications": [
+        {
+          "indication": "Opioid use disorder",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Headache",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "pain",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sweating",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "4mg qdaily-TID",
+      "doseInitComment": "",
+      "doseRange": "8-24mg",
+      "doseRangeComment": "",
+      "maxDose": "24mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Day 1: repeated 2 or 4mg doses, until withdrawal symptoms gone (max 12)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Varenicline (Champix)",
+      "indications": [
+        {
+          "indication": "Nicotine use disorder (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "nausea",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "0.5mg qdaily x3days; then 0.5mg BID x4days",
+      "doseInitComment": "",
+      "doseRange": "0.5-1.0mg BID",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Bupropion (Zyban)",
+      "indications": [
+        {
+          "indication": "Nicotine use disorder",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "agitation",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "150mg qdaily",
+      "doseInitComment": "Start 1-2 weeks before quitting smoking",
+      "doseRange": "150mg BID",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Naltrexone (ReVia)",
+      "indications": [
+        {
+          "indication": "AUD (1st line monotherapy)",
+          "modifier": 0
+        },
+        {
+          "indication": "opioid disorder",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "GI distress",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "dizziness",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "abdominal pain",
+          "modifier": 0
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "opioid withdrawal",
+          "modifier": 0
+        },
+        {
+          "severeEffect": "hepatoxicity",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "25-50mg",
+      "doseInitComment": "25mg for F (risk of SEs), 50mg for M",
+      "doseRange": "50mg",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated if liver disease, opioid use",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Acamprosate",
+      "indications": [
+        {
+          "indication": "AUD (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "diarrhea",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "sedation",
+          "modifier": 0
+        },
+        {
+          "sideEffect": "Headaches",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "irritability",
+          "modifier": -1
+        }
+      ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "333mg TID",
+      "doseInitComment": "",
+      "doseRange": "666mg TID",
+      "doseRangeComment": "",
+      "maxDose": "1998mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Contraindicated if renal failure (CrCl <30ml/min)",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Disulfram (Antabuse)",
+      "indications": [
+        {
+          "indication": "AUD (1st line monotherapy)",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [
+        {
+          "sideEffect": "Increased ALT/ALP",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "neuropathy",
+          "modifier": -1
+        },
+        {
+          "sideEffect": "Increased Blood pressure",
+          "modifier": -1
+        }
+      ],
+      "severeEffects": [
+        {
+          "severeEffect": "acute hepatotoxicity (may be fatal, rare)",
+          "modifier": 0
+        }
+      ],
+      "frequency": "",
+      "doseInit": "500mg qam",
+      "doseInitComment": "start at 500mg qAM for 1-2 weeks, then reduce to 250mg qAM",
+      "doseRange": "250mg qam",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "Wait 12hr after last drink before start",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Addiction Med",
+      "subCat": "",
+      "medName": "Thiamine",
+      "indications": [
+        {
+          "indication": "ETOH withdrawal",
+          "modifier": 0
+        }
+      ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "100mg TID IM/IV x3d, then 250mg qdaily PO (once eating)",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    }
+  ,
+  
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Dantrolene (IV)",
+      "indications": [
+    {
+      "indication": "NMS",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "1mg/kgq6h prn",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "10mg/kg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "muscle relaxant",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Bromocryptine (PO)",
+      "indications": [
+    {
+      "indication": "NMS",
+      "modifier": 0
+    },
+    {
+      "indication": "increased prolactin",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [
+    {
+      "sideEffect": "may worsen psychosis",
+      "modifier": 0
+    }
+  ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "2.5mg",
+      "doseInitComment": "",
+      "doseRange": "2.5-15mg (divided) doses",
+      "doseRangeComment": "",
+      "maxDose": "30mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "dopamine agonist",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Benztropine (Cogentin)",
+      "indications": [
+    {
+      "indication": "dystonic reaction",
+      "modifier": 0
+    },
+    {
+      "indication": "parkinsonism",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [
+    {
+      "sideEffect": "dizziness",
+      "modifier": 0
+    },
+    {
+      "sideEffect": "sedation",
+      "modifier": 0
+    },
+    {
+      "sideEffect": "blurred vision",
+      "modifier": 0
+    }
+  ],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "1-2mg BID PO/IM/IV",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "anticholinergic, worsens tardive dyskinesia",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Diphenhydramine (Benadryl)",
+      "indications": [
+    {
+      "indication": "Dystonic reaction",
+      "modifier": 0
+    },
+    {
+      "indication": "insomnia",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [
+    {
+      "sideEffect": "Sedation",
+      "modifier": 0
+    },
+    {
+      "sideEffect": "dizziness",
+      "modifier": 0
+    },
+    {
+      "sideEffect": "urinary retention",
+      "modifier": 0
+    }
+  ],
+      "severeEffects": [
+    {
+      "severeEffect": "decreased motor coordination",
+      "modifier": 0
+    },
+    {
+      "severeEffect": "decreased heart rate",
+      "modifier": 0
+    },
+    {
+      "severeEffect": "confusion",
+      "modifier": 0
+    }
+  ],
+      "frequency": "",
+      "doseInit": "25-50q4h PO/IM/IV",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "400mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "antihistamine, non-addicting for insomnia",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Amantadine",
+      "indications": [
+    {
+      "indication": "parkinsonism",
+      "modifier": 0
+    },
+    {
+      "indication": "increased prolactin",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "100mg qdaily-BID",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "300mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "NMDA antagonist",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Atropine drops (SL)",
+      "indications": [
+    {
+      "indication": "Sialorrhea",
+      "modifier": 0
+    }
+  ],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "1-2 drops qdaily-BID",
+      "doseInitComment": "",
+      "doseRange": "",
+      "doseRangeComment": "",
+      "maxDose": "",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "anticholinergic",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    },
+    {
+      "cat": "Side Effect Meds",
+      "subCat": "",
+      "medName": "Sildenafil (Viagra)",
+      "indications": [],
+      "indicationsComment": "",
+      "sideEffects": [],
+      "severeEffects": [],
+      "frequency": "",
+      "doseInit": "50mg",
+      "doseInitComment": "",
+      "doseRange": "25-100mg",
+      "doseRangeComment": "",
+      "maxDose": "100mg",
+      "maxDoseForKids": "",
+      "blackBoxWarning": "",
+      "misc": "take before intercourse",
+      "miscComment": "",
+      "equiv": "",
+      "amphWorkUp": "",
+      "mphWorkUp": ""
+    }
+   
+  ]
