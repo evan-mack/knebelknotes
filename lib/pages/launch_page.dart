@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/pages/guidelines_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import 'package:knebelknotes/pages/home_page.dart';
@@ -23,7 +24,7 @@ class LaunchPageState extends State<LaunchPage> {
   List<Widget> _buildScreens() {
     return [
       HomePage(_goToPage),
-      Text('Guidlines'),
+      GuidelinesPage(),
       ClassesPage(),
       ComparisonsPage(),
       MedicationsPage()

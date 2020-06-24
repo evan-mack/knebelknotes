@@ -38,11 +38,9 @@ class MedicationsPageState extends State<MedicationsPage> {
     return PlatformScaffold(
       appBar: PlatformAppBar(
         title: !isSearching
-            ? Center(
-                child: Text('Medications'),
-              )
+            ? Text('Medications')
             : TextField(
-              autofocus: true,
+                autofocus: true,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
@@ -51,6 +49,9 @@ class MedicationsPageState extends State<MedicationsPage> {
                 ),
                 controller: _controller,
               ),
+        material: (_, __) => MaterialAppBarData(
+          centerTitle: true,
+        ),
         trailingActions: <Widget>[
           isSearching
               ? Row(
@@ -97,74 +98,79 @@ class MedicationsPageState extends State<MedicationsPage> {
               child: PlatformCircularProgressIndicator(),
             );
           else
-            return ListView.builder(
-              itemCount: snapshot.data.length,
-              itemBuilder: (context, index) {
-                return _searchItem == null || _searchItem == ""
-                    ? Card(
-                        child: ListTile(
-                            title: Text('${snapshot.data[index].medName}'),
-                            subtitle: snapshot.data[index].subCat == ""
-                                ? Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Text('${snapshot.data[index].cat}'),
-                                      Text('')
-                                    ],
-                                  )
-                                : Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Text('${snapshot.data[index].subCat}'),
-                                      Text('${snapshot.data[index].cat}'),
-                                    ],
-                                  ),
-                            trailing: Icon(Icons.navigate_next),
-                            onTap: () => Navigator.of(context).push(
-                                  platformPageRoute(
-                                    context: context,
-                                    builder: (_) =>
-                                        MedProfilePage(snapshot.data[index]),
-                                  ),
-                                ),
-                            dense: true),
-                      )
-                    : snapshot.data[index].medName
-                            .toLowerCase()
-                            .contains(_searchItem.toLowerCase())
-                        ? Card(
-                            child: ListTile(
-                                title: Text('${snapshot.data[index].medName}'),
-                                subtitle: snapshot.data[index].subCat == ""
-                                    ? Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        children: <Widget>[
-                                          Text('${snapshot.data[index].cat}'),
-                                          Text('')
-                                        ],
-                                      )
-                                    : Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        children: <Widget>[
-                                          Text(
-                                              '${snapshot.data[index].subCat}'),
-                                          Text('${snapshot.data[index].cat}'),
-                                        ],
-                                      ),
-                                trailing: Icon(Icons.navigate_next),
-                                onTap: () => Navigator.of(context).push(
-                                      platformPageRoute(
-                                        context: context,
-                                        builder: (_) => MedProfilePage(
-                                            snapshot.data[index]),
-                                      ),
+            return Scrollbar(
+              child: ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (context, index) {
+                  return _searchItem == null || _searchItem == ""
+                      ? Card(
+                          child: ListTile(
+                              title: Text('${snapshot.data[index].medName}'),
+                              subtitle: snapshot.data[index].subCat == ""
+                                  ? Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text('${snapshot.data[index].cat}'),
+                                        Text('')
+                                      ],
+                                    )
+                                  : Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text('${snapshot.data[index].subCat}'),
+                                        Text('${snapshot.data[index].cat}'),
+                                      ],
                                     ),
-                                dense: true),
-                          )
-                        : Container();
-              },
+                              trailing: Icon(Icons.navigate_next),
+                              onTap: () => Navigator.of(context).push(
+                                    platformPageRoute(
+                                      context: context,
+                                      builder: (_) =>
+                                          MedProfilePage(snapshot.data[index]),
+                                    ),
+                                  ),
+                              dense: true),
+                        )
+                      : snapshot.data[index].medName
+                              .toLowerCase()
+                              .contains(_searchItem.toLowerCase())
+                          ? Card(
+                              child: ListTile(
+                                  title:
+                                      Text('${snapshot.data[index].medName}'),
+                                  subtitle: snapshot.data[index].subCat == ""
+                                      ? Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: <Widget>[
+                                            Text('${snapshot.data[index].cat}'),
+                                            Text('')
+                                          ],
+                                        )
+                                      : Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: <Widget>[
+                                            Text(
+                                                '${snapshot.data[index].subCat}'),
+                                            Text('${snapshot.data[index].cat}'),
+                                          ],
+                                        ),
+                                  trailing: Icon(Icons.navigate_next),
+                                  onTap: () => Navigator.of(context).push(
+                                        platformPageRoute(
+                                          context: context,
+                                          builder: (_) => MedProfilePage(
+                                              snapshot.data[index]),
+                                        ),
+                                      ),
+                                  dense: true),
+                            )
+                          : Container();
+                },
+              ),
             );
         },
       ),

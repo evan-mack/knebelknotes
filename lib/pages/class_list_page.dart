@@ -8,6 +8,25 @@ class ClassList extends StatelessWidget {
   final String cat;
   ClassList(this.cat);
 
+  _buildMedByUtility() {
+    return Column(
+      children: <Widget>[
+        Card(
+          child: ListTile(
+            title: Text('Managing Substance Use'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            title: Text('Managing Side Effects'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        ),
+      ],
+    );
+  }
+
   _buildMedByClass() {
     return FutureBuilder(
       future: MedicationDao.md.getMedByClass(cat),

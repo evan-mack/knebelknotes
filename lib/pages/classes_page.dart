@@ -5,6 +5,27 @@ import 'package:knebelknotes/data/medication_dao.dart';
 import 'package:knebelknotes/pages/class_list_page.dart';
 
 class ClassesPage extends StatelessWidget {
+
+  _buildUtilityList() {
+    return Column(
+      children: <Widget> [
+        Card(
+          child: ListTile(
+            title: Text('Managing Substance Use'),
+            trailing: Icon(Icons.navigate_next),
+            dense: true,
+          )
+        ),
+        Card(
+          child: ListTile (
+            title: Text('Managing Side Effects'),
+            trailing: Icon(Icons.navigate_next),
+            dense: true,
+          )
+        )
+      ]
+    );
+  }
   _buildClassList() {
     return FutureBuilder(
         future: MedicationDao.md.getAllCategories(),
@@ -12,24 +33,25 @@ class ClassesPage extends StatelessWidget {
           if (!snapshot.hasData) {
             return Center(child: PlatformCircularProgressIndicator());
           } else {
-            return ListView.separated(
-              separatorBuilder: (BuildContext context, int index) => Divider(),
+            return ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  title: Text(snapshot.data[index]),
-                  dense: true,
-                  onTap: () {
-                    Navigator.of(context).push(
-                      platformPageRoute(
-                        context: context,
-                        builder: (_) => ClassList(
-                          snapshot.data[index],
+                return Card(
+                  child: ListTile(
+                    title: Text(snapshot.data[index]),
+                    dense: true,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        platformPageRoute(
+                          context: context,
+                          builder: (_) => ClassList(
+                            snapshot.data[index],
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                  trailing: Icon(Icons.navigate_next),
+                      );
+                    },
+                    trailing: Icon(Icons.navigate_next),
+                  ),
                 );
               },
             );
@@ -63,7 +85,7 @@ class ClassesPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: <Widget>[_buildClassList(), Text('Utility')],
+          children: <Widget>[_buildClassList(), _buildUtilityList()],
         ),
       ),
     );

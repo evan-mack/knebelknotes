@@ -12,16 +12,55 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  @override
-  @override
-  Widget build(context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Center(
-          child: Text('Knebel Knotes'),
-        ),
-      ),
-      body: Column(
+
+  _aboutTheApp() {
+    return showPlatformDialog(
+      context: context,
+      builder: (_) => PlatformAlertDialog(
+        title: Text('About the App'),
+        content: Text('Info About the App'),
+        actions: <Widget>[
+          PlatformDialogAction(
+            child: PlatformText('Ok'),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(),
+          )
+        ],
+      )
+    );
+  }
+
+  _disclaimer() {
+    return showPlatformDialog(
+      context: context,
+      builder: (_) => PlatformAlertDialog(
+        title: Text('Disclaimer'),
+        content: Text('Disclaimer Text Goes here'),
+        actions: <Widget>[
+          PlatformDialogAction(
+            child: PlatformText('I Accept'),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(),
+          )
+        ],
+      )
+    );
+  }
+  _sources() {
+    return showPlatformDialog(
+      context: context,
+      builder: (_) => PlatformAlertDialog(
+        title: Text('Sources'),
+        content: Text('Sources Text Goes here'),
+        actions: <Widget>[
+          PlatformDialogAction(
+            child: PlatformText('Ok'),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(),
+          )
+        ],
+      )
+    );
+  }
+  _buildBody() {
+    return Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           ListTile(
@@ -63,7 +102,9 @@ class HomePageState extends State<HomePage> {
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
+                    
                   ),
+                  onTap: () => _aboutTheApp(),
                 ),
                 Container(
                   color: Colors.white,
@@ -78,6 +119,7 @@ class HomePageState extends State<HomePage> {
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
+                  onTap: () => _disclaimer(),
                 ),
                 Container(
                   color: Colors.white,
@@ -92,12 +134,24 @@ class HomePageState extends State<HomePage> {
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
+                  onTap: () => _sources(),
                 ),
               ],
             ),
           ),
         ],
+      );
+  }
+
+  @override
+  Widget build(context) {
+    return PlatformScaffold(
+      appBar: PlatformAppBar(
+        title: Center(
+          child: Text('Knebel Knotes'),
+        ),
       ),
+      body: _buildBody()
     );
   }
 }

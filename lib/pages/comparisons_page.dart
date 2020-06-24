@@ -2,6 +2,50 @@ import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class ComparisonsPage extends StatelessWidget {
+  _buildSideEffectComparisonList() {
+    return Column(
+      children: <Widget>[
+        Card(
+          child: ListTile(
+            title: Text('Antipsychotics'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            title: Text('Mood Stabilizers'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        )
+      ],
+    );
+  }
+
+  _buildEquivalencyComparisonList() {
+    return Column(
+      children: <Widget>[
+        Card(
+          child: ListTile(
+            title: Text('Antipsychotics'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            title: Text('Benzodiazapines'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            title: Text('Stimulants (for ADHD'),
+            trailing: Icon(Icons.navigate_next),
+          ),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -28,7 +72,10 @@ class ComparisonsPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: <Widget>[Text('SideEffects'), Text('Equivalency')],
+          children: <Widget>[
+            _buildSideEffectComparisonList(),
+            _buildEquivalencyComparisonList()
+          ],
         ),
       ),
     );
