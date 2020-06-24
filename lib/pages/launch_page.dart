@@ -7,6 +7,7 @@ import 'package:knebelknotes/pages/home_page.dart';
 import 'package:knebelknotes/repo/medications_repo.dart';
 import 'package:knebelknotes/pages/medications_page.dart';
 import 'package:knebelknotes/pages/comparisons_page.dart';
+import 'package:knebelknotes/pages/classes_page.dart';
 
 final materialThemeData = ThemeData();
 
@@ -23,7 +24,7 @@ class LaunchPageState extends State<LaunchPage> {
     return [
       HomePage(_goToPage),
       Text('Guidlines'),
-      Text('Classes'),
+      ClassesPage(),
       ComparisonsPage(),
       MedicationsPage()
     ];

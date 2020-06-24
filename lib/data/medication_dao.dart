@@ -32,10 +32,9 @@ class MedicationDao {
   }
 
   Future deleteAll() async {
-    await _medicationStore.delete(
-      await _db
-    );
+    await _medicationStore.delete(await _db);
   }
+
   Future<List<Medication>> getAllSortedByName() async {
     final finder = Finder(sortOrders: [
       SortOrder('medName'),
@@ -49,6 +48,37 @@ class MedicationDao {
     return recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
       medication.id = snapshot.key;
+      return medication;
+    }).toList();
+  }
+
+  Future<List<String>> getAllCategories() async {
+    final finder = Finder(sortOrders: [SortOrder('cat')]);
+    
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder: finder
+    );
+
+    var cat = recordSnapshots.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+      return medication.cat;
+    }).toSet();
+
+    return cat.toList();
+  }
+
+
+  Future<List<Medication>> getMedByClass(String cat) async{
+    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('medName')]);
+
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder:  finder
+    );
+
+    return recordSnapshots.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
       return medication;
     }).toList();
   }

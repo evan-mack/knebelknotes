@@ -17,9 +17,10 @@ class HomePageState extends State<HomePage> {
   Widget build(context) {
     return PlatformScaffold(
       appBar: PlatformAppBar(
-          title: Center(
-        child: Text('Knebel Knotes'),
-      )),
+        title: Center(
+          child: Text('Knebel Knotes'),
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
