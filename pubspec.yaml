@@ -37,6 +37,7 @@ dev_dependencies:
   dio: ^3.0.9
   flutter_platform_widgets: ^0.50.1
   persistent_bottom_nav_bar: ^1.5.5
+  easy_rich_text: ^0.2.4
 
 
 

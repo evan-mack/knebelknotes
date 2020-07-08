@@ -93,7 +93,7 @@ class GuidelinesPage extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(75),
+          preferredSize: Size.fromHeight(56),
           child: PlatformAppBar(
             title: Text('Disorders'),
             material: (_, __) => MaterialAppBarData(

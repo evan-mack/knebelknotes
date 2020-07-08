@@ -4,6 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:knebelknotes/data/medication.dart';
+import 'package:knebelknotes/pages/comparison_tables/adhd_table.dart';
+import 'package:knebelknotes/pages/comparison_tables/antipsychotic_chart.dart';
+
+
+
+//TODO
+//Add links to comparison charts
 
 class MedProfilePage extends StatefulWidget {
   final Medication med;
@@ -84,6 +91,27 @@ class MedProfilePageState extends State<MedProfilePage> {
       ),
     );
   }
+  _getADHDChart() {
+    return ListTile(
+      title: Text('Comparison Chart'),
+      trailing: Icon(Icons.navigate_next),
+       onTap: () => Navigator.of(context).push(
+        platformPageRoute(
+            context: context, builder: (_) => ADHDChart()),
+      ),
+    );
+  }
+
+  _getAntipsychoticChart() {
+    return ListTile(
+      title: Text('Comparison Chart'),
+      trailing: Icon(Icons.navigate_next),
+      onTap: () => Navigator.of(context).push(
+        platformPageRoute(
+            context: context, builder: (_) => AntipsychoticChart()),
+      ),
+    );
+  }
 
   _getBlackBoxWarning() {
     return ExpansionTile(
@@ -101,6 +129,7 @@ class MedProfilePageState extends State<MedProfilePage> {
 
   _getWorkup() {
     return ExpansionTile(
+      initiallyExpanded: true,
       title: Text('Work Up'),
       children: <Widget>[
         ListTile(
@@ -114,6 +143,7 @@ class MedProfilePageState extends State<MedProfilePage> {
 
   _getMisc() {
     return ExpansionTile(
+      initiallyExpanded: true,
       title: Text('Miscellaneous Info.'),
       children: <Widget>[
         ListTile(
@@ -167,6 +197,7 @@ class MedProfilePageState extends State<MedProfilePage> {
     String title =
         widget.med.indications.length > 1 ? 'Indications' : 'Indication';
     return ExpansionTile(
+      initiallyExpanded: true,
       title: Text(title),
       leading: CircleAvatar(
         backgroundColor: Colors.blue,
@@ -190,6 +221,7 @@ class MedProfilePageState extends State<MedProfilePage> {
     String title =
         widget.med.sideEffects.length > 1 ? 'Side Effects' : 'Side Effect';
     return ExpansionTile(
+      initiallyExpanded: true,
       title: Text(title),
       leading: CircleAvatar(
         backgroundColor: Colors.blue,
@@ -214,6 +246,7 @@ class MedProfilePageState extends State<MedProfilePage> {
         ? 'Severe Effects'
         : 'Severe Effect';
     return ExpansionTile(
+      initiallyExpanded: true,
       title: Text(title),
       leading: CircleAvatar(
         backgroundColor: Colors.blue,
@@ -243,11 +276,11 @@ class MedProfilePageState extends State<MedProfilePage> {
           widget.med.subCat != ""
               ? Text(
                   widget.med.subCat + ' ' + widget.med.cat,
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: 12),
                 )
               : Text(
                   widget.med.cat,
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: 12),
                 )
         ],
       ),
@@ -309,6 +342,8 @@ class MedProfilePageState extends State<MedProfilePage> {
       if (widget.med.sideEffects.length != 0) _buildSideEffects(),
       if (widget.med.severeEffects.length != 0) _buildSevereEffects(),
       if (widget.med.misc != '') _getMisc(),
+      if (widget.med.cat == 'Antipsychotic' && widget.med.subCat == 'Typical') _getAntipsychoticChart(),
+      if (widget.med.cat == 'ADHD') _getADHDChart(),
       if (widget.med.amphWorkUp != '' || widget.med.mphWorkUp != '')
         _getWorkup(),
     ];

@@ -6,8 +6,7 @@ import 'package:knebelknotes/data/medication_dao.dart';
 class MedicationsRepo {
   Future<List<Medication>> fetchMedicationData() async {
     final String meds = await rootBundle.loadString('assets/medication_json.json');
-    //final medList = medicationFromJson(meds);
-
+    
    // medList.forEach((med) => MedicationDao.md.insert(med));
     MedicationDao.md.deleteAll();
     return (medicationFromJson(meds)).map((medication) {

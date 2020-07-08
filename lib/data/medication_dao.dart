@@ -70,7 +70,7 @@ class MedicationDao {
 
 
   Future<List<Medication>> getMedByClass(String cat) async{
-    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('medName')]);
+    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
 
     final recordSnapshots = await _medicationStore.find(
       await _db,
@@ -81,5 +81,51 @@ class MedicationDao {
       final medication = Medication.fromMap(snapshot.value);
       return medication;
     }).toList();
+  }
+
+  Future<List<String>> getAllSubCategories(String cat) async {
+    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('subCat')]);
+
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder: finder
+    );
+
+    var subCat = recordSnapshots.map((snapshot){
+      final medication = Medication.fromMap(snapshot.value);
+      return medication.subCat;
+    }).toSet();
+    return subCat.toList();
+  }
+
+
+   Future<List<Medication>> getMedBySubCategory(String subCat) async{
+    final finder = Finder(filter: Filter.equals('subCat', subCat), sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
+
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder:  finder
+    );
+
+    return recordSnapshots.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+      return medication;
+    }).toList();
+  }
+
+  Future<Medication> getMedByName(String med) async {
+    final finder = Finder(filter: Filter.equals('medName', med));
+
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder:  finder
+    );
+
+    var medication = recordSnapshots.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+      return medication;
+    }).toList();
+
+    return medication[0];
   }
 }

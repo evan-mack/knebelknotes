@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/data/medication.dart';
 
 import 'package:knebelknotes/data/medication_dao.dart';
 import 'package:knebelknotes/pages/med_profile_page.dart';
@@ -8,22 +9,141 @@ class ClassList extends StatelessWidget {
   final String cat;
   ClassList(this.cat);
 
-  _buildMedByUtility() {
+  _buildMedBySubClassList(String item) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Card(
-          child: ListTile(
-            title: Text('Managing Substance Use'),
-            trailing: Icon(Icons.navigate_next),
+        ExpansionTile(
+          initiallyExpanded: true,
+          title: Text(
+            item,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.blue
+            ),
           ),
-        ),
-        Card(
-          child: ListTile(
-            title: Text('Managing Side Effects'),
-            trailing: Icon(Icons.navigate_next),
-          ),
+          children: <Widget>[
+            FutureBuilder(
+              future: MedicationDao.md.getMedBySubCategory(item),
+              builder: (BuildContext context, AsyncSnapshot snapshot2) {
+                if (!snapshot2.hasData) {
+                  return Center(
+                    child: PlatformCircularProgressIndicator(),
+                  );
+                } else {
+                  return Column(
+                    children: <Widget>[
+                      for (int i = 0; i < snapshot2.data.length; i++)
+                        Column(
+                          children: <Widget>[
+                            ListTile(
+                              title: Text(snapshot2.data[i].medName),
+                              trailing: Icon(Icons.navigate_next),
+                              onTap: () => Navigator.of(context).push(
+                                platformPageRoute(
+                                  context: context,
+                                  builder: (_) =>
+                                      MedProfilePage(snapshot2.data[i]),
+                                ),
+                              ),
+                            ),
+                            if (i < snapshot2.data.length - 1) Divider()
+                          ],
+                        )
+                    ],
+                  );
+                }
+              },
+            )
+          ],
         ),
       ],
+    );
+  }
+
+  _buildMedBySubClass() {
+    return FutureBuilder(
+      future: MedicationDao.md.getAllSubCategories(cat),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (!snapshot.hasData) {
+          return Center(
+            child: PlatformCircularProgressIndicator(),
+          );
+        } else {
+          return SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                if (snapshot.data.length == 1)
+                  _buildMedByClass()
+                else
+                  for (var item in snapshot.data) _buildMedBySubClassList(item)
+                // Column(
+                //   mainAxisSize: MainAxisSize.min,
+                //   children: <Widget>[
+                //     Container(
+                //       height: 40,
+                //       decoration: BoxDecoration(
+                //         gradient: LinearGradient(
+                //             colors: [
+                //               Colors.white,
+                //               Colors.blueGrey[300],
+                //             ],
+                //             begin: Alignment.topCenter,
+                //             end: Alignment.bottomCenter),
+                //       ),
+                //       child: Center(
+                //         child: Text(
+                //           item,
+                //           style: TextStyle(
+                //               fontWeight: FontWeight.w600, fontSize: 18),
+                //         ),
+                //       ),
+                //     ),
+                //     FutureBuilder(
+                //         future: MedicationDao.md.getMedBySubCategory(item),
+                //         builder: (BuildContext context,
+                //             AsyncSnapshot snapshot2) {
+                //           if (!snapshot2.hasData) {
+                //             return Center(
+                //               child: PlatformCircularProgressIndicator(),
+                //             );
+                //           } else {
+                //             return Column(
+                //               children: <Widget>[
+                //                 for (int i = 0;
+                //                     i < snapshot2.data.length;
+                //                     i++)
+                //                   Column(
+                //                     children: <Widget>[
+                //                       ListTile(
+                //                         title:
+                //                             Text(snapshot2.data[i].medName),
+                //                         trailing: Icon(Icons.navigate_next),
+                //                         onTap: () =>
+                //                             Navigator.of(context).push(
+                //                           platformPageRoute(
+                //                             context: context,
+                //                             builder: (_) => MedProfilePage(
+                //                                 snapshot2.data[i]),
+                //                           ),
+                //                         ),
+                //                       ),
+                //                       if (i < snapshot2.data.length - 1)
+                //                         Divider()
+                //                     ],
+                //                   )
+                //               ],
+                //             );
+                //           }
+                //         })
+                //   ],
+                // )
+              ],
+            ),
+          );
+        }
+      },
     );
   }
 
@@ -37,18 +157,17 @@ class ClassList extends StatelessWidget {
           );
         } else {
           return ListView.builder(
+            shrinkWrap: true,
             itemCount: snapshot.data.length,
             itemBuilder: (BuildContext context, int index) {
-              return Card(
-                child: ListTile(
-                  title: Text(snapshot.data[index].medName),
-                  trailing: Icon(Icons.navigate_next),
-                  dense: true,
-                  onTap: () => Navigator.of(context).push(
-                    platformPageRoute(
-                      context: context,
-                      builder: (_) => MedProfilePage(snapshot.data[index]),
-                    ),
+              return ListTile(
+                title: Text(snapshot.data[index].medName),
+                subtitle: Text(snapshot.data[index].subCat),
+                trailing: Icon(Icons.navigate_next),
+                onTap: () => Navigator.of(context).push(
+                  platformPageRoute(
+                    context: context,
+                    builder: (_) => MedProfilePage(snapshot.data[index]),
                   ),
                 ),
               );
@@ -70,7 +189,7 @@ class ClassList extends StatelessWidget {
         cupertino: (_, __) =>
             CupertinoNavigationBarData(previousPageTitle: 'Drugs By Class'),
       ),
-      body: _buildMedByClass(),
+      body: _buildMedBySubClass(),
     );
   }
 }

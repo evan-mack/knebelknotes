@@ -16,3 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//Add favourites
+//Filters
+

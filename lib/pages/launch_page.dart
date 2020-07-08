@@ -24,8 +24,8 @@ class LaunchPageState extends State<LaunchPage> {
   List<Widget> _buildScreens() {
     return [
       HomePage(_goToPage),
-      GuidelinesPage(),
       ClassesPage(),
+      GuidelinesPage(),
       ComparisonsPage(),
       MedicationsPage()
     ];
@@ -40,14 +40,14 @@ class LaunchPageState extends State<LaunchPage> {
           inactiveColor: Colors.grey,
           isTranslucent: false),
       PersistentBottomNavBarItem(
-          icon: Icon(Icons.content_copy),
-          title: ('Guidelines'),
+          icon: Icon(Icons.local_pharmacy),
+          title: ('Classes'),
           activeColor: Colors.blue,
           inactiveColor: Colors.grey,
           isTranslucent: false),
       PersistentBottomNavBarItem(
-          icon: Icon(Icons.local_pharmacy),
-          title: ('Classes'),
+          icon: Icon(Icons.content_copy),
+          title: ('Guidelines'),
           activeColor: Colors.blue,
           inactiveColor: Colors.grey,
           isTranslucent: false),
@@ -91,20 +91,18 @@ class LaunchPageState extends State<LaunchPage> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-        controller: _controller,
-        screens: _buildScreens(),
-        items: _navBarItems(),
-        confineInSafeArea: true,
-        backgroundColor: Colors.white,
-        handleAndroidBackButtonPress: true,
-        onItemSelected: (int index) {
-          print(index);
-          setState(() {});
-        },
-        navBarStyle: NavBarStyle.style9,
-        itemCount: 5,
-      
+      controller: _controller,
+      screens: _buildScreens(),
+      items: _navBarItems(),
+      confineInSafeArea: true,
+      backgroundColor: Colors.white,
+      handleAndroidBackButtonPress: true,
+      onItemSelected: (int index) {
+        print(index);
+        setState(() {});
+      },
+      navBarStyle: NavBarStyle.style9,
+      itemCount: 5,
     );
-
   }
 }
