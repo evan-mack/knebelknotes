@@ -78,67 +78,7 @@ class ClassList extends StatelessWidget {
                   _buildMedByClass()
                 else
                   for (var item in snapshot.data) _buildMedBySubClassList(item)
-                // Column(
-                //   mainAxisSize: MainAxisSize.min,
-                //   children: <Widget>[
-                //     Container(
-                //       height: 40,
-                //       decoration: BoxDecoration(
-                //         gradient: LinearGradient(
-                //             colors: [
-                //               Colors.white,
-                //               Colors.blueGrey[300],
-                //             ],
-                //             begin: Alignment.topCenter,
-                //             end: Alignment.bottomCenter),
-                //       ),
-                //       child: Center(
-                //         child: Text(
-                //           item,
-                //           style: TextStyle(
-                //               fontWeight: FontWeight.w600, fontSize: 18),
-                //         ),
-                //       ),
-                //     ),
-                //     FutureBuilder(
-                //         future: MedicationDao.md.getMedBySubCategory(item),
-                //         builder: (BuildContext context,
-                //             AsyncSnapshot snapshot2) {
-                //           if (!snapshot2.hasData) {
-                //             return Center(
-                //               child: PlatformCircularProgressIndicator(),
-                //             );
-                //           } else {
-                //             return Column(
-                //               children: <Widget>[
-                //                 for (int i = 0;
-                //                     i < snapshot2.data.length;
-                //                     i++)
-                //                   Column(
-                //                     children: <Widget>[
-                //                       ListTile(
-                //                         title:
-                //                             Text(snapshot2.data[i].medName),
-                //                         trailing: Icon(Icons.navigate_next),
-                //                         onTap: () =>
-                //                             Navigator.of(context).push(
-                //                           platformPageRoute(
-                //                             context: context,
-                //                             builder: (_) => MedProfilePage(
-                //                                 snapshot2.data[i]),
-                //                           ),
-                //                         ),
-                //                       ),
-                //                       if (i < snapshot2.data.length - 1)
-                //                         Divider()
-                //                     ],
-                //                   )
-                //               ],
-                //             );
-                //           }
-                //         })
-                //   ],
-                // )
+            
               ],
             ),
           );
@@ -182,7 +122,7 @@ class ClassList extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlatformScaffold(
       appBar: PlatformAppBar(
-        title: Text(cat),
+        title: cat == 'Addiction Med' ? Text('Mood Stabilizers') : Text(cat),
         material: (_, __) => MaterialAppBarData(
           centerTitle: true,
         ),

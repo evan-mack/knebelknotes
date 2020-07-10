@@ -4,18 +4,35 @@ import 'package:flutter/material.dart';
 import 'package:knebelknotes/data/medication_dao.dart';
 import 'package:knebelknotes/pages/class_list_page.dart';
 
+//Move addiction/sideeffect meds to second tab. add indication to header for sideeffects
+
 class ClassesPage extends StatelessWidget {
-  _buildUtilityList() {
+
+  _buildUtilityList(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
           title: Text('Managing Substance Use'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+            MedicationDao.md.getMedByClass('Addiction Med').then((med) {
+              Navigator.of(context).push(platformPageRoute(
+                context: context, builder: (_) => ClassList('Addiction Med')
+              ));
+            })
+            },
         ),
         Divider(),
         ListTile(
           title: Text('Managing Side Effects'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+            MedicationDao.md.getMedByClass('Side Effect Meds').then((med) {
+              Navigator.of(context).push(platformPageRoute(
+                context: context, builder: (_) => ClassList('Side Effect Meds')
+              ));
+            })
+            },
         )
       ],
     );
@@ -79,7 +96,7 @@ class ClassesPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: <Widget>[_buildClassList(), _buildUtilityList()],
+          children: <Widget>[_buildClassList(), _buildUtilityList(context)],
         ),
       ),
     );

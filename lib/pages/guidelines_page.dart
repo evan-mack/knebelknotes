@@ -1,88 +1,136 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/pages/disorders/adjustment_list.dart';
+import 'package:knebelknotes/pages/disorders/bipolar1_list.dart';
+import 'package:knebelknotes/pages/disorders/bipolar2_list.dart';
+import 'package:knebelknotes/pages/disorders/gad_list.dart';
+import 'package:knebelknotes/pages/disorders/mdd_list.dart';
+import 'package:knebelknotes/pages/disorders/ocd_list.dart';
+import 'package:knebelknotes/pages/disorders/panic_list.dart';
+import 'package:knebelknotes/pages/disorders/phobia_list.dart';
+import 'package:knebelknotes/pages/disorders/ptsd_ist.dart';
+import 'package:knebelknotes/pages/disorders/sad_list.dart';
+import 'package:knebelknotes/pages/disorders/schizophrenia_list.dart';
 
 class GuidelinesPage extends StatelessWidget {
-  _buildMoodDisorders() {
+  _buildMoodDisorders(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
           title: Text('Major Depressive Disorder(MDD)'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+            Navigator.of(context).push(
+                platformPageRoute(context: context, builder: (_) => MDDList()))
+          },
         ),
         Divider(),
         ListTile(
-          title: Text('Bipolar I Disorder'),
-          trailing: Icon(Icons.navigate_next),
-        ),
+            title: Text('Bipolar I Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => Bipolar1List()))
+                }),
         Divider(),
         ListTile(
-          title: Text('Bipolar II Disorder'),
-          trailing: Icon(Icons.navigate_next),
-        )
+            title: Text('Bipolar II Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => Bipolar2List()))
+                })
       ],
     );
   }
 
-  _buildAnxietyDisorders() {
+  _buildAnxietyDisorders(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
-          title: Text('Generalized Anxiety Disorder (GAD)'),
-          trailing: Icon(Icons.navigate_next),
-        ),
+            title: Text('Generalized Anxiety Disorder (GAD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => GADList()))
+                }),
         Divider(),
         ListTile(
-          title: Text('Seasonal Affective Disorder (SAD)'),
-          trailing: Icon(Icons.navigate_next),
-        ),
+            title: Text('Seasonal Affective Disorder (SAD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => SADList()))
+                }),
         Divider(),
         ListTile(
-          title: Text('Panic Disorder'),
-          trailing: Icon(Icons.navigate_next),
-        ),
+            title: Text('Panic Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => PanicList()))
+                }),
         Divider(),
         ListTile(
-          title: Text('Phobic Disorder'),
-          trailing: Icon(Icons.navigate_next),
-        )
+            title: Text('Phobic Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => PhobiaList()))
+                })
       ],
     );
   }
 
-  
-  _buildPsychoticDisorders() {
+  _buildPsychoticDisorders(context) {
     return Column(
       children: <Widget>[
         ListTile(
           title: Text('Schizophrenia'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => SchizophreniaList()))
+                }
         )
       ],
     );
   }
 
-   _buildStressDisorders() {
+  _buildStressDisorders(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
           title: Text('Post-Traumatic Stress Disorder (PTSD)'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => PTSDList()))
+                }
         ),
         Divider(),
         ListTile(
           title: Text('Adjustment Disorder'),
           trailing: Icon(Icons.navigate_next),
+          onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => AdjustmentList()))
+                }
         )
       ],
     );
   }
-   _buildOtherDisorders() {
+
+  _buildOtherDisorders(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
-          title: Text('Obsessive-Compulsive Disorder (OCD)'),
-          trailing: Icon(Icons.navigate_next),
-        )
+            title: Text('Obsessive-Compulsive Disorder (OCD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => OCDList()))
+                })
       ],
     );
   }
@@ -113,11 +161,11 @@ class GuidelinesPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            _buildMoodDisorders(),
-            _buildAnxietyDisorders(),
-            _buildPsychoticDisorders(),
-            _buildStressDisorders(),
-            _buildOtherDisorders()
+            _buildMoodDisorders(context),
+            _buildAnxietyDisorders(context),
+            _buildPsychoticDisorders(context),
+            _buildStressDisorders(context),
+            _buildOtherDisorders(context)
           ],
         ),
       ),

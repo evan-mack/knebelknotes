@@ -1,16 +1,30 @@
 # knebelknotes
 
-A new Flutter project.
+A Psychiatric Medication Information App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Knebel Knotes App uses the following packages:
+    -Sembast
+    -Flutter platform widgets
+    -persistent bottom nav bar
+    -path provider
 
-A few resources to get you started if this is your first Flutter project:
+## Structure
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The following structure applies to the app:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+main.dart 
+-launch_page.dart
+--home_page.dart
+--classes_page.dart
+  --class_list_page.dart
+    --med_profile_page.dart
+--guidelines_page.dart
+  --/disorders 
+    --med_profile_page.dart
+--comparisons_page.dart
+  --/comparisons
+    --med_profile_page.dart
+--medications_page.dart
+  --med_profile_page.dart

@@ -53,8 +53,9 @@ class MedicationDao {
   }
 
   Future<List<String>> getAllCategories() async {
-    final finder = Finder(sortOrders: [SortOrder('cat')]);
     
+    final finder = Finder(filter: Filter.notEquals('cat', 'Side Effect Meds') & Filter.notEquals('cat', 'Mood Stabilizer'),sortOrders: [SortOrder('cat')]);
+       
     final recordSnapshots = await _medicationStore.find(
       await _db,
       finder: finder
@@ -125,7 +126,26 @@ class MedicationDao {
       final medication = Medication.fromMap(snapshot.value);
       return medication;
     }).toList();
-
+    if(medication.length > 0)
     return medication[0];
+    return null;
   }
+
+  Future<bool> medExists(String med) async {
+    final finder = Finder(filter: Filter.equals('medName', med));
+    final recordSnapshots = await _medicationStore.find(
+      await _db,
+      finder: finder
+    );
+
+    var medication = recordSnapshots.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+      return medication;
+    });
+    return medication.length >= 1;
+  }
+
+
 }
+
+

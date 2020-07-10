@@ -4,6 +4,8 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:knebelknotes/data/medication_dao.dart';
 import 'package:knebelknotes/pages/med_profile_page.dart';
 
+//Static column for generic names
+
 class MoodChart extends StatelessWidget {
   _buildDataRow(BuildContext context, String med, Icon gi, Icon sedation,
       Icon weight, Icon dizziness, String other,
