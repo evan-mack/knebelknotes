@@ -7,7 +7,6 @@ import 'package:knebelknotes/pages/class_list_page.dart';
 //Move addiction/sideeffect meds to second tab. add indication to header for sideeffects
 
 class ClassesPage extends StatelessWidget {
-
   _buildUtilityList(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -17,10 +16,10 @@ class ClassesPage extends StatelessWidget {
           onTap: () => {
             MedicationDao.md.getMedByClass('Addiction Med').then((med) {
               Navigator.of(context).push(platformPageRoute(
-                context: context, builder: (_) => ClassList('Addiction Med')
-              ));
+                  context: context,
+                  builder: (_) => ClassList('Addiction Med')));
             })
-            },
+          },
         ),
         Divider(),
         ListTile(
@@ -29,13 +28,36 @@ class ClassesPage extends StatelessWidget {
           onTap: () => {
             MedicationDao.md.getMedByClass('Side Effect Meds').then((med) {
               Navigator.of(context).push(platformPageRoute(
-                context: context, builder: (_) => ClassList('Side Effect Meds')
-              ));
+                  context: context,
+                  builder: (_) => ClassList('Side Effect Meds')));
             })
-            },
+          },
         )
       ],
     );
+  }
+
+  String _getCatName(String cat) {
+    switch (cat) {
+      case 'ADHD':
+        return 'ADHD Medications';
+        break;
+      case 'Addiction Med':
+        return 'Addictions Medications';
+        break;
+      case 'Antidepressent':
+        return 'Antidepressants';
+        break;
+      case 'Antipsychotic':
+        return 'Antipsychotics';
+        break;
+      case 'Side Effect Meds':
+        return 'Medications for Side Effects';
+        break;
+      default:
+        return cat;
+        break;
+    }
   }
 
   _buildClassList() {
@@ -45,13 +67,11 @@ class ClassesPage extends StatelessWidget {
           if (!snapshot.hasData) {
             return Center(child: PlatformCircularProgressIndicator());
           } else {
-            return ListView.separated(
-              separatorBuilder: (BuildContext context, int index) => Divider(),
+            return ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
-                  title: Text(snapshot.data[index]),
-                  
+                  title: Text(_getCatName(snapshot.data[index])),
                   onTap: () {
                     Navigator.of(context).push(
                       platformPageRoute(
@@ -72,33 +92,12 @@ class ClassesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(55),
-          child: PlatformAppBar(
-            title: Center(
-              child: Text('Drugs By'),
-            ),
-            material: (_, __) => MaterialAppBarData(
-              bottom: TabBar(tabs: [
-                Text(
-                  'Class',
-                  style: TextStyle(fontSize: 16),
-                ),
-                Text(
-                  'Use',
-                  style: TextStyle(fontSize: 16),
-                )
-              ]),
-            ),
+    return PlatformScaffold(
+        appBar: PlatformAppBar(
+          title: Center(
+            child: Text('Drugs By Class'),
           ),
         ),
-        body: TabBarView(
-          children: <Widget>[_buildClassList(), _buildUtilityList(context)],
-        ),
-      ),
-    );
+        body: _buildClassList());
   }
 }

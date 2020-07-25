@@ -77,6 +77,8 @@ _buildDataRows2(BuildContext context) {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               DataTable(
                 columns: _buildDataColumn(0),

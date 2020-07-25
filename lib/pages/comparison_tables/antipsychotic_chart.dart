@@ -37,124 +37,49 @@ class AntipsychoticChart extends StatelessWidget {
     );
   }
 
-  _buildRigtSide(BuildContext context) {
+  _customListTile(String drugName, BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 15, right: 15, top: 10),
+      child: SizedBox(
+        height: 30,
+        child: InkWell(
+          onTap: () {
+            MedicationDao.md.getMedByName(drugName).then((med) {
+              Navigator.of(context).push(platformPageRoute(
+                  context: context, builder: (_) => MedProfilePage(med)));
+            });
+          },
+          child: Container(
+            child: Row(
+              children: <Widget>[
+                Text(drugName),
+                Spacer(),
+                Icon(Icons.navigate_next)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  var medList = [
+    'Haloperidol (Haldol)',
+    'Flupenthixol (Fluanxol)',
+    'Fluphenazine (Prolixin)',
+    'Perphenazine (Trilafon)',
+    'Prochloperazine',
+    'Pericyazine (Neuleptil)',
+    'Zuclopenthixol (Clopixol)',
+    'Loxapine (Loxapac)',
+    'Methotrimeprazine (Nozinan)',
+    'Chlorpromazine (Largactil)'
+  ];
+  _buildRightSide(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        ListTile(
-            title: Text('Haloperidol (Haldol)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md.getMedByName('Haloperidol (Haldol)').then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Flupenthixol (Fluanxol)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Flupenthixol (Fluanxol)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Fluphenazine (Prolixin)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Fluphenazine (Prolixin)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Perphenazine (Trilafon)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Perphenazine (Trilafon)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Prochloperazine'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md.getMedByName('Prochloperazine').then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Pericyazine (Neuleptil)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Pericyazine (Neuleptil)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Zuclopenthixol (Clopixol)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Zuclopenthixol (Clopixol)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Loxapine (Loxapac)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md.getMedByName('Loxapine (Loxapac)').then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Methotrimeprazine (Nozinan)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Methotrimeprazine (Nozinan)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
-        ListTile(
-            title: Text('Chlorpromazine (Largactil)'),
-            trailing: Icon(Icons.navigate_next),
-            dense: true,
-            onTap: () {
-              MedicationDao.md
-                  .getMedByName('Chlorpromazine (Largactil)')
-                  .then((med) {
-                Navigator.of(context).push(platformPageRoute(
-                    context: context, builder: (_) => MedProfilePage(med)));
-              });
-            }),
+        for (var drug in medList) _customListTile(drug, context)
       ],
     );
   }
@@ -163,30 +88,31 @@ class AntipsychoticChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlatformScaffold(
       appBar: PlatformAppBar(
-        title: Text('Antiphsycotic Comparison'),
+        title: Center(child: Text('Antiphsycotic Comparison')),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.blue[300],
-                border: Border(
-                  bottom: BorderSide(width: 1),
-                ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.blue[300],
+              border: Border(
+                bottom: BorderSide(width: 1),
               ),
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Center(
-                  child: Text(
-                    'EPS: acute dystonia, parkinsonism, akithisia, tardive dyskiniesia',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Center(
+                child: Text(
+                  'EPS: acute dystonia, parkinsonism, akithisia, tardive dyskiniesia',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
-            Container(
+          ),
+          Expanded(
+            child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -198,28 +124,28 @@ class AntipsychoticChart extends StatelessWidget {
                   children: <Widget>[
                     _buildLeftSide(),
                     VerticalDivider(),
-                    Expanded(child: _buildRigtSide(context))
+                    Expanded(child: _buildRightSide(context))
                   ],
                 )),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.yellow[300],
-                border: Border(
-                  top: BorderSide(width: 1),
-                ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.yellow[300],
+              border: Border(
+                top: BorderSide(width: 1),
               ),
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Center(
-                  child: Text(
-                    'Anti-cholinergic, Anti-adrenergic, Anti-histamine',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Center(
+                child: Text(
+                  'Anti-cholinergic, Anti-adrenergic, Anti-histamine',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

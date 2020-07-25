@@ -24,7 +24,6 @@ class GuidelinesPage extends StatelessWidget {
                 platformPageRoute(context: context, builder: (_) => MDDList()))
           },
         ),
-        Divider(),
         ListTile(
             title: Text('Bipolar I Disorder'),
             trailing: Icon(Icons.navigate_next),
@@ -32,7 +31,6 @@ class GuidelinesPage extends StatelessWidget {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => Bipolar1List()))
                 }),
-        Divider(),
         ListTile(
             title: Text('Bipolar II Disorder'),
             trailing: Icon(Icons.navigate_next),
@@ -54,7 +52,6 @@ class GuidelinesPage extends StatelessWidget {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => GADList()))
                 }),
-        Divider(),
         ListTile(
             title: Text('Seasonal Affective Disorder (SAD)'),
             trailing: Icon(Icons.navigate_next),
@@ -62,7 +59,6 @@ class GuidelinesPage extends StatelessWidget {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => SADList()))
                 }),
-        Divider(),
         ListTile(
             title: Text('Panic Disorder'),
             trailing: Icon(Icons.navigate_next),
@@ -70,13 +66,33 @@ class GuidelinesPage extends StatelessWidget {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => PanicList()))
                 }),
-        Divider(),
         ListTile(
             title: Text('Phobic Disorder'),
             trailing: Icon(Icons.navigate_next),
             onTap: () => {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => PhobiaList()))
+                }),
+        ListTile(
+            title: Text('Obsessive-Compulsive Disorder (OCD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => OCDList()))
+                }),
+        ListTile(
+            title: Text('Post-Traumatic Stress Disorder (PTSD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => PTSDList()))
+                }),
+        ListTile(
+            title: Text('Adjustment Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
+                  Navigator.of(context).push(platformPageRoute(
+                      context: context, builder: (_) => AdjustmentList()))
                 })
       ],
     );
@@ -86,13 +102,12 @@ class GuidelinesPage extends StatelessWidget {
     return Column(
       children: <Widget>[
         ListTile(
-          title: Text('Schizophrenia'),
-          trailing: Icon(Icons.navigate_next),
-          onTap: () => {
+            title: Text('Schizophrenia'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => SchizophreniaList()))
-                }
-        )
+                })
       ],
     );
   }
@@ -101,22 +116,20 @@ class GuidelinesPage extends StatelessWidget {
     return Column(
       children: <Widget>[
         ListTile(
-          title: Text('Post-Traumatic Stress Disorder (PTSD)'),
-          trailing: Icon(Icons.navigate_next),
-          onTap: () => {
+            title: Text('Post-Traumatic Stress Disorder (PTSD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => PTSDList()))
-                }
-        ),
+                }),
         Divider(),
         ListTile(
-          title: Text('Adjustment Disorder'),
-          trailing: Icon(Icons.navigate_next),
-          onTap: () => {
+            title: Text('Adjustment Disorder'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => {
                   Navigator.of(context).push(platformPageRoute(
                       context: context, builder: (_) => AdjustmentList()))
-                }
-        )
+                })
       ],
     );
   }
@@ -138,7 +151,7 @@ class GuidelinesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 3,
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(56),
@@ -151,8 +164,6 @@ class GuidelinesPage extends StatelessWidget {
                   Text('Mood'),
                   Text('Anxiety'),
                   Text('Psychotic'),
-                  Text('Stress'),
-                  Text('Other'),
                 ],
               ),
               centerTitle: true,
@@ -164,8 +175,6 @@ class GuidelinesPage extends StatelessWidget {
             _buildMoodDisorders(context),
             _buildAnxietyDisorders(context),
             _buildPsychoticDisorders(context),
-            _buildStressDisorders(context),
-            _buildOtherDisorders(context)
           ],
         ),
       ),

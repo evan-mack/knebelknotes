@@ -9,6 +9,31 @@ class ClassList extends StatelessWidget {
   final String cat;
   ClassList(this.cat);
 
+  _getTitle(String medName) {
+    var title;
+    if (medName.contains('(') && medName.contains(')')) {
+      title = medName.split('(');
+      if (title[1].length < 4) {
+        title[0] = medName;
+        title[1] = ' ';
+      }
+      return Center(
+        child: Row(
+          children: <Widget>[
+            Text(title[0]),
+            Spacer(),
+            Text(title[1].substring(0, title[1].length - 1),
+                style: TextStyle(
+                  color: Colors.grey[800],
+                  fontSize: 14,
+                ))
+          ],
+        ),
+      );
+    } else
+      return Text(medName);
+  }
+
   _buildMedBySubClassList(String item) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -18,10 +43,7 @@ class ClassList extends StatelessWidget {
           title: Text(
             item,
             style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              color: Colors.blue
-            ),
+                fontSize: 18, fontWeight: FontWeight.w500, color: Colors.blue),
           ),
           children: <Widget>[
             FutureBuilder(
@@ -38,7 +60,7 @@ class ClassList extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             ListTile(
-                              title: Text(snapshot2.data[i].medName),
+                              title: _getTitle(snapshot2.data[i].medName),
                               trailing: Icon(Icons.navigate_next),
                               onTap: () => Navigator.of(context).push(
                                 platformPageRoute(
@@ -48,7 +70,6 @@ class ClassList extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            if (i < snapshot2.data.length - 1) Divider()
                           ],
                         )
                     ],
@@ -78,7 +99,6 @@ class ClassList extends StatelessWidget {
                   _buildMedByClass()
                 else
                   for (var item in snapshot.data) _buildMedBySubClassList(item)
-            
               ],
             ),
           );
@@ -101,8 +121,7 @@ class ClassList extends StatelessWidget {
             itemCount: snapshot.data.length,
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
-                title: Text(snapshot.data[index].medName),
-                subtitle: Text(snapshot.data[index].subCat),
+                title: _getTitle(snapshot.data[index].medName),
                 trailing: Icon(Icons.navigate_next),
                 onTap: () => Navigator.of(context).push(
                   platformPageRoute(

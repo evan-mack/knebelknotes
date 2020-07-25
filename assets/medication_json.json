@@ -324,7 +324,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Risperidone (Risperdal)",
     "indications": [
       {
@@ -385,7 +385,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Paliperidone (Invega)",
     "indications": [
       {
@@ -426,7 +426,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Olanzapine (Zyprexa)",
     "indications": [
       {
@@ -483,7 +483,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Ziprazadone (Zeldox)",
     "indications": [
       {
@@ -535,7 +535,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Clozapine (Clozaril)",
     "indications": [
       {
@@ -583,7 +583,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Quetiapine (Seroquel)",
     "indications": [
       {
@@ -659,7 +659,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Aripiprazole (Abilify)",
     "indications": [
       {
@@ -727,7 +727,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Brexpiprazole (Rexulti)",
     "indications": [
       {
@@ -759,7 +759,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Lurasidone (Latuda)",
     "indications": [
       {
@@ -808,7 +808,7 @@
   },
   {
     "cat": "Antipsychotic",
-    "subCat": "ATypical",
+    "subCat": "Atypical",
     "medName": "Asenapine (Saphris)",
     "indications": [
       {
@@ -850,7 +850,7 @@
     "blackBoxWarning": "Increased mortality in NCD related psychosis",
     "misc": "weight neutral, no food within 20mins",
     "miscComment": "",
-    "equiv": "link",
+    "equiv": "",
     "amphWorkUp": "",
     "mphWorkUp": ""
   },
@@ -4898,7 +4898,7 @@
     "medName": "Tranylcypromine (Parnate)",
     "indications": [
       {
-        "indication": "MDD with atypical features (3rd line monotherapy)",
+        "indication": "MDD with Atypical features (3rd line monotherapy)",
         "modifier": 0
       },
       {
@@ -4971,7 +4971,7 @@
     "medName": "Selegiline",
     "indications": [
       {
-        "indication": "MDD with atypical features (3rd line monotherapy)",
+        "indication": "MDD with Atypical features (3rd line monotherapy)",
         "modifier": 0
       },
       {
@@ -5048,7 +5048,7 @@
         "modifier": 0
       },
       {
-        "indication": "MDD with atypical features (3rd line monotherapy)",
+        "indication": "MDD with Atypical features (3rd line monotherapy)",
         "modifier": 0
       },
       {

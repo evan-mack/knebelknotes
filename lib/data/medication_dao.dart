@@ -53,13 +53,10 @@ class MedicationDao {
   }
 
   Future<List<String>> getAllCategories() async {
-    
-    final finder = Finder(filter: Filter.notEquals('cat', 'Side Effect Meds') & Filter.notEquals('cat', 'Mood Stabilizer'),sortOrders: [SortOrder('cat')]);
-       
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder: finder
-    );
+    final finder = Finder(sortOrders: [SortOrder('cat')]);
+
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
     var cat = recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
@@ -69,14 +66,13 @@ class MedicationDao {
     return cat.toList();
   }
 
+  Future<List<Medication>> getMedByClass(String cat) async {
+    final finder = Finder(
+        filter: Filter.equals('cat', cat),
+        sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
 
-  Future<List<Medication>> getMedByClass(String cat) async{
-    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
-
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder:  finder
-    );
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
     return recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
@@ -85,28 +81,26 @@ class MedicationDao {
   }
 
   Future<List<String>> getAllSubCategories(String cat) async {
-    final finder = Finder(filter: Filter.equals('cat', cat), sortOrders: [SortOrder('subCat')]);
+    final finder = Finder(
+        filter: Filter.equals('cat', cat), sortOrders: [SortOrder('subCat')]);
 
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder: finder
-    );
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
-    var subCat = recordSnapshots.map((snapshot){
+    var subCat = recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
       return medication.subCat;
     }).toSet();
     return subCat.toList();
   }
 
+  Future<List<Medication>> getMedBySubCategory(String subCat) async {
+    final finder = Finder(
+        filter: Filter.equals('subCat', subCat),
+        sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
 
-   Future<List<Medication>> getMedBySubCategory(String subCat) async{
-    final finder = Finder(filter: Filter.equals('subCat', subCat), sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
-
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder:  finder
-    );
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
     return recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
@@ -117,26 +111,21 @@ class MedicationDao {
   Future<Medication> getMedByName(String med) async {
     final finder = Finder(filter: Filter.equals('medName', med));
 
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder:  finder
-    );
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
     var medication = recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
       return medication;
     }).toList();
-    if(medication.length > 0)
-    return medication[0];
+    if (medication.length > 0) return medication[0];
     return null;
   }
 
   Future<bool> medExists(String med) async {
     final finder = Finder(filter: Filter.equals('medName', med));
-    final recordSnapshots = await _medicationStore.find(
-      await _db,
-      finder: finder
-    );
+    final recordSnapshots =
+        await _medicationStore.find(await _db, finder: finder);
 
     var medication = recordSnapshots.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
@@ -144,8 +133,4 @@ class MedicationDao {
     });
     return medication.length >= 1;
   }
-
-
 }
-
-

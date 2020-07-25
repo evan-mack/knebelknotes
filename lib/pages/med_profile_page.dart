@@ -2,12 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:knebelknotes/data/medication.dart';
 import 'package:knebelknotes/pages/comparison_tables/adhd_table.dart';
 import 'package:knebelknotes/pages/comparison_tables/antipsychotic_chart.dart';
-
-
+import 'package:knebelknotes/pages/comparison_tables/antipsychotic_equiv_table.dart';
+import 'package:knebelknotes/pages/comparison_tables/benzo_comparison.dart';
+import 'package:knebelknotes/pages/comparison_tables/mood_stabilizertable.dart';
 
 //TODO
 //Add links to comparison charts
@@ -47,17 +49,32 @@ class MedProfilePageState extends State<MedProfilePage> {
   }
 
   doseProfile(String title, String content, {String comment}) {
-    return Container(
-      child: ListTile(
-        title: Row(
-          children: <Widget>[
-            SizedBox(
-              width: MediaQuery.of(context).size.width / 3,
-              child: Card(
-                elevation: 0,
-                color: Colors.blue,
-                child: Container(
-                  margin: EdgeInsets.all(8),
+    return Padding(
+      padding: EdgeInsets.only(bottom: 10),
+      child: SizedBox(
+        width: (MediaQuery.of(context).size.width - 30) / 3,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blue,
+            ),
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Container(
+                height: 30,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(9),
+                    topRight: Radius.circular(9),
+                  ),
+                ),
+                child: Center(
                   child: Text(
                     title,
                     style: TextStyle(
@@ -69,35 +86,50 @@ class MedProfilePageState extends State<MedProfilePage> {
                   ),
                 ),
               ),
-            ),
-            Flexible(
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  content,
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 40,
+                ),
+                child: Center(
+                  child: Text(
+                    content,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-        subtitle: comment != null
-            ? Padding(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width / 3),
-                child: Text(comment),
-              )
-            : null,
-        dense: true,
       ),
     );
   }
+
   _getADHDChart() {
     return ListTile(
       title: Text('Comparison Chart'),
       trailing: Icon(Icons.navigate_next),
-       onTap: () => Navigator.of(context).push(
-        platformPageRoute(
-            context: context, builder: (_) => ADHDChart()),
+      onTap: () => Navigator.of(context).push(
+        platformPageRoute(context: context, builder: (_) => ADHDChart()),
+      ),
+    );
+  }
+
+  _getMoodChart() {
+    return ListTile(
+      title: Text('Comparison Chart'),
+      trailing: Icon(Icons.navigate_next),
+      onTap: () => Navigator.of(context).push(
+        platformPageRoute(context: context, builder: (_) => MoodChart()),
+      ),
+    );
+  }
+
+  _getBenzoChart() {
+    return ListTile(
+      title: Text('Comparison Chart'),
+      trailing: Icon(Icons.navigate_next),
+      onTap: () => Navigator.of(context).push(
+        platformPageRoute(context: context, builder: (_) => BenzoComparison()),
       ),
     );
   }
@@ -113,9 +145,19 @@ class MedProfilePageState extends State<MedProfilePage> {
     );
   }
 
+  _getEquivChart() {
+    return ListTile(
+      title: Text('Equivalency Chart'),
+      trailing: Icon(Icons.navigate_next),
+      onTap: () => Navigator.of(context).push(
+        platformPageRoute(
+            context: context, builder: (_) => AntipsychoticEquiv()),
+      ),
+    );
+  }
+
   _getBlackBoxWarning() {
     return ExpansionTile(
-      initiallyExpanded: true,
       title: Text('Black Box Warning', style: TextStyle(color: Colors.red)),
       children: <Widget>[
         ListTile(
@@ -129,7 +171,6 @@ class MedProfilePageState extends State<MedProfilePage> {
 
   _getWorkup() {
     return ExpansionTile(
-      initiallyExpanded: true,
       title: Text('Work Up'),
       children: <Widget>[
         ListTile(
@@ -143,8 +184,7 @@ class MedProfilePageState extends State<MedProfilePage> {
 
   _getMisc() {
     return ExpansionTile(
-      initiallyExpanded: true,
-      title: Text('Miscellaneous Info.'),
+      title: Text('Miscellaneous'),
       children: <Widget>[
         ListTile(
           title: Text(widget.med.misc),
@@ -161,20 +201,23 @@ class MedProfilePageState extends State<MedProfilePage> {
       title: Text('Dose Information'),
       initiallyExpanded: true,
       children: <Widget>[
-        if (widget.med.doseInit != "")
-          doseProfile('Initial Dose', widget.med.doseInit,
-              comment: widget.med.doseInitComment != ""
-                  ? widget.med.doseInitComment
-                  : null),
-        if (widget.med.maxDose != "")
-          doseProfile('Max Dose', widget.med.maxDose),
-        if (widget.med.maxDoseForKids != "")
-          doseProfile('Max Dose For Kids', widget.med.maxDoseForKids),
-        if (widget.med.doseRange != "")
-          doseProfile('Dose Range', widget.med.doseRange),
-        if (widget.med.frequency != "")
-          doseProfile('Frequency', widget.med.frequency),
-        if (widget.med.equiv != "") doseProfile('Equivalency', widget.med.equiv)
+        Wrap(
+          spacing: 10,
+          children: <Widget>[
+            if (widget.med.doseInit != "")
+              doseProfile('Initial', widget.med.doseInit),
+            if (widget.med.doseRange != "")
+              doseProfile('Range', widget.med.doseRange),
+            if (widget.med.maxDose != "")
+              doseProfile('Max', widget.med.maxDose),
+            if (widget.med.maxDoseForKids != "")
+              doseProfile('Max For Kids', widget.med.maxDoseForKids),
+            if (widget.med.frequency != "")
+              doseProfile('Frequency', widget.med.frequency),
+            if (widget.med.equiv != "")
+              doseProfile('Equivalency', widget.med.equiv)
+          ],
+        )
       ],
     );
   }
@@ -193,26 +236,124 @@ class MedProfilePageState extends State<MedProfilePage> {
     }
   }
 
+  _customListTile(Widget leading, String drugName, BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 15, right: 15, top: 0),
+      child: SizedBox(
+        height: 35,
+        child: InkWell(
+          onTap: () {},
+          child: Container(
+            child: Row(
+              children: <Widget>[
+                SizedBox(width: 50, child: leading),
+                Expanded(
+                  child: Text(drugName),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  _getIndAvatar(modifier) {
+    switch (modifier) {
+      case 1:
+        return Text('1',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.green,
+                fontSize: 16,
+                fontWeight: FontWeight.bold));
+        break;
+      case 2:
+        return CircleAvatar(
+          radius: 8,
+          backgroundColor: Colors.yellow,
+        );
+        break;
+      case 3:
+        return CircleAvatar(
+          radius: 10,
+          backgroundColor: Colors.orange,
+          child: Text('3',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold)),
+        );
+      case 4:
+        return Row(
+          children: [
+            CircleAvatar(
+              radius: 8,
+              backgroundColor: Colors.yellow,
+            ),
+            CircleAvatar(
+              radius: 8,
+              backgroundColor: Colors.red,
+            ),
+          ],
+        );
+
+        break;
+    }
+  }
+
+  _buildCustomTile(Indication ind) {
+    var modifier;
+    if (ind.indication.contains('1st line') &&
+        ind.indication.contains('2nd line'))
+      modifier = 5;
+    else if (ind.indication.contains('3rd line') &&
+        ind.indication.contains('1st line'))
+      modifier = 6;
+    else if (ind.indication.contains('1st line'))
+      modifier = 1;
+    else if (ind.indication.contains('3rd line') &&
+        ind.indication.contains('2nd line'))
+      modifier = 4;
+    else if (ind.indication.contains('2nd line'))
+      modifier = 2;
+    else if (ind.indication.contains('3rd line'))
+      modifier = 3;
+    else
+      modifier = 0;
+    print(modifier);
+    return _customListTile(_getIndAvatar(modifier), ind.indication, context);
+  }
+
   _buildIndications() {
     String title =
         widget.med.indications.length > 1 ? 'Indications' : 'Indication';
     return ExpansionTile(
-      initiallyExpanded: true,
-      title: Text(title),
-      leading: CircleAvatar(
-        backgroundColor: Colors.blue,
-        child: Text(
-          '${widget.med.indications.length}',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+      title: Row(
+        children: [
+          Text(title),
+          Padding(
+            padding: EdgeInsets.only(left: 41),
+            child: CircleAvatar(
+              radius: 15,
+              backgroundColor: Colors.blue,
+              child: Text(
+                '${widget.med.indications.length}',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
       children: <Widget>[
-        for (var ind in widget.med.indications)
-          ListTile(
-            leading: _getIconColor(ind.modifier),
-            title: Text(ind.indication),
-            dense: true,
-          ),
+        for (var ind in widget.med.indications) _buildCustomTile(ind)
+        // ListTile(
+        //   leading: _getIconColor(ind.modifier),
+        //   title: Text(ind.indication),
+        //   dense: true,
+        // ),
       ],
     );
   }
@@ -221,22 +362,32 @@ class MedProfilePageState extends State<MedProfilePage> {
     String title =
         widget.med.sideEffects.length > 1 ? 'Side Effects' : 'Side Effect';
     return ExpansionTile(
-      initiallyExpanded: true,
-      title: Text(title),
-      leading: CircleAvatar(
-        backgroundColor: Colors.blue,
-        child: Text(
-          '${widget.med.sideEffects.length}',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+      title: Row(
+        children: [
+          Text(title),
+          Padding(
+            padding: EdgeInsets.only(left: 26),
+            child: CircleAvatar(
+              radius: 15,
+              backgroundColor: Colors.blue,
+              child: Text(
+                '${widget.med.sideEffects.length}',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
       children: <Widget>[
         for (var sideEffect in widget.med.sideEffects)
-          ListTile(
-            leading: _getIconColor(sideEffect.modifier),
-            title: Text(sideEffect.sideEffect),
-            dense: true,
-          )
+          _customListTile(_getIconColor(sideEffect.modifier),
+              sideEffect.sideEffect, context)
+        // ListTile(
+        //   leading: _getIconColor(sideEffect.modifier),
+        //   title: Text(sideEffect.sideEffect),
+        //   dense: true,
+        // )
       ],
     );
   }
@@ -246,21 +397,32 @@ class MedProfilePageState extends State<MedProfilePage> {
         ? 'Severe Effects'
         : 'Severe Effect';
     return ExpansionTile(
-      initiallyExpanded: true,
-      title: Text(title),
-      leading: CircleAvatar(
-        backgroundColor: Colors.blue,
-        child: Text(
-          '${widget.med.severeEffects.length}',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+      title:  Row(
+        children: [
+          Text(title),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: CircleAvatar(
+              radius: 15,
+              backgroundColor: Colors.blue,
+              child: Text(
+                '${widget.med.severeEffects.length}',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
       children: <Widget>[
         for (var severeEffect in widget.med.severeEffects)
-          ListTile(
-              leading: _getIconColor(severeEffect.modifier),
-              title: Text(severeEffect.severeEffect),
-              dense: true)
+          _customListTile(_getIconColor(severeEffect.modifier),
+              severeEffect.severeEffect, context)
+
+        // ListTile(
+        //     leading: _getIconColor(severeEffect.modifier),
+        //     title: Text(severeEffect.severeEffect),
+        //     dense: true)
       ],
     );
   }
@@ -307,14 +469,14 @@ class MedProfilePageState extends State<MedProfilePage> {
                           Row(
                             children: <Widget>[
                               Icon(Icons.done, color: Colors.green),
-                              Text('Indicates a positive interaction')
+                              Text('Advantage, Known For')
                             ],
                           ),
                           Divider(),
                           Row(
                             children: <Widget>[
                               Icon(Icons.priority_high, color: Colors.red),
-                              Text('Indicates a negative interaction')
+                              Text('Disadvantage, Known For')
                             ],
                           )
                         ],
@@ -342,8 +504,14 @@ class MedProfilePageState extends State<MedProfilePage> {
       if (widget.med.sideEffects.length != 0) _buildSideEffects(),
       if (widget.med.severeEffects.length != 0) _buildSevereEffects(),
       if (widget.med.misc != '') _getMisc(),
-      if (widget.med.cat == 'Antipsychotic' && widget.med.subCat == 'Typical') _getAntipsychoticChart(),
+      if (widget.med.cat == 'Antipsychotic' && widget.med.subCat == 'Typical')
+        _getAntipsychoticChart(),
+      if (widget.med.cat == 'Antipsychotic' &&
+          (widget.med.subCat == 'Typical' || widget.med.subCat == 'Atypical'))
+        _getEquivChart(),
+      if (widget.med.subCat == 'Benzodiazepines') _getBenzoChart(),
       if (widget.med.cat == 'ADHD') _getADHDChart(),
+      if (widget.med.cat == 'Mood Stabilizer') _getMoodChart(),
       if (widget.med.amphWorkUp != '' || widget.med.mphWorkUp != '')
         _getWorkup(),
     ];
