@@ -329,11 +329,11 @@ class MoodChart extends StatelessWidget {
             Center(child: Text('Severe Effects')),
             CustomTable(rowTitles, severeEffectColumns, severeEffectsRowData),
             Container(
-              height: 40,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
               child: Column(
                 children: <Widget>[
-                  Row(children: <Widget>[
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
                     Icon(Icons.check),
                     Text('= Yes'),
                     VerticalDivider(),
@@ -341,6 +341,7 @@ class MoodChart extends StatelessWidget {
                     Text('= No'),
                   ]),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
                           height: 20,
