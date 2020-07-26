@@ -325,8 +325,8 @@ class ADHDChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(title: Center(child: Text('ADHD Med Comparison'))),
+    return Scaffold(
+        appBar: AppBar(title: Text('ADHD Med Comparison'),centerTitle: true, ),
         body: Scrollbar(
             isAlwaysShown: true,
             controller: _scrollController,

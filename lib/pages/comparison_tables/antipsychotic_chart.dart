@@ -86,9 +86,10 @@ class AntipsychoticChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Center(child: Text('Antiphsycotic Comparison')),
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Antiphsycotic Comparison'),
+        centerTitle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -72,8 +72,8 @@ _buildDataRows2(BuildContext context) {
   }
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(title: Text('Antipsychotics Equiv. Comparison')),
+    return Scaffold(
+      appBar: AppBar(title: Text('Antipsychotics Equiv. Comparison'), centerTitle: true,),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
