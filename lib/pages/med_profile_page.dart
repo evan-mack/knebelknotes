@@ -471,10 +471,7 @@ class MedProfilePageState extends State<MedProfilePage> {
   }
 
   _medProfileAppBar() {
-    return PlatformAppBar(
-      material: (_, __) => MaterialAppBarData(centerTitle: true),
-      cupertino: (_, __) =>
-          CupertinoNavigationBarData(previousPageTitle: 'Meds'),
+    return AppBar(
       title: Column(
         children: <Widget>[
           Text(widget.med.medName),
@@ -489,7 +486,7 @@ class MedProfilePageState extends State<MedProfilePage> {
                 )
         ],
       ),
-      trailingActions: <Widget>[
+      actions: <Widget>[
         IconButton(
           icon: Icon(Icons.home),
           onPressed: () {
@@ -562,7 +559,7 @@ class MedProfilePageState extends State<MedProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
+    return Scaffold(
       appBar: _medProfileAppBar(),
       body: Stack(
         children: <Widget>[

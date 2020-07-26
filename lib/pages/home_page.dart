@@ -145,11 +145,10 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
-          title: Center(
-            child: Text('Knebel Knotes'),
-          ),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Knebel Knotes'),
+          centerTitle: true,
         ),
         body: _buildBody());
   }
