@@ -329,35 +329,40 @@ class MoodChart extends StatelessWidget {
             Center(child: Text('Severe Effects')),
             CustomTable(rowTitles, severeEffectColumns, severeEffectsRowData),
             Container(
-                height: 40,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
-                child: Row(
-                  children: <Widget>[
+              height: 40,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
+              child: Column(
+                children: <Widget>[
+                  Row(children: <Widget>[
                     Icon(Icons.check),
                     Text('= Yes'),
                     VerticalDivider(),
                     Icon(Icons.clear),
                     Text('= No'),
-                    VerticalDivider(),
-                    Container(
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(border: Border.all()),
-                        child: Text('')),
-                    Text('= Black Box Warning'),
-                    VerticalDivider(),
-                    Container(
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(color: Colors.yellow[300]),
-                        child: Text('')),
-                    Divider(
-                      thickness: 3,
-                    ),
-                    Text('= Known For'),
-                  ],
-                )),
+                  ]),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(border: Border.all()),
+                          child: Text('')),
+                      Text('= Black Box Warning'),
+                      VerticalDivider(),
+                      Container(
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(color: Colors.yellow[300]),
+                          child: Text('')),
+                      Divider(
+                        thickness: 3,
+                      ),
+                      Text('= Known For'),
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ));
   }
@@ -365,7 +370,10 @@ class MoodChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Mood Stabilizer Table'), centerTitle: true,),
+      appBar: AppBar(
+        title: Text('Mood Stabilizer Table'),
+        centerTitle: true,
+      ),
       body: _buildBody(),
     );
   }
