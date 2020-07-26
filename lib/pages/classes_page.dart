@@ -92,11 +92,10 @@ class ClassesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
-          title: Center(
-            child: Text('Drugs By Class'),
-          ),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Drugs By Class'),
+          centerTitle: true,
         ),
         body: _buildClassList());
   }

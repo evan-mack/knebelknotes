@@ -24,12 +24,13 @@ class ComparisonsPage extends StatelessWidget {
         ListTile(
           title: Text('Mood Stabilizers'),
           trailing: Icon(Icons.navigate_next),
-           onTap: () => Navigator.of(context).push(
-                  platformPageRoute(
-                    context: context,
-                    builder: (_) => MoodChart(),
-                  ),
-        ),)
+          onTap: () => Navigator.of(context).push(
+            platformPageRoute(
+              context: context,
+              builder: (_) => MoodChart(),
+            ),
+          ),
+        )
       ],
     );
   }
@@ -58,14 +59,14 @@ class ComparisonsPage extends StatelessWidget {
                 )),
         Divider(),
         ListTile(
-          title: Text('Stimulants (for ADHD)'),
-          trailing: Icon(Icons.navigate_next),
-          onTap: () => Navigator.of(context).push(
+            title: Text('Stimulants (for ADHD)'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => Navigator.of(context).push(
                   platformPageRoute(
                     context: context,
                     builder: (_) => ADHDChart(),
-                  ),)
-        ),
+                  ),
+                )),
       ],
     );
   }
@@ -77,22 +78,19 @@ class ComparisonsPage extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(56),
-          child: PlatformAppBar(
-            title: Center(
-              child: Text('Comparisons By'),
-            ),
-            material: (_, __) => MaterialAppBarData(
-              bottom: TabBar(tabs: [
-                Text(
-                  'Side Effects',
-                  style: TextStyle(fontSize: 16),
-                ),
-                Text(
-                  'Equivalency',
-                  style: TextStyle(fontSize: 16),
-                )
-              ]),
-            ),
+          child: AppBar(
+            title: Text('Comparisons By'),
+            centerTitle: true,
+            bottom: TabBar(tabs: [
+              Text(
+                'Side Effects',
+                style: TextStyle(fontSize: 16),
+              ),
+              Text(
+                'Equivalency',
+                style: TextStyle(fontSize: 16),
+              )
+            ]),
           ),
         ),
         body: TabBarView(

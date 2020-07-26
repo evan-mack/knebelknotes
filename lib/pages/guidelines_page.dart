@@ -155,19 +155,17 @@ class GuidelinesPage extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(56),
-          child: PlatformAppBar(
+          child: AppBar(
             title: Text('Disorders'),
-            material: (_, __) => MaterialAppBarData(
-              bottom: TabBar(
-                isScrollable: true,
-                tabs: [
-                  Text('Mood'),
-                  Text('Anxiety'),
-                  Text('Psychotic'),
-                ],
-              ),
-              centerTitle: true,
+            bottom: TabBar(
+              isScrollable: true,
+              tabs: [
+                Text('Mood'),
+                Text('Anxiety'),
+                Text('Psychotic'),
+              ],
             ),
+            centerTitle: true,
           ),
         ),
         body: TabBarView(

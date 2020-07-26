@@ -364,8 +364,8 @@ class MoodChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(title: Text('Mood Stabilizer Table')),
+    return Scaffold(
+      appBar: AppBar(title: Text('Mood Stabilizer Table'), centerTitle: true,),
       body: _buildBody(),
     );
   }

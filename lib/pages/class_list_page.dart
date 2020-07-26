@@ -139,15 +139,12 @@ class ClassList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: cat == 'Addiction Med' ? Text('Mood Stabilizers') : Text(cat),
-        material: (_, __) => MaterialAppBarData(
-          centerTitle: true,
+        centerTitle: true,
+        
         ),
-        cupertino: (_, __) =>
-            CupertinoNavigationBarData(previousPageTitle: 'Drugs By Class'),
-      ),
       body: _buildMedBySubClass(),
     );
   }
