@@ -196,6 +196,32 @@ class MedProfilePageState extends State<MedProfilePage> {
     );
   }
 
+  _getDoseComments() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            constraints: BoxConstraints.expand(height: 15),
+            child: Text('Additional Information:'),
+          ),
+          if (widget.med.doseInitComment != "")
+            Text(
+              'Initial: ' + widget.med.doseInitComment,
+              style: TextStyle(fontSize: 12, color: Colors.grey[800]),
+            ),
+            if (widget.med.doseRangeComment != "")
+            Text(
+              'Range: ' + widget.med.doseRangeComment,
+              style: TextStyle(fontSize: 12, color: Colors.grey[800]),
+            ),
+        ],
+      ),
+    );
+  }
+
   _getDoseInfo() {
     return ExpansionTile(
       title: Text('Dose Information'),
@@ -217,7 +243,10 @@ class MedProfilePageState extends State<MedProfilePage> {
             if (widget.med.equiv != "")
               doseProfile('Equivalency', widget.med.equiv)
           ],
-        )
+        ),
+        if (widget.med.doseInitComment != "" ||
+            widget.med.doseRangeComment != "")
+          _getDoseComments()
       ],
     );
   }
@@ -261,17 +290,27 @@ class MedProfilePageState extends State<MedProfilePage> {
   _getIndAvatar(modifier) {
     switch (modifier) {
       case 1:
-        return Text('1',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.green,
-                fontSize: 16,
-                fontWeight: FontWeight.bold));
+        return CircleAvatar(
+          radius: 10,
+          backgroundColor: Colors.green,
+          child: Text('1',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold)),
+        );
         break;
       case 2:
         return CircleAvatar(
-          radius: 8,
+          radius: 10,
           backgroundColor: Colors.yellow,
+          child: Text('2',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold)),
         );
         break;
       case 3:
@@ -289,13 +328,25 @@ class MedProfilePageState extends State<MedProfilePage> {
         return Row(
           children: [
             CircleAvatar(
-              radius: 8,
+              radius: 10,
               backgroundColor: Colors.yellow,
+              child: Text('2',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
             ),
             CircleAvatar(
-              radius: 8,
-              backgroundColor: Colors.red,
-            ),
+              radius: 10,
+              backgroundColor: Colors.orange,
+              child: Text('3',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
+            )
           ],
         );
 
@@ -311,7 +362,8 @@ class MedProfilePageState extends State<MedProfilePage> {
     else if (ind.indication.contains('3rd line') &&
         ind.indication.contains('1st line'))
       modifier = 6;
-    else if (ind.indication.contains('1st line'))
+    else if (ind.indication.contains('1st line') ||
+        ind.indication.contains('first line'))
       modifier = 1;
     else if (ind.indication.contains('3rd line') &&
         ind.indication.contains('2nd line'))
@@ -332,17 +384,14 @@ class MedProfilePageState extends State<MedProfilePage> {
     return ExpansionTile(
       title: Row(
         children: [
-          Text(title),
-          Padding(
-            padding: EdgeInsets.only(left: 41),
-            child: CircleAvatar(
-              radius: 15,
-              backgroundColor: Colors.blue,
-              child: Text(
-                '${widget.med.indications.length}',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
+          SizedBox(width: 110, child: Text(title)),
+          CircleAvatar(
+            radius: 15,
+            backgroundColor: Colors.blue,
+            child: Text(
+              '${widget.med.indications.length}',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ),
         ],
@@ -364,17 +413,14 @@ class MedProfilePageState extends State<MedProfilePage> {
     return ExpansionTile(
       title: Row(
         children: [
-          Text(title),
-          Padding(
-            padding: EdgeInsets.only(left: 26),
-            child: CircleAvatar(
-              radius: 15,
-              backgroundColor: Colors.blue,
-              child: Text(
-                '${widget.med.sideEffects.length}',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
+          SizedBox(width: 110, child: Text(title)),
+          CircleAvatar(
+            radius: 15,
+            backgroundColor: Colors.blue,
+            child: Text(
+              '${widget.med.sideEffects.length}',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ),
         ],
@@ -397,19 +443,16 @@ class MedProfilePageState extends State<MedProfilePage> {
         ? 'Severe Effects'
         : 'Severe Effect';
     return ExpansionTile(
-      title:  Row(
+      title: Row(
         children: [
-          Text(title),
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: CircleAvatar(
-              radius: 15,
-              backgroundColor: Colors.blue,
-              child: Text(
-                '${widget.med.severeEffects.length}',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
+          SizedBox(width: 110, child: Text(title)),
+          CircleAvatar(
+            radius: 15,
+            backgroundColor: Colors.blue,
+            child: Text(
+              '${widget.med.severeEffects.length}',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ),
         ],
