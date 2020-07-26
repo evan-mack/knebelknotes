@@ -6,8 +6,9 @@ import 'package:knebelknotes/pages/med_profile_page.dart';
 class AdjustmentList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
           title: Text('Adjustment Disorder'),
         ),
         body: Column(

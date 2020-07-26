@@ -35,8 +35,8 @@ class MedicationsPageState extends State<MedicationsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-      appBar: PlatformAppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: !isSearching
             ? Text('Medications')
             : TextField(
@@ -55,10 +55,8 @@ class MedicationsPageState extends State<MedicationsPage> {
                 ),
                 controller: _controller,
               ),
-        material: (_, __) => MaterialAppBarData(
-          centerTitle: true,
-        ),
-        trailingActions: <Widget>[
+        centerTitle: true,
+        actions: <Widget>[
           isSearching
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.center,

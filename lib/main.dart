@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformApp(
+    return MaterialApp(
       title: 'Knebel Knotes',
     debugShowCheckedModeBanner: false,
       home: LaunchPage(),

@@ -81,8 +81,8 @@ class SchizophreniaList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
+    return Scaffold(
+        appBar: AppBar(
           title: Text('Schizophrenia'),
         ),
         body: SingleChildScrollView(child: _buildAgeTiles(context)));

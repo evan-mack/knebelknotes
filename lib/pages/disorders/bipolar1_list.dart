@@ -140,8 +140,9 @@ class Bipolar1List extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
           title: Text('Bipolar I Disorder'),
         ),
         body: SingleChildScrollView(child: _buildAgeTiles(context)));

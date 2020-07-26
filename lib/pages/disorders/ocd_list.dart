@@ -82,8 +82,9 @@ class OCDList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
           title: Text('OCD'),
         ),
         body: SingleChildScrollView(child: _buildAgeTiles(context)));

@@ -74,8 +74,9 @@ class GADList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        appBar: PlatformAppBar(
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
           title: Text('Generalized Anxiety Disorder (GAD)'),
         ),
         body: SingleChildScrollView(child: _buildAgeTiles(context)));
