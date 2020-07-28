@@ -48,11 +48,11 @@ class MedProfilePageState extends State<MedProfilePage> {
     );
   }
 
-  doseProfile(String title, String content, {String comment}) {
+  doseProfile(String title, String content, int size, {String comment}) {
     return Padding(
       padding: EdgeInsets.only(bottom: 10),
       child: SizedBox(
-        width: (MediaQuery.of(context).size.width - 30) / 3,
+        width: (MediaQuery.of(context).size.width - 30) / size,
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(
@@ -212,7 +212,7 @@ class MedProfilePageState extends State<MedProfilePage> {
               'Initial: ' + widget.med.doseInitComment,
               style: TextStyle(fontSize: 12, color: Colors.grey[800]),
             ),
-            if (widget.med.doseRangeComment != "")
+          if (widget.med.doseRangeComment != "")
             Text(
               'Range: ' + widget.med.doseRangeComment,
               style: TextStyle(fontSize: 12, color: Colors.grey[800]),
@@ -222,28 +222,81 @@ class MedProfilePageState extends State<MedProfilePage> {
     );
   }
 
+  _buildDoseInfo(int count) {
+    List<String> info = [
+      widget.med.doseInit,
+      widget.med.doseRange,
+      widget.med.maxDose,
+      widget.med.maxDoseForKids,
+      widget.med.frequency,
+      widget.med.equiv
+    ];
+    List<String> name = [
+      'Initial',
+      'Range',
+      'Max',
+      'Max For Kids',
+      'Frequency',
+      'Equivalency'
+    ];
+    List<Widget> result = [];
+
+    int current = 0;
+    if (count <= 3) {
+      for (int i = 0; i < info.length; i++) {
+        if (info[i] != "") {
+          result.add(doseProfile(name[i], info[i], count));
+        }
+      }
+    } else {
+      for (int i = 0; i < info.length; i++) {
+        if (info[i] != "") {
+          if (current < 3) {
+            result.add(doseProfile(name[i], info[i], 3));
+            
+          } else {
+            result.add(doseProfile(name[i], info[i], count - 3));
+          }
+          current++;
+        }
+      }
+    }
+    return result;
+  }
+
   _getDoseInfo() {
+    int count = 0;
+
+    if (widget.med.doseInit != "") count++;
+    if (widget.med.doseRange != "") count++;
+    if (widget.med.maxDose != "") count++;
+    if (widget.med.maxDoseForKids != "") count++;
+    if (widget.med.frequency != "") count++;
+    if (widget.med.equiv != "") count++;
+
     return ExpansionTile(
       title: Text('Dose Information'),
       initiallyExpanded: true,
       children: <Widget>[
         Wrap(
-          spacing: 10,
-          children: <Widget>[
-            if (widget.med.doseInit != "")
-              doseProfile('Initial', widget.med.doseInit),
-            if (widget.med.doseRange != "")
-              doseProfile('Range', widget.med.doseRange),
-            if (widget.med.maxDose != "")
-              doseProfile('Max', widget.med.maxDose),
-            if (widget.med.maxDoseForKids != "")
-              doseProfile('Max For Kids', widget.med.maxDoseForKids),
-            if (widget.med.frequency != "")
-              doseProfile('Frequency', widget.med.frequency),
-            if (widget.med.equiv != "")
-              doseProfile('Equivalency', widget.med.equiv)
-          ],
-        ),
+            alignment: WrapAlignment.center,
+            spacing: 10,
+            children: _buildDoseInfo(count)
+            // <Widget>[
+            //   if (widget.med.doseInit != "")
+            //     doseProfile('Initial', widget.med.doseInit, count),
+            //   if (widget.med.doseRange != "")
+            //     doseProfile('Range', widget.med.doseRange, count),
+            //   if (widget.med.maxDose != "")
+            //     doseProfile('Max', widget.med.maxDose, count),
+            //   if (widget.med.maxDoseForKids != "")
+            //     doseProfile('Max For Kids', widget.med.maxDoseForKids, count),
+            //   if (widget.med.frequency != "")
+            //     doseProfile('Frequency', widget.med.frequency, count),
+            //   if (widget.med.equiv != "")
+            //     doseProfile('Equivalency', widget.med.equiv, count)
+            // ],
+            ),
         if (widget.med.doseInitComment != "" ||
             widget.med.doseRangeComment != "")
           _getDoseComments()
@@ -398,11 +451,6 @@ class MedProfilePageState extends State<MedProfilePage> {
       ),
       children: <Widget>[
         for (var ind in widget.med.indications) _buildCustomTile(ind)
-        // ListTile(
-        //   leading: _getIconColor(ind.modifier),
-        //   title: Text(ind.indication),
-        //   dense: true,
-        // ),
       ],
     );
   }
@@ -461,11 +509,6 @@ class MedProfilePageState extends State<MedProfilePage> {
         for (var severeEffect in widget.med.severeEffects)
           _customListTile(_getIconColor(severeEffect.modifier),
               severeEffect.severeEffect, context)
-
-        // ListTile(
-        //     leading: _getIconColor(severeEffect.modifier),
-        //     title: Text(severeEffect.severeEffect),
-        //     dense: true)
       ],
     );
   }
@@ -486,6 +529,7 @@ class MedProfilePageState extends State<MedProfilePage> {
                 )
         ],
       ),
+      centerTitle: true,
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.home),

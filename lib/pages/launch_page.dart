@@ -59,7 +59,7 @@ class LaunchPageState extends State<LaunchPage> {
           isTranslucent: false),
       PersistentBottomNavBarItem(
           icon: Icon(Icons.search),
-          title: ('Meds'),
+          title: ('Search'),
           activeColor: Colors.blue,
           inactiveColor: Colors.grey,
           isTranslucent: false),

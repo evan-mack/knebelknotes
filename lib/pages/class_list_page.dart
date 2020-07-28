@@ -34,7 +34,7 @@ class ClassList extends StatelessWidget {
       return Text(medName);
   }
 
-  _buildMedBySubClassList(String item) {
+  _buildMedBySubClassList(String cat, String item) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -47,7 +47,7 @@ class ClassList extends StatelessWidget {
           ),
           children: <Widget>[
             FutureBuilder(
-              future: MedicationDao.md.getMedBySubCategory(item),
+              future: MedicationDao.md.getMedBySubCategory(cat, item),
               builder: (BuildContext context, AsyncSnapshot snapshot2) {
                 if (!snapshot2.hasData) {
                   return Center(
@@ -98,7 +98,7 @@ class ClassList extends StatelessWidget {
                 if (snapshot.data.length == 1)
                   _buildMedByClass()
                 else
-                  for (var item in snapshot.data) _buildMedBySubClassList(item)
+                  for (var item in snapshot.data) _buildMedBySubClassList(cat, item)
               ],
             ),
           );

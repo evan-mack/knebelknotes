@@ -64,9 +64,16 @@ class HomePageState extends State<HomePage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Container(
+            width: double.infinity,
+            child: Text('Browse By..', style: TextStyle(fontSize: 20)),
+          ),
+        ),
         ListTile(
           leading: Icon(Icons.local_pharmacy, color: Colors.blue[200]),
-          title: Text('Browse Drug Classes'),
+          title: Text('Drug Classes'),
           trailing: Icon(Icons.arrow_forward_ios),
           onTap: () => widget.goToPage(1),
         ),
@@ -81,13 +88,13 @@ class HomePageState extends State<HomePage> {
         ),
         ListTile(
           leading: Icon(Icons.compare_arrows, color: Colors.blue[200]),
-          title: Text('View Comparison Charts'),
+          title: Text('Comparison Charts'),
           trailing: Icon(Icons.arrow_forward_ios),
           onTap: () => widget.goToPage(3),
         ),
         ListTile(
           leading: Icon(Icons.search, color: Colors.blue[200]),
-          title: Text('Search Medications'),
+          title: Text('Medication List (Search)'),
           trailing: Icon(Icons.arrow_forward_ios),
           onTap: () => widget.goToPage(4),
         ),

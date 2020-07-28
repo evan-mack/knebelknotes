@@ -158,7 +158,6 @@ class GuidelinesPage extends StatelessWidget {
           child: AppBar(
             title: Text('Disorders'),
             bottom: TabBar(
-              isScrollable: true,
               tabs: [
                 Text('Mood'),
                 Text('Anxiety'),

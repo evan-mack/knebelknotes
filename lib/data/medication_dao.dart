@@ -94,9 +94,9 @@ class MedicationDao {
     return subCat.toList();
   }
 
-  Future<List<Medication>> getMedBySubCategory(String subCat) async {
+  Future<List<Medication>> getMedBySubCategory(String cat, String subCat) async {
     final finder = Finder(
-        filter: Filter.equals('subCat', subCat),
+        filter: Filter.equals('subCat', subCat) & Filter.equals('cat', cat),
         sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
 
     final recordSnapshots =

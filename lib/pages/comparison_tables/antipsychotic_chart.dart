@@ -10,6 +10,11 @@ class AntipsychoticChart extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+
+          
+          Text('High Potency'),
+          Text(''),
+          Text(''),
           Row(
             children: <Widget>[
               Icon(Icons.arrow_upward),
@@ -17,14 +22,10 @@ class AntipsychoticChart extends StatelessWidget {
               Icon(Icons.arrow_upward),
             ],
           ),
-          Text(''),
-          Text(''),
           Text('Side Effect'),
           Text('Spectrum From'),
           Text('High to Low'),
           Text('Potency'),
-          Text(''),
-          Text(''),
           Row(
             children: <Widget>[
               Icon(Icons.arrow_downward),
@@ -32,6 +33,9 @@ class AntipsychoticChart extends StatelessWidget {
               Icon(Icons.arrow_downward),
             ],
           ),
+          Text(''),
+          Text(''),
+          Text('Low Potency'),
         ],
       ),
     );

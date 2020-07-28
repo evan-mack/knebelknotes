@@ -54,6 +54,9 @@ class ClassesPage extends StatelessWidget {
       case 'Side Effect Meds':
         return 'Medications for Side Effects';
         break;
+        case 'Mood Stabilizer':
+        return 'Mood Stabilizers';
+        break;
       default:
         return cat;
         break;
