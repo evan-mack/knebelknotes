@@ -253,7 +253,6 @@ class MedProfilePageState extends State<MedProfilePage> {
         if (info[i] != "") {
           if (current < 3) {
             result.add(doseProfile(name[i], info[i], 3));
-            
           } else {
             result.add(doseProfile(name[i], info[i], count - 3));
           }
@@ -281,22 +280,7 @@ class MedProfilePageState extends State<MedProfilePage> {
         Wrap(
             alignment: WrapAlignment.center,
             spacing: 10,
-            children: _buildDoseInfo(count)
-            // <Widget>[
-            //   if (widget.med.doseInit != "")
-            //     doseProfile('Initial', widget.med.doseInit, count),
-            //   if (widget.med.doseRange != "")
-            //     doseProfile('Range', widget.med.doseRange, count),
-            //   if (widget.med.maxDose != "")
-            //     doseProfile('Max', widget.med.maxDose, count),
-            //   if (widget.med.maxDoseForKids != "")
-            //     doseProfile('Max For Kids', widget.med.maxDoseForKids, count),
-            //   if (widget.med.frequency != "")
-            //     doseProfile('Frequency', widget.med.frequency, count),
-            //   if (widget.med.equiv != "")
-            //     doseProfile('Equivalency', widget.med.equiv, count)
-            // ],
-            ),
+            children: _buildDoseInfo(count)),
         if (widget.med.doseInitComment != "" ||
             widget.med.doseRangeComment != "")
           _getDoseComments()
@@ -402,6 +386,58 @@ class MedProfilePageState extends State<MedProfilePage> {
             )
           ],
         );
+        break;
+      case 5:
+        return Row(
+          children: [
+            CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.green,
+              child: Text('1',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
+            ),
+            CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.yellow,
+              child: Text('2',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
+            )
+          ],
+        );
+        break;
+        case 6:
+         return Row(
+          children: [
+            CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.green,
+              child: Text('1',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
+            ),
+            CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.orange,
+              child: Text('3',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
+            )
+          ],
+        );
 
         break;
     }
@@ -477,11 +513,6 @@ class MedProfilePageState extends State<MedProfilePage> {
         for (var sideEffect in widget.med.sideEffects)
           _customListTile(_getIconColor(sideEffect.modifier),
               sideEffect.sideEffect, context)
-        // ListTile(
-        //   leading: _getIconColor(sideEffect.modifier),
-        //   title: Text(sideEffect.sideEffect),
-        //   dense: true,
-        // )
       ],
     );
   }

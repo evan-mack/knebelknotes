@@ -1119,7 +1119,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SNRIs",
     "medName": "Duloxetine (Cymbalta)",
     "indications": [
@@ -1184,7 +1184,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SNRIs",
     "medName": "Desvenlafaxine (Prestiq)",
     "indications": [
@@ -1249,7 +1249,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SNRIs",
     "medName": "Levomilnacipran (Fetzima)",
     "indications": [
@@ -1306,7 +1306,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Escitalopram (Cipralex)",
     "indications": [
@@ -1391,7 +1391,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Citalopram (Celexa)",
     "indications": [
@@ -1460,7 +1460,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Fluoxetine (Prozac)",
     "indications": [
@@ -1561,7 +1561,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Paroxetine (Paxil)",
     "indications": [
@@ -1642,7 +1642,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Sertaline (Zoloft)",
     "indications": [
@@ -1735,7 +1735,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Fluvoxamine (Luvox)",
     "indications": [
@@ -1812,7 +1812,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "SSRIs",
     "medName": "Venlafaxine (Effexor)",
     "indications": [
@@ -1893,7 +1893,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "Atypical",
     "medName": "Mirtazapine (Remeron)",
     "indications": [
@@ -1954,7 +1954,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "Atypical",
     "medName": "Bupropion (Wellbutrin XR)",
     "indications": [
@@ -2019,7 +2019,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "Atypical",
     "medName": "Vortioxetine (Trintellix)",
     "indications": [
@@ -2059,7 +2059,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "Atypical",
     "medName": "Trazodone (Desyrel)",
     "indications": [
@@ -4298,7 +4298,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Amitriptyline (Elavil)",
     "indications": [
@@ -4379,7 +4379,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Imipramine (Tofranil)",
     "indications": [
@@ -4464,7 +4464,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Clomipramine (Anafranil)",
     "indications": [
@@ -4561,7 +4561,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Doxepin (Sinequan)",
     "indications": [
@@ -4650,7 +4650,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Nortriptyline (Aventyl)",
     "indications": [
@@ -4739,7 +4739,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "TCAs",
     "medName": "Desipramine",
     "indications": [
@@ -4824,7 +4824,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "MAOIs",
     "medName": "Phenelzine (Nardil)",
     "indications": [
@@ -4893,7 +4893,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "MAOIs",
     "medName": "Tranylcypromine (Parnate)",
     "indications": [
@@ -4966,7 +4966,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "MAOIs",
     "medName": "Selegiline",
     "indications": [
@@ -5039,7 +5039,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antidepressent",
+    "cat": "Antidepressant",
     "subCat": "MAOIs",
     "medName": "Moclobemide (Manerix)",
     "indications": [

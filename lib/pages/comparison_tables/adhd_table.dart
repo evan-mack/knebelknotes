@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:easy_rich_text/easy_rich_text.dart';
 
 //Add on tap to drug profile
 //ADd trade name column

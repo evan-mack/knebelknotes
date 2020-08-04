@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:knebelknotes/data/app_database.dart';
 import 'package:sembast/sembast.dart';
 import 'package:knebelknotes/data/medication.dart';
@@ -94,7 +96,8 @@ class MedicationDao {
     return subCat.toList();
   }
 
-  Future<List<Medication>> getMedBySubCategory(String cat, String subCat) async {
+  Future<List<Medication>> getMedBySubCategory(
+      String cat, String subCat) async {
     final finder = Finder(
         filter: Filter.equals('subCat', subCat) & Filter.equals('cat', cat),
         sortOrders: [SortOrder('subCat'), SortOrder('medName')]);
@@ -122,15 +125,62 @@ class MedicationDao {
     return null;
   }
 
-  Future<bool> medExists(String med) async {
-    final finder = Finder(filter: Filter.equals('medName', med));
-    final recordSnapshots =
-        await _medicationStore.find(await _db, finder: finder);
-
-    var medication = recordSnapshots.map((snapshot) {
+  Future<List<dynamic>> getMedIndications() async {
+    Set<String> result = new Set();
+    final medicationSnapshot = await _medicationStore.find(await _db);
+    medicationSnapshot.map((snapshot) {
       final medication = Medication.fromMap(snapshot.value);
-      return medication;
-    });
-    return medication.length >= 1;
+        medication.indications.map((indication) {
+          if (indication.indication.contains('(')) {
+            var temp = indication.indication.split(' (');
+            result.add(temp[0].toUpperCase());
+          } else {
+            result.add(indication.indication.toUpperCase());
+          }
+        }).toList();
+    }).toList();
+
+    var resultList = result.toList();
+    resultList.sort((a, b) => a.compareTo(b));
+    return resultList;
+  }
+  Future<List<dynamic>> getMedSideEffects() async {
+    Set<String> result = new Set();
+    final medicationSnapshot = await _medicationStore.find(await _db);
+    medicationSnapshot.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+        medication.sideEffects.map((sideEffects) {
+          if (sideEffects.sideEffect.contains('(', 1)) {
+            var temp = sideEffects.sideEffect.split(' ');
+            result.add(temp[1].toUpperCase());
+          } else {
+            result.add(sideEffects.sideEffect.toUpperCase());
+          }
+        }).toList();
+    }).toList();
+
+    var resultList = result.toList();
+    resultList.sort((a, b) => a.compareTo(b));
+    return resultList;
+  }
+
+    Future<List<dynamic>> getMedSevereEffects() async {
+    Set<String> result = new Set();
+    final medicationSnapshot = await _medicationStore.find(await _db);
+    medicationSnapshot.map((snapshot) {
+      final medication = Medication.fromMap(snapshot.value);
+        medication.severeEffects.map((sideEffects) {
+          if (sideEffects.severeEffect.contains('(', 1)) {
+            var temp = sideEffects.severeEffect.split(' (');
+            result.add(temp[0].toUpperCase());
+          } else {
+            result.add(sideEffects.severeEffect.toUpperCase());
+          }
+        }).toList();
+    }).toList();
+
+    var resultList = result.toList();
+    resultList.sort((a, b) => a.compareTo(b));
+    return resultList;
   }
 }

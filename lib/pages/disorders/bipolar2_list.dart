@@ -92,7 +92,7 @@ class Bipolar2List extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Bipolar I Disorder'),
+          title: Text('Bipolar II Disorder'),
         ),
         body: SingleChildScrollView(child: _buildAgeTiles(context)));
   }

@@ -1,11 +1,14 @@
 TODO
 
-DONE
-Minimize space between drugs in class list
 
 Adderall XR change 5-60 (narcolepsy) as a note
 
-DONE
-change indAvatar to small circle with bold white number
-  ex. 3rd line
 
+Add Tab to Antipsychotics 
+Oral (Typical and Atypical) and Injectables (Short-acting and Long-lasting)
+
+make tabs bigger on guidelines page
+
+add indications under title for side effects
+
+fix logo

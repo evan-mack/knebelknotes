@@ -71,13 +71,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.9"
-  easy_rich_text:
-    dependency: "direct dev"
-    description:
-      name: easy_rich_text
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.4"
   file:
     dependency: transitive
     description:
@@ -85,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.2.0"
+  filter_list:
+    dependency: "direct dev"
+    description:
+      name: filter_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   flutter:
     dependency: "direct main"
     description: flutter

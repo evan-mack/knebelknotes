@@ -1,5 +1,5 @@
 name: knebelknotes
-description: A new Flutter project.
+description: A Psychiatric Information App
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -37,8 +37,7 @@ dev_dependencies:
   dio: ^3.0.9
   flutter_platform_widgets: ^0.50.1
   persistent_bottom_nav_bar: ^1.5.5
-  easy_rich_text: ^0.2.4
-
+  filter_list: ^0.0.4
 
 
 

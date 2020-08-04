@@ -65,10 +65,10 @@ class HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Container(
             width: double.infinity,
-            child: Text('Browse By..', style: TextStyle(fontSize: 20)),
+            child: Text('Browse By...', style: TextStyle(fontSize: 20)),
           ),
         ),
         ListTile(

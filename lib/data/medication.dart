@@ -119,6 +119,7 @@ class Indication {
         "indication": indication,
         "modifier": modifier,
       };
+
 }
 
 class SevereEffect {

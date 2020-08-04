@@ -34,6 +34,46 @@ class ClassList extends StatelessWidget {
       return Text(medName);
   }
 
+  _getSubTitle(List<Indication> indications, String medName) {
+    List<String> items = [];
+    for (var ind in indications) {
+      items.add(ind.indication);
+    }
+    items.sort((a, b) => a.compareTo(b));
+    List<Widget> result = [];
+    List<Widget> result2 = [];
+
+    items.forEach((element) {
+      result2.add(Text(element));
+    });
+    items.forEach((element) {
+      result.add(
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+          margin: EdgeInsets.symmetric(horizontal: 2),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            color: Colors.grey[300],
+          ),
+          child: Center(
+            child: Text(
+              element,
+              style: TextStyle(fontSize: 12),
+            ),
+          ),
+        ),
+      );
+    });
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          _getTitle(medName),
+          Row(
+            children: result,
+          )
+        ]);
+  }
+
   _buildMedBySubClassList(String cat, String item) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -47,36 +87,31 @@ class ClassList extends StatelessWidget {
           ),
           children: <Widget>[
             FutureBuilder(
-              future: MedicationDao.md.getMedBySubCategory(cat, item),
-              builder: (BuildContext context, AsyncSnapshot snapshot2) {
-                if (!snapshot2.hasData) {
-                  return Center(
-                    child: PlatformCircularProgressIndicator(),
-                  );
-                } else {
-                  return Column(
-                    children: <Widget>[
-                      for (int i = 0; i < snapshot2.data.length; i++)
-                        Column(
-                          children: <Widget>[
-                            ListTile(
-                              title: _getTitle(snapshot2.data[i].medName),
-                              trailing: Icon(Icons.navigate_next),
-                              onTap: () => Navigator.of(context).push(
-                                platformPageRoute(
-                                  context: context,
-                                  builder: (_) =>
-                                      MedProfilePage(snapshot2.data[i]),
-                                ),
+                future: MedicationDao.md.getMedBySubCategory(cat, item),
+                builder: (BuildContext context, AsyncSnapshot snapshot2) {
+                  if (!snapshot2.hasData) {
+                    return Center(
+                      child: PlatformCircularProgressIndicator(),
+                    );
+                  } else {
+                    return ListView.builder(
+                        itemCount: snapshot2.data.length,
+                        shrinkWrap: true,
+                        itemBuilder: (BuildContext context, int index) {
+                          return ListTile(
+                            title: _getTitle(snapshot2.data[index].medName),
+                            trailing: Icon(Icons.navigate_next),
+                            onTap: () => Navigator.of(context).push(
+                              platformPageRoute(
+                                context: context,
+                                builder: (_) =>
+                                    MedProfilePage(snapshot2.data[index]),
                               ),
                             ),
-                          ],
-                        )
-                    ],
-                  );
-                }
-              },
-            )
+                          );
+                        });
+                  }
+                })
           ],
         ),
       ],
@@ -98,13 +133,53 @@ class ClassList extends StatelessWidget {
                 if (snapshot.data.length == 1)
                   _buildMedByClass()
                 else
-                  for (var item in snapshot.data) _buildMedBySubClassList(cat, item)
+                  for (var item in snapshot.data)
+                    _buildMedBySubClassList(cat, item)
               ],
             ),
           );
         }
       },
     );
+  }
+
+  _buildAntipsychoticList() {
+    return [
+      FutureBuilder(
+        future: MedicationDao.md.getAllSubCategories('Antipsychotic'),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (!snapshot.hasData) {
+            return Center(
+              child: PlatformCircularProgressIndicator(),
+            );
+          } else {
+            return SingleChildScrollView(
+                child: Column(children: [
+              for (var item in snapshot.data)
+                if (item == 'Typical' || item == 'Atypical')
+                  _buildMedBySubClassList(cat, item)
+            ]));
+          }
+        },
+      ),
+      FutureBuilder(
+        future: MedicationDao.md.getAllSubCategories('Antipsychotic'),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (!snapshot.hasData) {
+            return Center(
+              child: PlatformCircularProgressIndicator(),
+            );
+          } else {
+            return SingleChildScrollView(
+                child: Column(children: [
+              for (var item in snapshot.data)
+                if (item != 'Typical' && item != 'Atypical')
+                  _buildMedBySubClassList(cat, item)
+            ]));
+          }
+        },
+      ),
+    ];
   }
 
   _buildMedByClass() {
@@ -120,16 +195,28 @@ class ClassList extends StatelessWidget {
             shrinkWrap: true,
             itemCount: snapshot.data.length,
             itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: _getTitle(snapshot.data[index].medName),
-                trailing: Icon(Icons.navigate_next),
-                onTap: () => Navigator.of(context).push(
-                  platformPageRoute(
-                    context: context,
-                    builder: (_) => MedProfilePage(snapshot.data[index]),
-                  ),
-                ),
-              );
+              return snapshot.data[index].cat == 'Side Effect Meds'
+                  ? ListTile(
+                      title: _getSubTitle(snapshot.data[index].indications,
+                          snapshot.data[index].medName),
+                      trailing: Icon(Icons.navigate_next),
+                      onTap: () => Navigator.of(context).push(
+                        platformPageRoute(
+                          context: context,
+                          builder: (_) => MedProfilePage(snapshot.data[index]),
+                        ),
+                      ),
+                    )
+                  : ListTile(
+                      title: _getTitle(snapshot.data[index].medName),
+                      trailing: Icon(Icons.navigate_next),
+                      onTap: () => Navigator.of(context).push(
+                        platformPageRoute(
+                          context: context,
+                          builder: (_) => MedProfilePage(snapshot.data[index]),
+                        ),
+                      ),
+                    );
             },
           );
         }
@@ -137,15 +224,38 @@ class ClassList extends StatelessWidget {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
+  _antipsychoticList() {
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(56),
+            child: AppBar(
+              title: Text('Antipsychotics'),
+              bottom: TabBar(tabs: [Text('Oral'), Text('Injectable')]),
+              centerTitle: true,
+            ),
+          ),
+          body: TabBarView(children: _buildAntipsychoticList()),
+        ));
+  }
+
+  _otherList() {
     return Scaffold(
       appBar: AppBar(
-        title: cat == 'Addiction Med' ? Text('Mood Stabilizers') : Text(cat),
+        title: cat == 'Addiction Med'
+            ? Text('Mood Stabilizers')
+            : cat == 'Side Effect Meds'
+                ? Text('Medications for Side Effects')
+                : Text(cat),
         centerTitle: true,
-        
-        ),
+      ),
       body: _buildMedBySubClass(),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return cat == 'Antipsychotic' ? _antipsychoticList() : _otherList();
   }
 }
