@@ -244,13 +244,14 @@ class _FilterListWidgetState extends State<FilterListWidget> {
       alignment: Alignment.bottomCenter,
       child: Container(
         height: 45,
-        width: MediaQuery.of(context).size.width * .9,
+        width: MediaQuery.of(context).size.width,
         margin: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
         alignment: Alignment.center,
         child: Row(
           children: <Widget>[
             Expanded(child: SizedBox()),
             Container(
+              width: MediaQuery.of(context).size.width * .5,
               decoration: BoxDecoration(
                 color: widget.backgroundColor,
                 borderRadius: BorderRadius.all(Radius.circular(25)),
@@ -269,16 +270,17 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                     ),
-                    cupertino: (_,__) => CupertinoButtonData(
-                          borderRadius: BorderRadius.all(Radius.circular(25))
-                    ),
+                    cupertino: (_, __) => CupertinoButtonData(
+                        borderRadius: BorderRadius.all(Radius.circular(25))),
                     onPressed: () {
                       setState(() {
                         _selectedTextList.clear();
                       });
                     },
+                    padding: EdgeInsets.only(bottom: 5),
                     child: Container(
                       height: double.infinity,
+                      width: MediaQuery.of(context).size.width / 4,
                       alignment: Alignment.center,
                       child: Text(
                         'Clear',
@@ -293,15 +295,17 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                     ),
-                    cupertino: (_,__) => CupertinoButtonData(
-                      borderRadius: BorderRadius.all(Radius.circular(25))
-                    ),
+                    cupertino: (_, __) => CupertinoButtonData(
+                        borderRadius: BorderRadius.all(Radius.circular(25))),
                     color: widget.applyButonTextBackgroundColor,
                     padding: EdgeInsets.only(bottom: 5),
                     onPressed: () {
                       Navigator.pop(context, _selectedTextList);
                     },
-                    child: Center(
+                    child: Container(
+                      height: double.infinity,
+                      width: MediaQuery.of(context).size.width / 4,
+                      alignment: Alignment.center,
                       child: Text(
                         'Apply',
                         style: Theme.of(context).textTheme.headline.copyWith(

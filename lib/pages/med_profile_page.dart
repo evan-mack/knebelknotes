@@ -473,7 +473,7 @@ class MedProfilePageState extends State<MedProfilePage> {
     return ExpansionTile(
       title: Row(
         children: [
-          SizedBox(width: 110, child: Text(title)),
+          SizedBox(width: 115, child: Text(title)),
           CircleAvatar(
             radius: 15,
             backgroundColor: Colors.blue,
@@ -497,7 +497,7 @@ class MedProfilePageState extends State<MedProfilePage> {
     return ExpansionTile(
       title: Row(
         children: [
-          SizedBox(width: 110, child: Text(title)),
+          SizedBox(width: 115, child: Text(title)),
           CircleAvatar(
             radius: 15,
             backgroundColor: Colors.blue,
@@ -524,7 +524,7 @@ class MedProfilePageState extends State<MedProfilePage> {
     return ExpansionTile(
       title: Row(
         children: [
-          SizedBox(width: 110, child: Text(title)),
+          SizedBox(width: 115, child: Text(title)),
           CircleAvatar(
             radius: 15,
             backgroundColor: Colors.blue,
