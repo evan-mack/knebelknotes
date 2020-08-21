@@ -75,45 +75,41 @@ class ClassList extends StatelessWidget {
   }
 
   _buildMedBySubClassList(String cat, String item) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
+    return ExpansionTile(
+      initiallyExpanded: true,
+      title: Text(
+        item,
+        style: TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w500, color: Colors.blue),
+      ),
       children: <Widget>[
-        ExpansionTile(
-          initiallyExpanded: true,
-          title: Text(
-            item,
-            style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.w500, color: Colors.blue),
-          ),
-          children: <Widget>[
-            FutureBuilder(
-                future: MedicationDao.md.getMedBySubCategory(cat, item),
-                builder: (BuildContext context, AsyncSnapshot snapshot2) {
-                  if (!snapshot2.hasData) {
-                    return Center(
-                      child: PlatformCircularProgressIndicator(),
-                    );
-                  } else {
-                    return ListView.builder(
-                        itemCount: snapshot2.data.length,
-                        shrinkWrap: true,
-                        itemBuilder: (BuildContext context, int index) {
-                          return ListTile(
-                            title: _getTitle(snapshot2.data[index].medName),
-                            trailing: Icon(Icons.navigate_next),
-                            onTap: () => Navigator.of(context).push(
-                              platformPageRoute(
-                                context: context,
-                                builder: (_) =>
-                                    MedProfilePage(snapshot2.data[index]),
-                              ),
-                            ),
-                          );
-                        });
-                  }
-                })
-          ],
-        ),
+        FutureBuilder(
+            future: MedicationDao.md.getMedBySubCategory(cat, item),
+            builder: (BuildContext context, AsyncSnapshot snapshot2) {
+              if (!snapshot2.hasData) {
+                return Center(
+                  child: PlatformCircularProgressIndicator(),
+                );
+              } else {
+                return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                    itemCount: snapshot2.data.length,
+                    shrinkWrap: true,
+                    itemBuilder: (BuildContext context, int index) {
+                      return ListTile(
+                        title: _getTitle(snapshot2.data[index].medName),
+                        trailing: Icon(Icons.navigate_next),
+                        onTap: () => Navigator.of(context).push(
+                          platformPageRoute(
+                            context: context,
+                            builder: (_) =>
+                                MedProfilePage(snapshot2.data[index]),
+                          ),
+                        ),
+                      );
+                    });
+              }
+            })
       ],
     );
   }
@@ -133,8 +129,13 @@ class ClassList extends StatelessWidget {
                 if (snapshot.data.length == 1)
                   _buildMedByClass()
                 else
-                  for (var item in snapshot.data)
-                    _buildMedBySubClassList(cat, item)
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      for (var item in snapshot.data)
+                        _buildMedBySubClassList(cat, item)
+                    ],
+                  )
               ],
             ),
           );

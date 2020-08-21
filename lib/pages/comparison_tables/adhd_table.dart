@@ -123,7 +123,7 @@ class ADHDChart extends StatelessWidget {
         headingRowHeight: 30,
         columns: [
           DataColumn(label: Text('Indications')),
-          DataColumn(label: Text('Initial')),
+          DataColumn(label: Text('Initial Dose')),
         ],
         rows: _getTableIndications());
   }
