@@ -1,14 +1,17 @@
 TODO
 
+Bipolar OO Guidelines -> BPI Maintenance  to BPII Maintenance  [X]
 
-Adderall XR change 5-60 (narcolepsy) as a note
+Add dose to initial in ADHD  comparison chart [X]
+Fix benzodiazepines chart title (Spelling) 
+Fix scrolling for multiple sub class classes [X]
+
+Add option to exclude certain filters
 
 
-Add Tab to Antipsychotics 
-Oral (Typical and Atypical) and Injectables (Short-acting and Long-lasting)
+Iphone specific fixes
+filters pop up
+cut off text for long strings ( Chlordiazepoxide)
 
-make tabs bigger on guidelines page
-
-add indications under title for side effects
 
 fix logo

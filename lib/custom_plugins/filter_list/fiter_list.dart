@@ -45,11 +45,9 @@ class FilterList {
     var list = await showPlatformDialog(
       context: context,
       builder: (BuildContext context) {
-        return PlatformAlertDialog(
-          android: (_) => MaterialAlertDialogData(
-            elevation: 0,
-            backgroundColor: Colors.transparent
-          ),
+        return AlertDialog(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
           content: Container(
             height: height,
             width: width,
@@ -80,9 +78,7 @@ class FilterList {
               hideheaderText: hideheaderText,
               hideSearchField: hideSearchField,
             ),
-            
           ),
-         
         );
       },
     );

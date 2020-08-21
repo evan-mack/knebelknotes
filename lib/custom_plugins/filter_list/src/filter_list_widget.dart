@@ -269,6 +269,9 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                     ),
+                    cupertino: (_,__) => CupertinoButtonData(
+                          borderRadius: BorderRadius.all(Radius.circular(25))
+                    ),
                     onPressed: () {
                       setState(() {
                         _selectedTextList.clear();
@@ -289,6 +292,9 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                     androidFlat: (_) => MaterialFlatButtonData(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
+                    ),
+                    cupertino: (_,__) => CupertinoButtonData(
+                      borderRadius: BorderRadius.all(Radius.circular(25))
                     ),
                     color: widget.applyButonTextBackgroundColor,
                     padding: EdgeInsets.only(bottom: 5),

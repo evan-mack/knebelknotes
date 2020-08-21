@@ -12,7 +12,7 @@ class Bipolar2List extends StatelessWidget {
         ],
       }
     ],
-    'BPI Maintenance': [
+    'BPII Maintenance': [
       {
         'Monotherapy': [
           'Quetiapine (Seroquel)',

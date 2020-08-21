@@ -147,55 +147,55 @@ class GuidelinesPage extends StatelessWidget {
       ],
     );
   }
+
   double tabBarHeight = 40;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: Size.fromHeight(56),
-            child: AppBar(
-              title: Text('Disorders'),
-              centerTitle: true,
-            ),
+      length: 3,
+      child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(56),
+          child: AppBar(
+            title: Text('Disorders'),
+            centerTitle: true,
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: tabBarHeight,
-                  child: TabBar(
-                    labelColor: Colors.blue,
-                    tabs: [
-                      Container(
-                        child: Center(child: Text('Mood')),
-                        height: tabBarHeight,
-                      ),
-                      Container(
-                        child: Center(child: Text('Anxiety')),
-                        height: tabBarHeight,
-                      ),
-                      Container(
-                        child: Center(child: Text('Psychotic')),
-                        height: tabBarHeight,
-                      ),
-                    ],
+        ),
+        body: Column(
+          children: <Widget>[
+            Container(
+              height: tabBarHeight,
+              child: TabBar(
+                labelColor: Colors.blue,
+                tabs: [
+                  Container(
+                    child: Center(child: Text('Mood')),
+                    height: tabBarHeight,
                   ),
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height,
-                  child: TabBarView(
-                    children: <Widget>[
-                      _buildMoodDisorders(context),
-                      _buildAnxietyDisorders(context),
-                      _buildPsychoticDisorders(context),
-                    ],
+                  Container(
+                    child: Center(child: Text('Anxiety')),
+                    height: tabBarHeight,
                   ),
-                ),
-              ],
+                  Container(
+                    child: Center(child: Text('Psychotic')),
+                    height: tabBarHeight,
+                  ),
+                ],
+              ),
             ),
-          ),
-        ));
+            Expanded(
+                child: TabBarView(
+                  children: <Widget>[
+                    _buildMoodDisorders(context),
+                    _buildAnxietyDisorders(context),
+                    _buildPsychoticDisorders(context),
+                  ],
+                ),
+              ),
+            
+          ],
+        ),
+      ),
+    );
   }
 }

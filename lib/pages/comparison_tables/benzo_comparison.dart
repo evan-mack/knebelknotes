@@ -74,7 +74,7 @@ class BenzoComparison extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Benzodiazpines Table'), centerTitle: true,),
+        appBar: AppBar(title: Text('Benzodiazepines Table'), centerTitle: true,),
         body: CustomTable(rowTitle, columns, rows));
   }
 }
