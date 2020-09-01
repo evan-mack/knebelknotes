@@ -71,35 +71,44 @@ class ComparisonsPage extends StatelessWidget {
     );
   }
 
+  double tabBarHeight = 40;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(56),
-          child: AppBar(
-            title: Text('Comparisons By'),
-            centerTitle: true,
-            bottom: TabBar(tabs: [
-              Text(
-                'Side Effects',
-                style: TextStyle(fontSize: 16),
-              ),
-              Text(
-                'Equivalency',
-                style: TextStyle(fontSize: 16),
-              )
-            ]),
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(56),
+            child: AppBar(
+              title: Text('Comparisons By'),
+              centerTitle: true,
+            ),
           ),
-        ),
-        body: TabBarView(
-          children: <Widget>[
-            _buildSideEffectComparisonList(context),
-            _buildEquivalencyComparisonList(context)
-          ],
-        ),
-      ),
+          body: Column(children: [
+            Container(
+                height: tabBarHeight,
+                child: TabBar(
+                  labelColor: Colors.blue,
+                  tabs: <Widget>[
+                    Container(
+                      child: Center(child: Text('Side Effects')),
+                      height: tabBarHeight,
+                    ),
+                    Container(
+                      child: Center(child: Text('Equivalency')),
+                      height: tabBarHeight,
+                    )
+                  ],
+                )),
+            Expanded(
+              child: TabBarView(
+                children: <Widget>[
+                  _buildSideEffectComparisonList(context),
+                  _buildEquivalencyComparisonList(context)
+                ],
+              ),
+            ),
+          ])),
     );
   }
 }

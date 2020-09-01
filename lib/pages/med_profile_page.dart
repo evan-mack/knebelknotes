@@ -11,8 +11,6 @@ import 'package:knebelknotes/pages/comparison_tables/antipsychotic_equiv_table.d
 import 'package:knebelknotes/pages/comparison_tables/benzo_comparison.dart';
 import 'package:knebelknotes/pages/comparison_tables/mood_stabilizertable.dart';
 
-//TODO
-//Add links to comparison charts
 
 class MedProfilePage extends StatefulWidget {
   final Medication med;
@@ -486,7 +484,8 @@ class MedProfilePageState extends State<MedProfilePage> {
         ],
       ),
       children: <Widget>[
-        for (var ind in widget.med.indications) _buildCustomTile(ind)
+        for (var ind in widget.med.indications) _buildCustomTile(ind),
+        Container(height: 2,)
       ],
     );
   }
@@ -512,7 +511,8 @@ class MedProfilePageState extends State<MedProfilePage> {
       children: <Widget>[
         for (var sideEffect in widget.med.sideEffects)
           _customListTile(_getIconColor(sideEffect.modifier),
-              sideEffect.sideEffect, context)
+              sideEffect.sideEffect, context),
+              Container(height: 2,)
       ],
     );
   }
@@ -539,7 +539,8 @@ class MedProfilePageState extends State<MedProfilePage> {
       children: <Widget>[
         for (var severeEffect in widget.med.severeEffects)
           _customListTile(_getIconColor(severeEffect.modifier),
-              severeEffect.severeEffect, context)
+              severeEffect.severeEffect, context),
+        Container(height: 2,)
       ],
     );
   }

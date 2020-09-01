@@ -3,7 +3,7 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:knebelknotes/data/medication.dart';
 
 import 'package:knebelknotes/data/medication_dao.dart';
-import 'package:knebelknotes/pages/med_profile_page.dart';
+import 'package:knebelknotes/pages/med_profile_page2.dart';
 
 class ClassList extends StatelessWidget {
   final String cat;
@@ -92,7 +92,7 @@ class ClassList extends StatelessWidget {
                 );
               } else {
                 return ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                    physics: NeverScrollableScrollPhysics(),
                     itemCount: snapshot2.data.length,
                     shrinkWrap: true,
                     itemBuilder: (BuildContext context, int index) {
@@ -229,16 +229,34 @@ class ClassList extends StatelessWidget {
     return DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: Size.fromHeight(56),
-            child: AppBar(
-              title: Text('Antipsychotics'),
-              bottom: TabBar(tabs: [Text('Oral'), Text('Injectable')]),
-              centerTitle: true,
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(56),
+              child: AppBar(
+                title: Text('Antipsychotics'),
+                centerTitle: true,
+              ),
             ),
-          ),
-          body: TabBarView(children: _buildAntipsychoticList()),
-        ));
+            body: Column(children: [
+              TabBar(tabs: [
+                Container(
+                  child: Center(
+                      child: Text(
+                    'Oral',
+                    style: TextStyle(color: Colors.blue),
+                  )),
+                  height: 40,
+                ),
+                Container(
+                  child: Center(
+                      child: Text('Injectable',
+                          style: TextStyle(color: Colors.blue))),
+                  height: 40,
+                ),
+              ]),
+              Expanded(
+                child: TabBarView(children: _buildAntipsychoticList()),
+              )
+            ])));
   }
 
   _otherList() {

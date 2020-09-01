@@ -3,6 +3,10 @@ import 'package:knebelknotes/custom_plugins/filter_list/src/choice_chip_widget.d
 import 'package:knebelknotes/custom_plugins/filter_list/src/search_field_widget.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
+import 'package:toggle_switch/toggle_switch.dart';
+
+//import 'package:knebelknotes/custom_plugins/filter_list/src/toggle_switch_widget.dart';
+
 class FilterListWidget extends StatefulWidget {
   FilterListWidget({
     Key key,
@@ -10,6 +14,7 @@ class FilterListWidget extends StatefulWidget {
     this.borderRadius,
     this.height,
     this.width,
+    this.selectedExludeList,
     this.selectedTextList,
     this.allTextList,
     this.headlineText,
@@ -35,6 +40,7 @@ class FilterListWidget extends StatefulWidget {
   final double height;
   final double width;
   final double borderRadius;
+  final List<String> selectedExludeList;
   final List<String> selectedTextList;
   final List<String> allTextList;
   final Color closeIconColor;
@@ -63,8 +69,11 @@ class FilterListWidget extends StatefulWidget {
 
 class _FilterListWidgetState extends State<FilterListWidget> {
   List<String> _selectedTextList = List();
+  List<String> _selectedExcludeList = List();
 
   List<String> _allTextList;
+
+  int switchIndex = 0;
 
   @override
   void initState() {
@@ -73,10 +82,14 @@ class _FilterListWidgetState extends State<FilterListWidget> {
     _selectedTextList = widget.selectedTextList != null
         ? List.from(widget.selectedTextList)
         : [];
+    _selectedExcludeList = widget.selectedExludeList != null
+        ? List.from(widget.selectedExludeList)
+        : [];
     super.initState();
   }
 
   bool showApplyButton = false;
+ 
 
   Widget _body() {
     return Container(
@@ -197,7 +210,7 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                             .toList();
                       });
                     },
-                  )
+                  ),
           ],
         ),
       ),
@@ -206,24 +219,38 @@ class _FilterListWidgetState extends State<FilterListWidget> {
 
   List<Widget> _buildChoiceList(List<String> list) {
     List<Widget> choices = List();
+  
     list.forEach(
       (item) {
         var selectedText = _selectedTextList.contains(item);
+        var selectedTextIndex = 0;
+        if(_selectedTextList.contains(item)) selectedTextIndex = 1;
+        else if(_selectedExcludeList.contains(item)) selectedTextIndex = 2;
+
         choices.add(
           ChoicechipWidget(
             onSelected: (value) {
               setState(
                 () {
-                  selectedText
-                      ? _selectedTextList.remove(item)
-                      : _selectedTextList.add(item);
+                  if(selectedTextIndex== 0){
+                  _selectedTextList.add(item);
+                  }
+                  else if(selectedTextIndex ==1){
+                    _selectedTextList.remove(item);
+                    _selectedExcludeList.add(item);
+                  }
+                  else if(selectedTextIndex ==2){
+                    _selectedExcludeList.remove(item);
+                  }
+
                 },
               );
             },
+            icon: selectedTextIndex == 0 ? null : selectedTextIndex == 1 ? Icon(Icons.check) : Icon(Icons.clear),
             selected: selectedText,
             selectedTextColor: widget.selectedTextColor,
-            selectedTextBackgroundColor: widget.color,
-            unselectedTextBackgroundColor: widget.unselectedTextbackGroundColor,
+            selectedTextBackgroundColor: selectedTextIndex == 1 ? widget.color : Colors.red,
+            unselectedTextBackgroundColor: selectedTextIndex == 0 ? widget.unselectedTextbackGroundColor : selectedTextIndex == 1 ? widget.color : Colors.red,
             unselectedTextColor: widget.unselectedTextColor,
             text: item,
           ),
@@ -275,6 +302,7 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                     onPressed: () {
                       setState(() {
                         _selectedTextList.clear();
+                        _selectedExcludeList.clear();
                       });
                     },
                     padding: EdgeInsets.only(bottom: 5),
@@ -300,7 +328,7 @@ class _FilterListWidgetState extends State<FilterListWidget> {
                     color: widget.applyButonTextBackgroundColor,
                     padding: EdgeInsets.only(bottom: 5),
                     onPressed: () {
-                      Navigator.pop(context, _selectedTextList);
+                      Navigator.pop(context, [_selectedTextList, _selectedExcludeList]);
                     },
                     child: Container(
                       height: double.infinity,

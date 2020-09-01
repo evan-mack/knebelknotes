@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ChoicechipWidget extends StatelessWidget {
   const ChoicechipWidget(
       {Key key,
+      this.icon,
       this.text,
       this.selected,
       this.selectedTextColor,
@@ -12,6 +13,7 @@ class ChoicechipWidget extends StatelessWidget {
       this.selectedTextBackgroundColor})
       : super(key: key);
 
+  final Icon icon;
   final String text;
   final bool selected;
   final Function(bool) onSelected;
@@ -20,25 +22,49 @@ class ChoicechipWidget extends StatelessWidget {
   final Color unselectedTextBackgroundColor;
   final Color selectedTextBackgroundColor;
 
-
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: FilterChip(
+      child: ChoiceChip(
           backgroundColor: selected
               ? selectedTextBackgroundColor
               : unselectedTextBackgroundColor,
           selectedColor: selected
               ? selectedTextBackgroundColor
               : unselectedTextBackgroundColor,
-          label: Text(
-            '$text',
-            style: TextStyle(
-                color: selected ? selectedTextColor : unselectedTextColor),
+          label: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if(icon != null) icon,
+              Flexible(child: Text(
+                '$text',
+                style: TextStyle(
+                  fontSize: 12,
+                    color: selected ? selectedTextColor : unselectedTextColor),
+              ),),
+            ],
           ),
           selected: selected,
           onSelected: onSelected),
     );
   }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       padding: const EdgeInsets.symmetric(horizontal: 10),
+//       child: ChoiceChip(
+//         backgroundColor: selected == 0 ? unselectedTextBackgroundColor : selected == 1 ? selectedTextBackgroundColor : Colors.red,
+//       label: Text(
+//         '$text',
+//         style: TextStyle(
+//           color: selected == 0 ? unselectedTextBackgroundColor : selectedTextColor
+//         )
+//       ),
+//       selected: selected == 0 ? false : true,
+//       onSelected: onSelected,
+//       )
+//     );
+//   }
+
 }

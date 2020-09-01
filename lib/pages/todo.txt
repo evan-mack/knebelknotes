@@ -1,17 +1,23 @@
 TODO
 
-Bipolar OO Guidelines -> BPI Maintenance  to BPII Maintenance  [X]
 
-Add dose to initial in ADHD  comparison chart [X]
-Fix benzodiazepines chart title (Spelling) 
-Fix scrolling for multiple sub class classes [X]
-
-Add option to exclude certain filters
+Fix rest of Tab Bars [X]
 
 
 Iphone specific fixes
-filters pop up
-cut off text for long strings ( Chlordiazepoxide)
+filters pop up [X]
+cut off text for long strings (Chlordiazepoxide) [possible fix]
 
 
 fix logo
+
+
+Meeting Topics:
+Search function. hard to tell why results came back (semi implemented)
+
+
+
+Future Projects
+Seperate Sections for contraindications
+Cite guidelines for each medication
+

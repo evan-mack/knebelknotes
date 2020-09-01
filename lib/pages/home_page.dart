@@ -17,7 +17,8 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (_) => PlatformAlertDialog(
               title: Text('About the App'),
-              content: Text('Info About the App'),
+              content: Text(
+                  'Knebel Knotes provides a quick reference for prescribing most psychiatric medications. It focuses on key information each medication is known for, to help support clinical practice and facilitate learning. Drug classes included are: antipsychotics (typical and atypical), antidepressants (SSRIs, SNRIs, TCAs, MAOIs, and atypicals), mood stabilizers, anxiolytics/sedatives, ADHD medications, cognitive enhancers, addictions medications, side effect medications). Key information provided includes: indications, dosing (initial, range, max), side effects, severe effects, black box warnings, and drug class comparisons (for example equivalencies). Additional references include short-acting injectables, long-acting injectables, and common PRNs.'),
               actions: <Widget>[
                 PlatformDialogAction(
                   child: PlatformText('Ok'),
@@ -33,7 +34,7 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (_) => PlatformAlertDialog(
               title: Text('Disclaimer'),
-              content: Text('Disclaimer Text Goes here'),
+              content: Text('This app is intended for use by health care students and providers, and not the general public. The information included is abbreviated and serves as a practical reference guide. Information is not comprehensive and errors may exist. It is not meant to serve as a comprehensive drug monograph. Drug doses are based on clinical literature and experience, and may be different from manufacturers recommendations. Indications are based on Canadian psychiatric guidelines considered current as of September 2019'),
               actions: <Widget>[
                 PlatformDialogAction(
                   child: PlatformText('I Accept'),
