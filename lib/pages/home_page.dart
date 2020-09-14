@@ -50,7 +50,7 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (_) => PlatformAlertDialog(
               title: Text('Sources'),
-              content: Text('Sources Text Goes here'),
+              content: Text('Stahl’s Essential Psychopharmacology – Prescriber’s Guide\n\nRxTx by Canadian Pharmacists Association\n\nDrug Monographs from FDA and Health Canada database\n\nCANMAT 2016 Depression Guidelines\n\nCANMAT 2018 Bipolar Guidelines\n\n2014 Canadian clinical practice guidelines for thfe management of anxiety, posttraumatic stress and obsessive-compulsive disorders\n'),
               actions: <Widget>[
                 PlatformDialogAction(
                   child: PlatformText('Ok'),

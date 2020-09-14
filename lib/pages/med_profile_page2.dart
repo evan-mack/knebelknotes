@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
@@ -99,9 +100,10 @@ class MedProfilePageState extends State<MedProfilePage> {
             Align(
               alignment: Alignment.bottomRight,
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                PlatformButton(
-                  material: (_, __) => MaterialRaisedButtonData(
-                      color: Colors.blue, shape: CircleBorder()),
+                 PlatformIconButton(
+                  materialIcon: CircleAvatar(child: Icon(Icons.remove)),
+                 
+                  cupertinoIcon: CircleAvatar(child:Icon(Icons.remove)),
                   onPressed: () => {
                     setState(() {
                       for (var item in _items) {
@@ -109,11 +111,12 @@ class MedProfilePageState extends State<MedProfilePage> {
                       }
                     })
                   },
-                  child: Icon(Icons.remove, color: Colors.white),
+                  
                 ),
-                PlatformButton(
-                  material: (_, __) => MaterialRaisedButtonData(
-                      color: Colors.blue, shape: CircleBorder()),
+                PlatformIconButton(
+                  materialIcon: CircleAvatar(child: Icon(Icons.add)),
+                 
+                  cupertinoIcon: CircleAvatar(child:Icon(CupertinoIcons.add)),
                   onPressed: () => {
                     setState(() {
                       for (var item in _items) {
@@ -121,10 +124,7 @@ class MedProfilePageState extends State<MedProfilePage> {
                       }
                     })
                   },
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
+                  
                 ),
               ]),
             ),

@@ -232,26 +232,26 @@ class MedicationsPageState extends State<MedicationsPage> {
 
       if (snapshot.data[index].medName.toLowerCase().contains(_searchItem))
         result = snapshot.data[index];
-      // else {
-      //   for (var ind in snapshot.data[index].indications) {
-      //     if (ind.indication.toLowerCase().contains(_searchItem)) {
-      //       result = snapshot.data[index];
-      //       break;
-      //     }
-      //   }
-      //   for (var sideEffect in snapshot.data[index].sideEffects) {
-      //     if (sideEffect.sideEffect.toLowerCase().contains(_searchItem)) {
-      //       result = snapshot.data[index];
-      //       break;
-      //     }
-      //   }
-      //   for (var severeEffect in snapshot.data[index].severeEffects) {
-      //     if (severeEffect.severeEffect.toLowerCase().contains(_searchItem)) {
-      //       result = snapshot.data[index];
-      //       break;
-      //     }
-      //   }
-      // }
+      else {
+        for (var ind in snapshot.data[index].indications) {
+          if (ind.indication.toLowerCase().contains(_searchItem)) {
+            result = snapshot.data[index];
+            break;
+          }
+        }
+        for (var sideEffect in snapshot.data[index].sideEffects) {
+          if (sideEffect.sideEffect.toLowerCase().contains(_searchItem)) {
+            result = snapshot.data[index];
+            break;
+          }
+        }
+        for (var severeEffect in snapshot.data[index].severeEffects) {
+          if (severeEffect.severeEffect.toLowerCase().contains(_searchItem)) {
+            result = snapshot.data[index];
+            break;
+          }
+        }
+      }
     }
     if (_selectedIndications.isNotEmpty && result != null) {
       int counter = 0;

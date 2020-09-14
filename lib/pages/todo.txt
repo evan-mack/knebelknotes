@@ -1,19 +1,9 @@
 TODO
 
 
-Fix rest of Tab Bars [X]
-
-
 Iphone specific fixes
-filters pop up [X]
-cut off text for long strings (Chlordiazepoxide) [possible fix]
-
 
 fix logo
-
-
-Meeting Topics:
-Search function. hard to tell why results came back (semi implemented)
 
 
 

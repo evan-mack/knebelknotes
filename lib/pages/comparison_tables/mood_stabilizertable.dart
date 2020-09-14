@@ -115,7 +115,7 @@ class MoodChart extends StatelessWidget {
       DataRow(
           cells: _buildDataRow(
               context,
-              'Carbamazepine (tegretol)',
+              'Carbamazepine (Tegretol)',
               Icon(Icons.check),
               Icon(Icons.check),
               Icon(Icons.arrow_downward),
@@ -162,7 +162,7 @@ class MoodChart extends StatelessWidget {
       DataRow(
           cells: _buildDataRow2(
               context,
-              'Carbamazepine (tegretol)',
+              'Carbamazepine (Tegretol)',
               Icon(Icons.check),
               Icon(Icons.clear),
               Icon(Icons.check),
@@ -200,7 +200,7 @@ class MoodChart extends StatelessWidget {
   List<String> rowTitles = [
     'Lithium',
     'Valproate (Divalproex)',
-    'Carbamazepine (tegretol)',
+    'Carbamazepine (Tegretol)',
     'Lamotrigine (Lamictal)',
   ];
 

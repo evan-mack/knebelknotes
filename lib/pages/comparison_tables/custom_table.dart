@@ -54,7 +54,7 @@ class CustomTable extends StatelessWidget {
           Padding(padding: EdgeInsets.only(top: 15), child: items[i]),
           onTap: () {
                       MedicationDao.md
-                          .getMedByName(rowTitles[i])
+                          .getMedByName(rowTitles[currentRow])
                           .then((med) {
                         Navigator.of(context).push(platformPageRoute(
                             context: context,
