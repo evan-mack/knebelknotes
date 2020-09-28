@@ -45,7 +45,7 @@ class ClassesPage extends StatelessWidget {
       case 'Addiction Med':
         return 'Addictions Medications';
         break;
-      case 'Antidepressent':
+      case 'Antidepressant':
         return 'Antidepressants';
         break;
       case 'Antipsychotic':

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   //Route Name
@@ -12,6 +13,16 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  Future<void> _launched;
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceSafariVC: false, forceWebView: false);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   _aboutTheApp() {
     return showPlatformDialog(
         context: context,
@@ -34,7 +45,8 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (_) => PlatformAlertDialog(
               title: Text('Disclaimer'),
-              content: Text('This app is intended for use by health care students and providers, and not the general public. The information included is abbreviated and serves as a practical reference guide. Information is not comprehensive and errors may exist. It is not meant to serve as a comprehensive drug monograph. Drug doses are based on clinical literature and experience, and may be different from manufacturers recommendations. Indications are based on Canadian psychiatric guidelines considered current as of September 2019'),
+              content: Text(
+                  'This app is intended for use by health care students and providers, and not the general public. The information included is abbreviated and serves as a practical reference guide. Information is not comprehensive and errors may exist. It is not meant to serve as a comprehensive drug monograph. Drug doses are based on clinical literature and experience, and may be different from manufacturers recommendations. Indications are based on Canadian psychiatric guidelines considered current as of September 2019'),
               actions: <Widget>[
                 PlatformDialogAction(
                   child: PlatformText('I Accept'),
@@ -50,7 +62,83 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (_) => PlatformAlertDialog(
               title: Text('Sources'),
-              content: Text('Stahl’s Essential Psychopharmacology – Prescriber’s Guide\n\nRxTx by Canadian Pharmacists Association\n\nDrug Monographs from FDA and Health Canada database\n\nCANMAT 2016 Depression Guidelines\n\nCANMAT 2018 Bipolar Guidelines\n\n2014 Canadian clinical practice guidelines for thfe management of anxiety, posttraumatic stress and obsessive-compulsive disorders\n'),
+              content: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://www.amazon.ca/Prescribers-Guide-Stahls-Essential-Psychopharmacology/dp/1107675022');
+                              }),
+                          child: Text(
+                              'Stahl’s Essential Psychopharmacology – Prescriber’s Guide',
+                              textAlign: TextAlign.center))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://www.pharmacists.ca/products-services/rxtxmobile/');
+                              }),
+                          child: Text(
+                              'RxTx by Canadian Pharmacists Association',
+                              textAlign: TextAlign.center))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    '(https://www.accessdata.fda.gov/scripts/cder/daf/');
+                              }),
+                          child: Text('Drug Monographs from FDA',
+                              textAlign: TextAlign.center))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://health-products.canada.ca/dpd-bdpp/index-eng.jsp)');
+                              }),
+                          child: Text(
+                              'Drug Monographs from Health Canada database',
+                              textAlign: TextAlign.center))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4994790/');
+                              }),
+                          child: Text(
+                            'CANMAT 2016 Depression Guidelines',
+                            textAlign: TextAlign.center,
+                          ))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/');
+                              }),
+                          child: Text(
+                            'CANMAT 2018 Bipolar Guidelines ',
+                            textAlign: TextAlign.center,
+                          ))),
+                  SizedBox(
+                      width: double.maxFinite,
+                      child: PlatformButton(
+                          onPressed: () => setState(() {
+                                _launched = _launchInBrowser(
+                                    'https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1');
+                              }),
+                          child: Text(
+                            '2014 Canadian clinical practice guidelines for the management of anxiety, posttraumatic stress and obsessive-compulsive disorders',
+                            textAlign: TextAlign.center,
+                          ))),
+                ],
+              ),
               actions: <Widget>[
                 PlatformDialogAction(
                   child: PlatformText('Ok'),
