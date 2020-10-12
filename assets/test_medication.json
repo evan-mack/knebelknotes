@@ -1,0 +1,59 @@
+[
+    {
+        "cat": "Antidepressant",
+        "subCat": "Atypical",
+        "medName": "Mirtazapine (Remeron)",
+        "indications": [
+            {
+                "indication": "MDD with comorbid ETOH (1st line monotherapy or 2nd line adjunct)",
+                "modifier": 0
+            },
+            {
+                "indication": "MDD - Elderly (1st line monotherapy)",
+                "modifier": 0
+            },
+            {
+                "indication": "Perimenopausal MDD (2nd line monotherapy)",
+                "modifier": 0
+            },
+            {
+                "indication": "Peripartum MDD (3rd line monotherapy)",
+                "modifier": 0
+            }
+        ],
+        "indicationsComment": "",
+        "sideEffects": [
+            {
+                "sideEffect": "Sedation",
+                "modifier": 0
+            },
+            {
+                "sideEffect": "Appetite",
+                "modifier": 0
+            }
+        ],
+        "severeEffects": [
+            {
+                "severeEffect": "Serotonin syndrome",
+                "modifier": 0
+            },
+            {
+                "severeEffect": "Mania",
+                "modifier": 0
+            }
+        ],
+        "frequency": "",
+        "doseInit": "15mg qhs",
+        "doseInitComment": "",
+        "doseRange": "15-45mg",
+        "doseRangeComment": "",
+        "maxDose": "45mg",
+        "maxDoseForKids": "",
+        "blackBoxWarning": "increased suicidality (<24yo with MDD)",
+        "misc": "decreased sexual dysfunction, decreased drug interaction, 7.5mg most sedating",
+        "miscComment": "",
+        "equiv": "",
+        "amphWorkUp": "",
+        "mphWorkUp": ""
+    }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Haloperidol (Haldol)",
     "indications": [
@@ -44,7 +44,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Flupenthixol (Fluanxol)",
     "indications": [
@@ -71,7 +71,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Fluphenazine (Prolixin)",
     "indications":[
@@ -98,7 +98,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Perphenazine (Trilafon)",
     "indications": [
@@ -129,7 +129,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Prochloperazine",
     "indications": [
@@ -164,7 +164,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Pericyazine (Neuleptil)",
     "indications": [
@@ -191,7 +191,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Zuclopenthixol (Clopixol)",
     "indications": [
@@ -218,7 +218,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Loxapine (Loxapac)",
     "indications": [
@@ -245,7 +245,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Methotrimeprazine (Nozinan)",
     "indications": [
@@ -280,7 +280,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Thioridazine",
     "indications": [
@@ -307,7 +307,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Chlorprothixene",
     "indications": [
@@ -334,7 +334,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Typical",
     "medName": "Chlorpromazine (Largactil)",
     "indications":[
@@ -382,7 +382,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Risperidone (Risperdal)",
     "indications": [
@@ -447,7 +447,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Paliperidone (Invega)",
     "indications": [
@@ -487,7 +487,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Olanzapine (Zyprexa)",
     "indications": [
@@ -548,7 +548,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Ziprazadone (Zeldox)",
     "indications":[
@@ -604,7 +604,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Clozapine (Clozaril)",
     "indications": [
@@ -652,7 +652,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Quetiapine (Seroquel)",
     "indications": [
@@ -732,7 +732,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Aripiprazole (Abilify)",
     "indications": [
@@ -804,7 +804,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Brexpiprazole (Rexulti)",
     "indications": [
@@ -840,7 +840,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Lurasidone (Latuda)",
     "indications": [
@@ -893,7 +893,7 @@
     "mphWorkUp": ""
   },
   {
-    "cat": "Antipsychotics",
+    "cat": "Antipsychotic",
     "subCat": "Atypical",
     "medName": "Asenapine (Saphris)",
     "indications": [
@@ -2155,7 +2155,7 @@
     "maxDoseForKids": "",
     "blackBoxWarning": "increased suicidality (<24yo with MDD)",
     "misc": "decreased sexual dysfunction, decreased drug interaction, 7.5mg most sedating",
-    "miscComment": "7.5mg most sedating",
+    "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
     "mphWorkUp": ""

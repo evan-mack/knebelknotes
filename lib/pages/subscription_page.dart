@@ -13,54 +13,8 @@ class SubscriptionPage extends StatefulWidget {
 }
 
 class SubscriptionPageState extends State<SubscriptionPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      //backgroundColor: kColorPrimary,
-      appBar: AppBar(
-        title: Text('Knebel Knotes'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-                padding: const EdgeInsets.only(bottom: 18.0),
-                child: Center(
-                  child: Text(
-                    'Welcome',
-                    style: kSendButtonTextStyle.copyWith(fontSize: 40),
-                    textAlign: TextAlign.center,
-                  ),
-                )),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: RaisedButton(
-                  color: Colors.blue[200],
-                  textColor: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Text(
-                      'Purchase a subscription',
-                      style: kSendButtonTextStyle,
-                    ),
-                  ),
-                  onPressed: () {
-                    if (appData.isPro) {
-                      Navigator.of(context).push(platformPageRoute(
-                          context: context, builder: (_) => LaunchPage()));
-                    } else {
-                      Navigator.of(context).push(platformPageRoute(
-                          context: context, builder: (_) => UpgradePage()));
-                    }
-                  }),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  PurchaserInfo _purchaserInfo;
+  Offerings _offerings;
 
   @override
   void initState() {
@@ -69,24 +23,61 @@ class SubscriptionPageState extends State<SubscriptionPage> {
   }
 
   Future<void> initPlatformState() async {
-    appData.isPro = false;
+    appData.isPro = null;
 
     await Purchases.setDebugLogsEnabled(true);
     await Purchases.setup('RBthtoxcpSfRcjHPXEkcyrXCUBQIcfIt');
 
-    PurchaserInfo purchaserInfo;
-    try {
-      purchaserInfo = await Purchases.getPurchaserInfo();
-      print(purchaserInfo.toString());
-      if (purchaserInfo.entitlements.all['all_features'] != null) {
-        appData.isPro = purchaserInfo.entitlements.all['all_features'].isActive;
-      } else {
-        appData.isPro = false;
-      }
-    } on PlatformException catch (e) {
-      print(e);
-    }
+    PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+    Offerings offerings = await Purchases.getOfferings();
+    Purchases.addPurchaserInfoUpdateListener((purchaserInfo) {
+      setState(() {
+        appData.isPro =
+            purchaserInfo.entitlements.active.containsKey('all_features');
+      });
+    });
 
-    print('#### is user pro? ${appData.isPro}');
+    setState(() {
+      _purchaserInfo = purchaserInfo;
+      _offerings = offerings;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(_purchaserInfo);
+    if (_purchaserInfo == null) {
+      return Scaffold(
+        //backgroundColor: kColorPrimary,
+
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                  padding: const EdgeInsets.only(bottom: 18.0),
+                  child: Center(
+                    child: Text(
+                      'Loading Account...',
+                      textAlign: TextAlign.center,
+                    ),
+                  )),
+              Center(child: PlatformCircularProgressIndicator())
+            ],
+          ),
+        ),
+      );
+    } else {
+      var isPro =
+          _purchaserInfo.entitlements.active.containsKey('all_features');
+      print('isPro = {$isPro}');
+      if (isPro){
+        return UpgradePage(offerings: _offerings);
+        //return LaunchPage();
+      }else
+        return UpgradePage(
+          offerings: _offerings,
+        );
+    }
   }
 }
