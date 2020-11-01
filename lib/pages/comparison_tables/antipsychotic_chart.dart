@@ -92,7 +92,7 @@ class AntipsychoticChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text('Antipshycotic Comparison'),
+        title:Text('Antipsychotic Comparison'),
         centerTitle: true,
       ),
       body: Column(

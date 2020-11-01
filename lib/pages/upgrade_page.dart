@@ -308,6 +308,7 @@ class PurchaseButton extends StatelessWidget {
                     PurchaserInfo _purchaserInfo =
                         await Purchases.purchasePackage(package);
                     print('purchase completed');
+                    
 
                     appData.isPro = _purchaserInfo
                         .entitlements.all["all_features"].isActive;

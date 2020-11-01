@@ -5,7 +5,7 @@ import 'package:knebelknotes/pages/med_profile_page2.dart';
 
 class Bipolar2List extends StatelessWidget {
   var medList = {
-    'MDD': [
+    'MDE': [
       {
         'Monotherapy': [
           'Quetiapine (Seroquel)',

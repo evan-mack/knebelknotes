@@ -72,8 +72,8 @@ class SubscriptionPageState extends State<SubscriptionPage> {
           _purchaserInfo.entitlements.active.containsKey('all_features');
       print('isPro = {$isPro}');
       if (isPro){
-        return UpgradePage(offerings: _offerings);
-        //return LaunchPage();
+        //return UpgradePage(offerings: _offerings);
+        return LaunchPage();
       }else
         return UpgradePage(
           offerings: _offerings,

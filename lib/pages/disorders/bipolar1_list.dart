@@ -10,7 +10,7 @@ class Bipolar1List extends StatelessWidget {
         'Monotherapy': [
           'Lithium',
           'Valproate (Divalproex)',
-          'Paliperidon (Invega)',
+          'Paliperidone (Invega)',
           'Cariprazine',
           'Quetiapine (Seroquel)',
           'Risperidone (Risperidone)',
@@ -28,7 +28,7 @@ class Bipolar1List extends StatelessWidget {
         'Psychotherapy': ['Verbal De-escalation']
       }
     ],
-    'MDD': [
+    'MDE': [
       {
         'Monotherapy': [
           'Quetiapine (Seroquel)',

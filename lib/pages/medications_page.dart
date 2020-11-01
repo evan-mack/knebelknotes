@@ -139,10 +139,34 @@ class MedicationsPageState extends State<MedicationsPage> {
   }
 
   _buildChip(Icon icon, String title, Color color, List<String> currentList) {
+    
     return Padding(
       padding: EdgeInsets.only(top: 5),
-      child: Chip(
+      child: InputChip(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        onPressed: () => {
+          setState(() {
+            if (currentList == _selectedIndications) {
+              _selectedIndications.remove(title);
+              _excludedIndications.add(title);
+            } else if (currentList == _excludedIndications) {
+              _excludedIndications.remove(title);
+              _selectedIndications.add(title);
+            }else if(currentList == _selectedSideEffects){
+              _selectedSideEffects.remove(title);
+              _excludedSideEffects.add(title);
+            }else if(currentList == _excludedSideEffects){
+              _excludedSideEffects.remove(title);
+              _selectedSideEffects.add(title);
+            }else if(currentList == _selectedSevereEffects){
+              _selectedSevereEffects.remove(title);
+              _excludedSevereEffects.add(title);
+            }else if(currentList == _excludedSevereEffects){
+              _excludedSevereEffects.remove(title);
+              _selectedSevereEffects.add(title);
+            }
+          })
+        },
         deleteIcon: Icon(
           Icons.cancel,
         ),

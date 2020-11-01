@@ -266,7 +266,7 @@ class ClassList extends StatelessWidget {
             ? Text('Mood Stabilizers')
             : cat == 'Side Effect Meds'
                 ? Text('Medications for Side Effects')
-                : Text(cat),
+                : cat == 'Antidepressant' ? Text('Antidepressants') : Text(cat),
         centerTitle: true,
       ),
       body: _buildMedBySubClass(),
