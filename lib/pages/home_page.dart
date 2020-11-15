@@ -1,9 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/models/userInfo.dart';
+import 'package:knebelknotes/pages/admin_page.dart';
+import 'package:knebelknotes/services/auth.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
+  final AuthService _auth = AuthService();
+
   //Route Name
   static const routeName = '/HomePage';
   HomePage(this.goToPage);
@@ -241,10 +247,40 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(context) {
+    UserInfo _userInfo = Provider.of<UserInfo>(context);
     return Scaffold(
         appBar: AppBar(
           title: Text('Knebel Knotes'),
           centerTitle: true,
+          actions: <Widget>[
+            PopupMenuButton(
+              offset: Offset(0, 50),
+              itemBuilder: (context) => <PopupMenuEntry>[
+                if (_userInfo.isAdmin)
+                  PopupMenuItem(
+                    height: 20,
+                    child: FlatButton.icon(
+                      icon: Icon(Icons.edit),
+                      onPressed: () {
+                        Navigator.of(context).push(platformPageRoute(
+                            context: context, builder: (_) => AdminPage()));
+                      },
+                      label: Text('Admin'),
+                    ),
+                  ),
+                PopupMenuItem(
+                  height: 20,
+                  child: FlatButton.icon(
+                    icon: Icon(Icons.person),
+                    onPressed: () async {
+                      await widget._auth.signOut();
+                    },
+                    label: Text('Log Out'),
+                  ),
+                )
+              ],
+            ),
+          ],
         ),
         body: _buildBody());
   }

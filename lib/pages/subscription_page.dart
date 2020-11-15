@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:knebelknotes/models/userInfo.dart';
 import 'package:knebelknotes/pages/launch_page.dart';
 import 'package:knebelknotes/pages/subscription_info.dart';
 import 'package:knebelknotes/pages/upgrade_page.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/services/auth.dart';
 
+import 'package:provider/provider.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:flutter/services.dart';
 
@@ -25,11 +28,12 @@ class SubscriptionPageState extends State<SubscriptionPage> {
   Future<void> initPlatformState() async {
     appData.isPro = null;
 
-    await Purchases.setDebugLogsEnabled(true);
+    //await Purchases.setDebugLogsEnabled(true);
     await Purchases.setup('RBthtoxcpSfRcjHPXEkcyrXCUBQIcfIt');
 
     PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
     Offerings offerings = await Purchases.getOfferings();
+
     Purchases.addPurchaserInfoUpdateListener((purchaserInfo) {
       setState(() {
         appData.isPro =
@@ -45,8 +49,34 @@ class SubscriptionPageState extends State<SubscriptionPage> {
 
   @override
   Widget build(BuildContext context) {
-    print(_purchaserInfo);
-    if (_purchaserInfo == null) {
+    UserInfo _userInfo = Provider.of<UserInfo>(context);
+    if (_userInfo == null) {
+      return Scaffold(
+        //backgroundColor: kColorPrimary,
+
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                  padding: const EdgeInsets.only(bottom: 18.0),
+                  child: Center(
+                    child: Text(
+                      'Loading Account...',
+                      textAlign: TextAlign.center,
+                    ),
+                  )),
+              Center(child: PlatformCircularProgressIndicator())
+            ],
+          ),
+        ),
+      );
+    } else if (_userInfo.isAdmin)
+      return LaunchPage();
+    else if (_userInfo.isStudent &&
+        DateTime.parse(_userInfo.accessExpires).isAfter(DateTime.now()))
+      return LaunchPage();
+    else if (_purchaserInfo == null) {
       return Scaffold(
         //backgroundColor: kColorPrimary,
 
@@ -70,11 +100,11 @@ class SubscriptionPageState extends State<SubscriptionPage> {
     } else {
       var isPro =
           _purchaserInfo.entitlements.active.containsKey('all_features');
-      print('isPro = {$isPro}');
-      if (isPro){
-        //return UpgradePage(offerings: _offerings);
+      //print('isPro = {$isPro}');
+      if (isPro) {
+        
         return LaunchPage();
-      }else
+      } else
         return UpgradePage(
           offerings: _offerings,
         );

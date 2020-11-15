@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "842968602091",
+    "firebase_url": "https://knebel-knotes.firebaseio.com",
+    "project_id": "knebel-knotes",
+    "storage_bucket": "knebel-knotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842968602091:android:825cb7c05a117976adf5ae",
+        "android_client_info": {
+          "package_name": "com.flutter.knebelknotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842968602091-dd8ntiqp32gi48rmog8povi5oh2f2cvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutter.knebelknotes",
+            "certificate_hash": "a0fed7b8f956e5743fa458971591a704c460097d"
+          }
+        },
+        {
+          "client_id": "842968602091-r7i4mebfv51dnu4f86b4d0f181k0c5t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutter.knebelknotes",
+            "certificate_hash": "5dccac9cf0ff9fbb8fa3f5027e9a1281966097ea"
+          }
+        },
+        {
+          "client_id": "842968602091-h0sh54oeao510dq5t76p9de543ch0uu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-JuwLogws9k4eGc24I_wwHArMBelV840"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842968602091-h0sh54oeao510dq5t76p9de543ch0uu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

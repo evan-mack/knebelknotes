@@ -19,6 +19,7 @@ class LaunchPage extends StatefulWidget {
 }
 
 class LaunchPageState extends State<LaunchPage> {
+  
   //Used for persistent nav bar
   PersistentTabController _controller;
   List<Widget> _buildScreens() {

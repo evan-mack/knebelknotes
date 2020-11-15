@@ -48,13 +48,13 @@ class UpgradePageState extends State<UpgradePage> {
   @override
   Widget build(BuildContext context) {
     if (widget.offerings != null) {
-      print('Offerings not null 1');
+     // print('Offerings not null 1');
       final offering = widget.offerings.current;
       if (offering != null) {
-        print('Offerings not null 2');
+       // print('Offerings not null 2');
         final annual = offering.annual;
         if (annual != null) {
-          print('Offerings not null 3');
+         // print('Offerings not null 3');
           return Scaffold(
             body: Center(
               child: SingleChildScrollView(
@@ -134,7 +134,7 @@ class UpgradePageState extends State<UpgradePage> {
                               setState(() {
                                 appData.isPro = false;
                               });
-                            print(appData.isPro);
+                        //    print(appData.isPro);
                             if (appData.isPro) {
                               showPlatformDialog(
                                   context: context,
@@ -304,16 +304,16 @@ class PurchaseButton extends StatelessWidget {
               child: RaisedButton(
                 onPressed: () async {
                   try {
-                    print('now trying to purchase');
+                   // print('now trying to purchase');
                     PurchaserInfo _purchaserInfo =
                         await Purchases.purchasePackage(package);
-                    print('purchase completed');
+                    //print('purchase completed');
                     
 
                     appData.isPro = _purchaserInfo
                         .entitlements.all["all_features"].isActive;
 
-                    print('is user pro? ${appData.isPro}');
+                   // print('is user pro? ${appData.isPro}');
 
                     if (appData.isPro) {
                       return LaunchPage();
