@@ -7,6 +7,7 @@ import 'package:apple_sign_in/apple_sign_in.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
+  Future<bool> get appleSignInAvailable => AppleSignIn.isAvailable();
 
   // create user obj based on firebase user
   CustomUser _userFromFirebaseUser(User user) {
@@ -30,27 +31,39 @@ class AuthService {
       return null;
     }
   }
+
   Future signInWithApple() async {
     try {
-      final AuthorizationResult appleResult = await AppleSignIn.performRequests([
+
+      final AuthorizationResult appleResult =
+          await AppleSignIn.performRequests([
         AppleIdRequest(requestedScopes: [Scope.email, Scope.fullName])
       ]);
 
-      if(appleResult.error != null){
+      switch (appleResult.status) {
+        case AuthorizationStatus.authorized:
+          final oAuthProvider = OAuthProvider('apple.com');
+          final AuthCredential credential = oAuthProvider.credential(
+              accessToken: String.fromCharCodes(
+                  appleResult.credential.authorizationCode),
+              idToken:
+                  String.fromCharCodes(appleResult.credential.identityToken));
+
+          final UserCredential result =
+              await _auth.signInWithCredential(credential);
+          User user = result.user;
+
+          return _userFromFirebaseUser(user);
+          break;
+        case AuthorizationStatus.error:
+        print('Error');
+        break;
+        case AuthorizationStatus.cancelled:
+        print('User cancelled');
+        break;
 
       }
-      final oAuthProvider = OAuthProvider('apple.com');
-      final AuthCredential credential = oAuthProvider.credential(
-        accessToken: String.fromCharCodes(appleResult.credential.authorizationCode),
-        idToken: String.fromCharCodes(appleResult.credential.identityToken)
-      );
-
-      final UserCredential result = await _auth.signInWithCredential(credential);
-      User user = result.user;
-
-      return _userFromFirebaseUser(user);
-
-    }catch(e){
+    } catch (e) {
       print(e.toString());
       return null;
     }
@@ -71,7 +84,6 @@ class AuthService {
           await _auth.signInWithCredential(credential);
       User user = result.user;
 
-
       //Create a new document for the user with the uid and email
 
       return _userFromFirebaseUser(user);
@@ -87,5 +99,15 @@ class AuthService {
     } catch (e) {
       print(e.toString());
     }
+  }
+}
+
+
+class AppleSignInAvailable {
+  AppleSignInAvailable(this.isAvailable);
+  final bool isAvailable;
+  
+  static Future<AppleSignInAvailable> check() async {
+    return AppleSignInAvailable(await AppleSignIn.isAvailable());
   }
 }
