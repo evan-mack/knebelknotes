@@ -6,6 +6,7 @@ import 'package:knebelknotes/models/userInfo.dart';
 import 'package:knebelknotes/services/auth.dart';
 import 'package:knebelknotes/services/database.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -41,13 +42,18 @@ class _SignInState extends State<SignIn> {
   }
 
   Widget _getSignInButton() {
-    // if (Platform.isAndroid) {
-    //   return _signInGoogleButton();
-    // } else
-    //   return _signInIosButton();
-    return Column(
-      children: <Widget>[_signInGoogleButton(), _signInIosButton()],
-    );
+    if (Platform.isAndroid) {
+      return _signInGoogleButton();
+    } else
+      return FutureBuilder(
+        future: AppleSignInAvailable.check(),
+        builder: (context, snapshot){
+          if(snapshot.data)
+          return _signInIosButton();
+          else
+          return PlatformCircularProgressIndicator();
+        },
+      );
   }
 
   Widget _signInGoogleButton() {
