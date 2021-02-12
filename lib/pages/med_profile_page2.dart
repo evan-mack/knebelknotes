@@ -38,6 +38,11 @@ class MedProfilePageState extends State<MedProfilePage> {
       if (widget.med.misc != "") _getMisc(),
       if (widget.med.amphWorkUp != '' || widget.med.mphWorkUp != '')
         _getWorkup(),
+      if (widget.med.metabolism != '')
+        BodyItem(
+            isExpanded: false,
+            header: Text('CYP Metabolism'),
+            body: _getMetabolism())
     ];
 
     // if (widget.med.cat == 'Antipsychotic' &&
@@ -100,10 +105,9 @@ class MedProfilePageState extends State<MedProfilePage> {
             Align(
               alignment: Alignment.bottomRight,
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                 PlatformIconButton(
+                PlatformIconButton(
                   materialIcon: CircleAvatar(child: Icon(Icons.remove)),
-                 
-                  cupertinoIcon: CircleAvatar(child:Icon(Icons.remove)),
+                  cupertinoIcon: CircleAvatar(child: Icon(Icons.remove)),
                   onPressed: () => {
                     setState(() {
                       for (var item in _items) {
@@ -111,12 +115,10 @@ class MedProfilePageState extends State<MedProfilePage> {
                       }
                     })
                   },
-                  
                 ),
                 PlatformIconButton(
                   materialIcon: CircleAvatar(child: Icon(Icons.add)),
-                 
-                  cupertinoIcon: CircleAvatar(child:Icon(CupertinoIcons.add)),
+                  cupertinoIcon: CircleAvatar(child: Icon(CupertinoIcons.add)),
                   onPressed: () => {
                     setState(() {
                       for (var item in _items) {
@@ -124,7 +126,6 @@ class MedProfilePageState extends State<MedProfilePage> {
                       }
                     })
                   },
-                  
                 ),
               ]),
             ),
@@ -343,6 +344,17 @@ class MedProfilePageState extends State<MedProfilePage> {
       }
     }
     return result;
+  }
+
+  _getMetabolism() {
+    return ListTile(
+        title: Padding(
+      padding: EdgeInsets.only(left: 10),
+      child: Text(
+        widget.med.metabolism,
+        style: TextStyle(fontSize: 14),
+      ),
+    ));
   }
 
   _getBlackBoxWarning() {

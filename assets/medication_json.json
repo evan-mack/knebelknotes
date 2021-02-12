@@ -41,7 +41,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -95,7 +96,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -126,7 +128,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -215,7 +218,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -242,7 +246,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2, CYP2D6, CYP3A4"
   },
   {
     "cat": "Antipsychotic",
@@ -304,7 +309,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -379,7 +385,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antipsychotic",
@@ -444,7 +451,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -484,7 +492,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "No CYP metabolism"
   },
   {
     "cat": "Antipsychotic",
@@ -545,7 +554,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2"
   },
   {
     "cat": "Antipsychotic",
@@ -601,7 +611,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antipsychotic",
@@ -649,7 +660,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2"
   },
   {
     "cat": "Antipsychotic",
@@ -729,7 +741,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antipsychotic",
@@ -801,7 +814,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -837,7 +851,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antipsychotic",
@@ -890,7 +905,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antipsychotic",
@@ -947,7 +963,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2"
   },
   {
     "cat": "Antipsychotic",
@@ -1417,7 +1434,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2, CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -1478,7 +1496,8 @@
     "miscComment": "Contraindicated in cardiovascular disease, renally excreted",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -1571,7 +1590,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2C19, CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -1644,7 +1664,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2C19, CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -1749,7 +1770,8 @@
     "miscComment": "Not recommended for elderly MDE, long half life, avoid in Peripartum MDD breast feeding",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6, CYP2C19"
   },
   {
     "cat": "Antidepressant",
@@ -1834,7 +1856,8 @@
     "miscComment": "Not recommended for MDD Youth, not recommended in BPII MDE, avoid in Peripartum MDD pregnancy",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -1931,7 +1954,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2012,7 +2036,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2, CYP3A4, CYP2C19"
   },
   {
     "cat": "Antidepressant",
@@ -2101,7 +2126,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2158,7 +2184,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -2223,7 +2250,8 @@
     "miscComment": "no sexual dysfunction, sedation, weight gain",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2B6, CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2263,7 +2291,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6, CYP2A4"
   },
   {
     "cat": "Antidepressant",
@@ -2316,7 +2345,8 @@
     "miscComment": "sedation from 25-200mg",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -2401,7 +2431,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2486,7 +2517,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2579,7 +2611,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6, CYP1A2"
   },
   {
     "cat": "Antidepressant",
@@ -2668,7 +2701,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6, CYP3A4"
   },
   {
     "cat": "Antidepressant",
@@ -2753,7 +2787,8 @@
     "miscComment": "Less anti-cholinergic/anti-histamine activity and therefore cause decreased sedation and decreased orthostatic hypotension which leads to fewer falls",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -2838,7 +2873,8 @@
     "miscComment": "Less anti-cholinergic/anti-histamine activity and therefore cause decreased sedation and decreased orthostatic hypotension which leads to fewer falls",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Antidepressant",
@@ -3134,7 +3170,8 @@
     "miscComment": "REVERSIBLE MAOI",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2C19, CYP2D6"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3324,7 +3361,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3514,7 +3552,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3607,7 +3646,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3700,7 +3740,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2C19"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3745,7 +3786,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3777,7 +3819,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3838,7 +3881,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -3882,7 +3926,8 @@
     "miscComment": "Less sedating than other anxiolytics/hypnotics",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2, CYP2D6"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -4011,7 +4056,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2"
   },
   {
     "cat": "Anxiolytics/Hypnotics",
@@ -4213,7 +4259,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "ADHD",
@@ -4306,7 +4353,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "ADHD",
@@ -4403,7 +4451,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "ADHD",
@@ -4496,11 +4545,12 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "weight, blood pressure, cardiovascular status (physical exam +/- ECG), screen for tics",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "ADHD",
-    "subCat": "Methlyphenidate(MPH)",
+    "subCat": "Methylphenidate (MPH)",
     "medName": "IR (Ritalin)",
     "indications": [
   {
@@ -4589,7 +4639,7 @@
   },
   {
     "cat": "ADHD",
-    "subCat": "Methlyphenidate(MPH)",
+    "subCat": "Methylphenidate (MPH)",
     "medName": "XR (Biphentin)",
     "indications": [
   {
@@ -4678,7 +4728,7 @@
   },
   {
     "cat": "ADHD",
-    "subCat": "Methlyphenidate(MPH)",
+    "subCat": "Methylphenidate (MPH)",
     "medName": "ER OROS (Concerta)",
     "indications": [
   {
@@ -4803,7 +4853,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP2C19"
   },
   {
     "cat": "ADHD",
@@ -4835,7 +4886,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "ADHD",
@@ -4884,7 +4936,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "ADHD",
@@ -5021,7 +5074,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6, CYP3A4"
   },
   {
     "cat": "Cognitive Enhancers",
@@ -5249,7 +5303,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4, CYP1A2, CYP2B6"
   },
   {
     "cat": "Mood Stabilizer",
@@ -5378,7 +5433,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2B6, CYP3A4"
   },
   {
     "cat": "Addiction Med",
@@ -5418,7 +5474,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Addiction Med",
@@ -5482,7 +5539,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Addiction Med",
@@ -5624,7 +5682,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP1A2, CYP2E1"
   },
   {
     "cat": "Addiction Med",
@@ -5678,7 +5737,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Side Effect Meds",
@@ -5714,7 +5774,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   },
   {
     "cat": "Side Effect Meds",
@@ -5815,7 +5876,8 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP2D6"
   },
   {
     "cat": "Side Effect Meds",
@@ -5895,6 +5957,7 @@
     "miscComment": "",
     "equiv": "",
     "amphWorkUp": "",
-    "mphWorkUp": ""
+    "mphWorkUp": "",
+    "metabolism": "CYP3A4"
   }
 ]

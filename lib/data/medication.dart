@@ -24,6 +24,7 @@ class Medication {
   final String equiv;
   final String amphWorkUp;
   final String mphWorkUp;
+  final String metabolism;
 
   Medication({
     this.cat,
@@ -46,6 +47,7 @@ class Medication {
     this.equiv,
     this.amphWorkUp,
     this.mphWorkUp,
+    this.metabolism
   });
 
   static Medication fromMap(Map<String, dynamic> json) => Medication(
@@ -72,6 +74,7 @@ class Medication {
         equiv: json["equiv"],
         amphWorkUp: json["amphWorkUp"],
         mphWorkUp: json["mphWorkUp"],
+        metabolism: json["metabolism"] ?? ""
       );
 
   Map<String, dynamic> toMap() => {
@@ -96,6 +99,7 @@ class Medication {
         "equiv": equiv,
         "amphWorkUp": amphWorkUp,
         "mphWorkUp": mphWorkUp,
+        "metabolism": metabolism
       };
 }
 

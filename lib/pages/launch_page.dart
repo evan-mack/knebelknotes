@@ -19,7 +19,6 @@ class LaunchPage extends StatefulWidget {
 }
 
 class LaunchPageState extends State<LaunchPage> {
-  
   //Used for persistent nav bar
   PersistentTabController _controller;
   List<Widget> _buildScreens() {
@@ -91,7 +90,8 @@ class LaunchPageState extends State<LaunchPage> {
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
+    return Scaffold(
+        body: PersistentTabView(
       controller: _controller,
       screens: _buildScreens(),
       items: _navBarItems(),
@@ -104,6 +104,6 @@ class LaunchPageState extends State<LaunchPage> {
       },
       navBarStyle: NavBarStyle.style9,
       itemCount: 5,
-    );
+    ));
   }
 }
