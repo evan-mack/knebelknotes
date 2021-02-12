@@ -21,7 +21,7 @@ class _SubscribeState extends State<Subscribe> {
           if (snapshot.hasData) {
             if (!snapshot.data.exists)
               DatabaseService(uid: widget.user.uid, email: widget.user.email)
-                  .updateUserData(false, false, DateTime.now().toString());
+                  .updateUserData(false, true, DateTime.now().add(new Duration(days: 7)).toString());
 
             return SubscriptionPage();
           }

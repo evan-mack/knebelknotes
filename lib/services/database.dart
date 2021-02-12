@@ -25,7 +25,7 @@ class DatabaseService {
   UserInfo _userInfoFromSnapshot(DocumentSnapshot snapshot) {
     return UserInfo(
       isAdmin: snapshot.data()['isAdmin'] ?? false,
-      isStudent: snapshot.data()['isStudent'] ?? false,
+      isStudent: snapshot.data()['isStudent'] ?? true,
       accessExpires: snapshot.data()['studentAccessExpires'] ?? DateTime.now().toString()
     );
     //return snapshot.docs.map((doc) {

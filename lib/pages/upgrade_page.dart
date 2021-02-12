@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:knebelknotes/data/medication.dart';
 import 'package:knebelknotes/data/medication_dao.dart';
+import 'package:knebelknotes/pages/TermsOfUse.dart';
 import 'package:knebelknotes/pages/launch_page.dart';
 import 'package:knebelknotes/pages/med_profile_page.dart';
 import 'package:knebelknotes/pages/subscription_page.dart';
@@ -12,9 +13,11 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:knebelknotes/pages/subscription_info.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:knebelknotes/services/auth.dart';
 
 class UpgradePage extends StatefulWidget {
   final Offerings offerings;
+  final AuthService _auth = AuthService();
   UpgradePage({Key key, @required this.offerings}) : super(key: key);
 
   @override
@@ -208,6 +211,28 @@ class UpgradePageState extends State<UpgradePage> {
                   Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
+                          onTap: () => Navigator.of(context).push(
+                              platformPageRoute(
+                                  context: context,
+                                  builder: (_) => TOSPage())),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius:
+                              BorderRadius.all(Radius.circular(10))),
+                          child: Text(
+                            'Terms Of Use',
+                            style: kSendButtonTextStyle.copyWith(
+                              fontSize: 16, color: Colors.white),
+                            )
+                          ),
+                        )
+
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GestureDetector(
                         onTap: () {
                           MedicationDao.md
                               .getMedByName('Mirtazapine (Remeron)')
@@ -229,24 +254,19 @@ class UpgradePageState extends State<UpgradePage> {
                                 fontSize: 16, color: Colors.white),
                           ),
                         ),
-                      ))
-                  // Padding(
-                  //   padding: const EdgeInsets.all(18.0),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       _launchURLWebsite('https://yahoo.com');
-                  //     },
-                  //     child: Text(
-                  //       'Term of Use (click to read)',
-                  //       style: kSendButtonTextStyle.copyWith(
-                  //         fontSize: 16,
-                  //         fontWeight: FontWeight.normal,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
+                      )),
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: GestureDetector(
+                     onTap: () async {
+                       await widget._auth.signOut();
+                     },
+                     child: Text('Log Out')
+                   )
+                 )
                 ],
-              )),
+              ),
+              ),
             ),
           );
         }

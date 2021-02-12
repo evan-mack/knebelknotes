@@ -7,7 +7,10 @@ import 'package:apple_sign_in/apple_sign_in.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
-  Future<bool> get appleSignInAvailable => AppleSignIn.isAvailable();
+  Future<bool> get appleSignInAvailable  => AppleSignIn.isAvailable();
+
+
+
 
   // create user obj based on firebase user
   CustomUser _userFromFirebaseUser(User user) {
@@ -43,24 +46,32 @@ class AuthService {
       switch (appleResult.status) {
         case AuthorizationStatus.authorized:
           final oAuthProvider = OAuthProvider('apple.com');
+          print('test1');
           final AuthCredential credential = oAuthProvider.credential(
               accessToken: String.fromCharCodes(
                   appleResult.credential.authorizationCode),
               idToken:
                   String.fromCharCodes(appleResult.credential.identityToken));
+          print('test2');
 
           final UserCredential result =
               await _auth.signInWithCredential(credential);
+          print('test3');
+          print(result.user.email);
           User user = result.user;
 
           return _userFromFirebaseUser(user);
           break;
         case AuthorizationStatus.error:
         print('Error');
+
+        print(appleResult.error.toString());
         break;
         case AuthorizationStatus.cancelled:
         print('User cancelled');
         break;
+        default:
+          print('rando error');
 
       }
     } catch (e) {

@@ -7,6 +7,9 @@ import 'package:knebelknotes/services/auth.dart';
 import 'package:knebelknotes/services/database.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../TermsOfUse.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -19,6 +22,14 @@ class _SignInState extends State<SignIn> {
   //text field state
   String email = '';
   String password = '';
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceSafariVC: false, forceWebView: false);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +45,34 @@ class _SignInState extends State<SignIn> {
                   image: AssetImage('assets/KnebelKnotesV2.png'), height: 200),
               SizedBox(height: 20.0),
               Center(child: _getSignInButton()),
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 20),
+                  child:Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          _launchInBrowser('http://www.knebel.ca');
+                        },
+                        child: Text('Privacy Policy'),
+                      ),
+
+                      Text('  |  '),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                  platformPageRoute(
+                      context: context,
+                      builder: (_) => TOSPage())),
+                      child: Text('User Agreement'),
+            )
+                    ],
+                  )
+
+
+
+              )
+
 
               //Center(child: _signInButton(userInfo: _userInfo, user: user)),
             ],
@@ -46,10 +85,16 @@ class _SignInState extends State<SignIn> {
       return _signInGoogleButton();
     } else
       return FutureBuilder(
-        future: AppleSignInAvailable.check(),
+        future: _auth.appleSignInAvailable,
         builder: (context, snapshot){
-          if(snapshot.data)
-          return _signInIosButton();
+          if(snapshot.hasData)
+          return Column(
+            children: <Widget>[
+              _signInIosButton(),
+              SizedBox(height: 5),
+              _signInGoogleButton()
+            ],
+          );
           else
           return PlatformCircularProgressIndicator();
         },
@@ -106,7 +151,7 @@ class _SignInState extends State<SignIn> {
       highlightElevation: 0,
       borderSide: BorderSide(color: Colors.grey),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+        padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,

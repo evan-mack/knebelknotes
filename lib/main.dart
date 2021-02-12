@@ -45,7 +45,7 @@ class MyApp2 extends StatelessWidget {
           title: 'Knebel Knotes',
           debugShowCheckedModeBanner: false,
           home: Wrapper()),
-    );
+          );
     
   }
 }
