@@ -17,6 +17,7 @@ class SubscriptionPage extends StatefulWidget {
 
 class SubscriptionPageState extends State<SubscriptionPage> {
   PurchaserInfo _purchaserInfo;
+  PurchaserInfo _restoreInfo;
   Offerings _offerings;
 
   @override
@@ -33,6 +34,7 @@ class SubscriptionPageState extends State<SubscriptionPage> {
 
     PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
     Offerings offerings = await Purchases.getOfferings();
+    PurchaserInfo restoreInfo = await Purchases.restoreTransactions();
 
     Purchases.addPurchaserInfoUpdateListener((purchaserInfo) {
       setState(() {
@@ -41,7 +43,14 @@ class SubscriptionPageState extends State<SubscriptionPage> {
       });
     });
 
+    Purchases.addPurchaserInfoUpdateListener((restoreInfo) {
+      setState((){
+        appData.isPro = restoreInfo.entitlements.active.containsKey('all_features');
+      });
+     });
+
     setState(() {
+      _restoreInfo = restoreInfo;
       _purchaserInfo = purchaserInfo;
       _offerings = offerings;
     });
@@ -98,10 +107,11 @@ class SubscriptionPageState extends State<SubscriptionPage> {
         ),
       );
     } else {
-      var isPro =
+      var isPro = _restoreInfo.entitlements.active.containsKey('all_features');
+      appData.isPro =
           _purchaserInfo.entitlements.active.containsKey('all_features');
       //print('isPro = {$isPro}');
-      if (isPro) {
+      if (appData.isPro || isPro) {
         
         return LaunchPage();
       } else

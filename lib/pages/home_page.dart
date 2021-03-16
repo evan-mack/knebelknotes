@@ -96,7 +96,7 @@ class HomePageState extends State<HomePage> {
                       child: PlatformButton(
                           onPressed: () => setState(() {
                                 _launched = _launchInBrowser(
-                                    '(https://www.accessdata.fda.gov/scripts/cder/daf/');
+                                    'https://www.accessdata.fda.gov/scripts/cder/daf/');
                               }),
                           child: Text('Drug Monographs from FDA',
                               textAlign: TextAlign.center))),
@@ -105,7 +105,7 @@ class HomePageState extends State<HomePage> {
                       child: PlatformButton(
                           onPressed: () => setState(() {
                                 _launched = _launchInBrowser(
-                                    'https://health-products.canada.ca/dpd-bdpp/index-eng.jsp)');
+                                    'https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html');
                               }),
                           child: Text(
                               'Drug Monographs from Health Canada database',

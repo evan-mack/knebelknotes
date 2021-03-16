@@ -91,8 +91,8 @@ class _SignInState extends State<SignIn> {
           return Column(
             children: <Widget>[
               _signInIosButton(),
-              SizedBox(height: 5),
-              _signInGoogleButton()
+             // SizedBox(height: 5),
+             // _signInGoogleButton()
             ],
           );
           else
